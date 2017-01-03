@@ -14,3 +14,17 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+});
+Route::get('/embed/watchlist', function () {
+    return view('embed/watchlist');
+});
+
+
+// API 
+Route::get('/user/watchlist', function (Request $request) {
+    return response()
+    ->json(['GOOGL','YHOO','NDAQ','FB']);
+});
