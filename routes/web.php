@@ -22,9 +22,28 @@ Route::get('/embed/watchlist', function () {
     return view('embed/watchlist');
 });
 
+// API
 
-// API 
+
+
+Route::group(['prefix' => 'api/v1'], function () {
+    Route::get('/stock/search', 'StockController@search');
+    Route::get('/stock/data/{symbol}/{options?}', 'StockController@show');
+});
 Route::get('/user/watchlist', function (Request $request) {
     return response()
-    ->json(['GOOGL','YHOO','NDAQ','FB']);
+    ->json([
+        [
+            'symbol' => 'GOOGL',
+            'name' => 'Alphabet Inc.'
+        ],
+        [
+            'symbol' => 'YHOO',
+            'name' => 'Yahoo',
+        ],
+        [
+            'symbol' => 'NDAQ',
+            'name' => 'Nasdaq'
+        ]
+    ]);
 });

@@ -1,0 +1,112 @@
+
+@import url(http://fontawesome.io/assets/font-awesome/css/font-awesome.css);
+
+// Bootstrap
+// $blue: #72d0eb;
+// $pink: #ffb3b3;
+// $family-serif: "Georgia", serif;
+
+// Override generated variables here
+// For example, by default, the $danger color is $red and the font is sans-serif
+// You can change these values:
+// $family-primary: $family-serif;
+
+#stocktrade{
+    font-size: 14px;
+    @import "./node_modules/bulma/bulma.sass";
+
+    .panel,.tabs{
+        font-size: 1em;
+    }
+
+    .transition, .autocomplete, .showAll-transition {
+        transition: all 0.3s ease-out;
+        -moz-transition: all 0.3s ease-out;
+        -webkit-transition: all 0.3s ease-out;
+        -o-transition: all 0.3s ease-out;
+    }
+
+    .autocomplete ul {
+        transition: all 0.3s ease-out;
+        -moz-transition: all 0.3s ease-out;
+        -webkit-transition: all 0.3s ease-out;
+        -o-transition: all 0.3s ease-out;
+        li a {
+            transition: all 0.3s ease-out;
+            -moz-transition: all 0.3s ease-out;
+            -webkit-transition: all 0.3s ease-out;
+            -o-transition: all 0.3s ease-out;
+        }
+        // font-family: sans-serif;
+        position: absolute;
+        list-style: none;
+        background: #f8f8f8;
+        padding: 10px 0;
+        margin: 0;
+        display: inline-block;
+        min-width: 15%;
+        margin-top: 10px;
+        &:before {
+            content: "";
+            display: block;
+            position: absolute;
+            height: 0;
+            width: 0;
+            border: 10px solid transparent;
+            border-bottom: 10px solid #f8f8f8;
+            left: 46%;
+            top: -20px;
+        }
+        li {
+            a {
+                text-decoration: none;
+                display: block;
+                background: #f8f8f8;
+                color: #2b2b2b;
+                padding: 5px;
+                padding-left: 10px;
+                &:hover {
+                    color: white;
+                    background: #2F9AF7;
+                }
+            }
+            &.focus-list a {
+                color: white;
+                background: #2F9AF7;
+            }
+            a {
+                span {
+                    display: block;
+                    margin-top: 3px;
+                    color: grey;
+                    font-size: 13px;
+                }
+                &:hover span {
+                    color: white;
+                }
+            }
+            &.focus-list a span {
+                color: white;
+            }
+        }
+    }
+
+    .showAll-transition {
+        opacity: 1;
+        height: 50px;
+        overflow: hidden;
+    }
+
+    .showAll-enter {
+        opacity: 0.3;
+        height: 0;
+    }
+
+    .showAll-leave {
+        display: none;
+    }
+
+    .modal-card-body{
+        min-height: 400px;
+    }
+}
