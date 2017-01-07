@@ -10,10 +10,10 @@
 // For example, by default, the $danger color is $red and the font is sans-serif
 // You can change these values:
 // $family-primary: $family-serif;
-
+@import "./node_modules/bulma/bulma.sass";
 #stocktrade{
     font-size: 14px;
-    @import "./node_modules/bulma/bulma.sass";
+
 
     .panel,.tabs{
         font-size: 1em;

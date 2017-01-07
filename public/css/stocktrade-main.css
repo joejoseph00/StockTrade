@@ -1,10 +1,5 @@
 @import url(http://fontawesome.io/assets/font-awesome/css/font-awesome.css);
-#stocktrade {
-  font-size: 14px;
-  /*! bulma.io v0.3.0 | MIT License | github.com/jgthms/bulma */
-  /*! minireset.css v0.0.2 | MIT License | github.com/jgthms/minireset.css */
-}
-
+/*! bulma.io v0.3.0 | MIT License | github.com/jgthms/bulma */
 @-webkit-keyframes spinAround {
   from {
     -webkit-transform: rotate(0deg);
@@ -15,7 +10,6 @@
     transform: rotate(359deg);
   }
 }
-
 @keyframes spinAround {
   from {
     -webkit-transform: rotate(0deg);
@@ -27,91 +21,92 @@
   }
 }
 
-#stocktrade html,
-#stocktrade body,
-#stocktrade p,
-#stocktrade ol,
-#stocktrade ul,
-#stocktrade li,
-#stocktrade dl,
-#stocktrade dt,
-#stocktrade dd,
-#stocktrade blockquote,
-#stocktrade figure,
-#stocktrade fieldset,
-#stocktrade legend,
-#stocktrade textarea,
-#stocktrade pre,
-#stocktrade iframe,
-#stocktrade hr,
-#stocktrade h1,
-#stocktrade h2,
-#stocktrade h3,
-#stocktrade h4,
-#stocktrade h5,
-#stocktrade h6 {
+/*! minireset.css v0.0.2 | MIT License | github.com/jgthms/minireset.css */
+html,
+body,
+p,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+blockquote,
+figure,
+fieldset,
+legend,
+textarea,
+pre,
+iframe,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0;
   padding: 0;
 }
 
-#stocktrade h1,
-#stocktrade h2,
-#stocktrade h3,
-#stocktrade h4,
-#stocktrade h5,
-#stocktrade h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-size: 100%;
   font-weight: normal;
 }
 
-#stocktrade ul {
+ul {
   list-style: none;
 }
 
-#stocktrade button,
-#stocktrade input,
-#stocktrade select,
-#stocktrade textarea {
+button,
+input,
+select,
+textarea {
   margin: 0;
 }
 
-#stocktrade html {
+html {
   box-sizing: border-box;
 }
 
-#stocktrade * {
+* {
   box-sizing: inherit;
 }
 
-#stocktrade *:before, #stocktrade *:after {
+*:before, *:after {
   box-sizing: inherit;
 }
 
-#stocktrade img,
-#stocktrade embed,
-#stocktrade object,
-#stocktrade audio,
-#stocktrade video {
+img,
+embed,
+object,
+audio,
+video {
   height: auto;
   max-width: 100%;
 }
 
-#stocktrade iframe {
+iframe {
   border: 0;
 }
 
-#stocktrade table {
+table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-#stocktrade td,
-#stocktrade th {
+td,
+th {
   padding: 0;
   text-align: left;
 }
 
-#stocktrade html {
+html {
   background-color: white;
   font-size: 14px;
   -moz-osx-font-smoothing: grayscale;
@@ -122,39 +117,39 @@
   text-rendering: optimizeLegibility;
 }
 
-#stocktrade article,
-#stocktrade aside,
-#stocktrade figure,
-#stocktrade footer,
-#stocktrade header,
-#stocktrade hgroup,
-#stocktrade section {
+article,
+aside,
+figure,
+footer,
+header,
+hgroup,
+section {
   display: block;
 }
 
-#stocktrade body,
-#stocktrade button,
-#stocktrade input,
-#stocktrade select,
-#stocktrade textarea {
+body,
+button,
+input,
+select,
+textarea {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 }
 
-#stocktrade code,
-#stocktrade pre {
+code,
+pre {
   -moz-osx-font-smoothing: auto;
   -webkit-font-smoothing: auto;
   font-family: "Inconsolata", "Consolas", "Monaco", monospace;
 }
 
-#stocktrade body {
+body {
   color: #4a4a4a;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
 }
 
-#stocktrade a {
+a {
   color: #00d1b2;
   cursor: pointer;
   text-decoration: none;
@@ -162,11 +157,11 @@
   transition: none 86ms ease-out;
 }
 
-#stocktrade a:hover {
+a:hover {
   color: #363636;
 }
 
-#stocktrade code {
+code {
   background-color: whitesmoke;
   color: #ff3860;
   font-size: 0.8em;
@@ -174,7 +169,7 @@
   padding: 0.25em 0.5em 0.25em;
 }
 
-#stocktrade hr {
+hr {
   background-color: #dbdbdb;
   border: none;
   display: block;
@@ -182,30 +177,30 @@
   margin: 1.5rem 0;
 }
 
-#stocktrade img {
+img {
   max-width: 100%;
 }
 
-#stocktrade input[type="checkbox"],
-#stocktrade input[type="radio"] {
+input[type="checkbox"],
+input[type="radio"] {
   vertical-align: baseline;
 }
 
-#stocktrade small {
+small {
   font-size: 0.8em;
 }
 
-#stocktrade span {
+span {
   font-style: inherit;
   font-weight: inherit;
 }
 
-#stocktrade strong {
+strong {
   color: #363636;
   font-weight: 700;
 }
 
-#stocktrade pre {
+pre {
   background-color: whitesmoke;
   color: #4a4a4a;
   font-size: 0.8em;
@@ -213,7 +208,7 @@
   word-wrap: normal;
 }
 
-#stocktrade pre code {
+pre code {
   background: none;
   color: inherit;
   display: block;
@@ -222,285 +217,285 @@
   padding: 1.25rem 1.5rem;
 }
 
-#stocktrade table {
+table {
   width: 100%;
 }
 
-#stocktrade table td,
-#stocktrade table th {
+table td,
+table th {
   text-align: left;
   vertical-align: top;
 }
 
-#stocktrade table th {
+table th {
   color: #363636;
 }
 
-#stocktrade .is-block {
+.is-block {
   display: block;
 }
 
 @media screen and (max-width: 768px) {
-  #stocktrade .is-block-mobile {
+  .is-block-mobile {
     display: block !important;
   }
 }
 
 @media screen and (min-width: 769px) {
-  #stocktrade .is-block-tablet {
+  .is-block-tablet {
     display: block !important;
   }
 }
 
 @media screen and (min-width: 769px) and (max-width: 999px) {
-  #stocktrade .is-block-tablet-only {
+  .is-block-tablet-only {
     display: block !important;
   }
 }
 
 @media screen and (max-width: 999px) {
-  #stocktrade .is-block-touch {
+  .is-block-touch {
     display: block !important;
   }
 }
 
 @media screen and (min-width: 1000px) {
-  #stocktrade .is-block-desktop {
+  .is-block-desktop {
     display: block !important;
   }
 }
 
 @media screen and (min-width: 1000px) and (max-width: 1191px) {
-  #stocktrade .is-block-desktop-only {
+  .is-block-desktop-only {
     display: block !important;
   }
 }
 
 @media screen and (min-width: 1192px) {
-  #stocktrade .is-block-widescreen {
+  .is-block-widescreen {
     display: block !important;
   }
 }
 
-#stocktrade .is-flex {
+.is-flex {
   display: -webkit-box;
   display: flex;
 }
 
 @media screen and (max-width: 768px) {
-  #stocktrade .is-flex-mobile {
+  .is-flex-mobile {
     display: -webkit-box !important;
     display: flex !important;
   }
 }
 
 @media screen and (min-width: 769px) {
-  #stocktrade .is-flex-tablet {
+  .is-flex-tablet {
     display: -webkit-box !important;
     display: flex !important;
   }
 }
 
 @media screen and (min-width: 769px) and (max-width: 999px) {
-  #stocktrade .is-flex-tablet-only {
+  .is-flex-tablet-only {
     display: -webkit-box !important;
     display: flex !important;
   }
 }
 
 @media screen and (max-width: 999px) {
-  #stocktrade .is-flex-touch {
+  .is-flex-touch {
     display: -webkit-box !important;
     display: flex !important;
   }
 }
 
 @media screen and (min-width: 1000px) {
-  #stocktrade .is-flex-desktop {
+  .is-flex-desktop {
     display: -webkit-box !important;
     display: flex !important;
   }
 }
 
 @media screen and (min-width: 1000px) and (max-width: 1191px) {
-  #stocktrade .is-flex-desktop-only {
+  .is-flex-desktop-only {
     display: -webkit-box !important;
     display: flex !important;
   }
 }
 
 @media screen and (min-width: 1192px) {
-  #stocktrade .is-flex-widescreen {
+  .is-flex-widescreen {
     display: -webkit-box !important;
     display: flex !important;
   }
 }
 
-#stocktrade .is-inline {
+.is-inline {
   display: inline;
 }
 
 @media screen and (max-width: 768px) {
-  #stocktrade .is-inline-mobile {
+  .is-inline-mobile {
     display: inline !important;
   }
 }
 
 @media screen and (min-width: 769px) {
-  #stocktrade .is-inline-tablet {
+  .is-inline-tablet {
     display: inline !important;
   }
 }
 
 @media screen and (min-width: 769px) and (max-width: 999px) {
-  #stocktrade .is-inline-tablet-only {
+  .is-inline-tablet-only {
     display: inline !important;
   }
 }
 
 @media screen and (max-width: 999px) {
-  #stocktrade .is-inline-touch {
+  .is-inline-touch {
     display: inline !important;
   }
 }
 
 @media screen and (min-width: 1000px) {
-  #stocktrade .is-inline-desktop {
+  .is-inline-desktop {
     display: inline !important;
   }
 }
 
 @media screen and (min-width: 1000px) and (max-width: 1191px) {
-  #stocktrade .is-inline-desktop-only {
+  .is-inline-desktop-only {
     display: inline !important;
   }
 }
 
 @media screen and (min-width: 1192px) {
-  #stocktrade .is-inline-widescreen {
+  .is-inline-widescreen {
     display: inline !important;
   }
 }
 
-#stocktrade .is-inline-block {
+.is-inline-block {
   display: inline-block;
 }
 
 @media screen and (max-width: 768px) {
-  #stocktrade .is-inline-block-mobile {
+  .is-inline-block-mobile {
     display: inline-block !important;
   }
 }
 
 @media screen and (min-width: 769px) {
-  #stocktrade .is-inline-block-tablet {
+  .is-inline-block-tablet {
     display: inline-block !important;
   }
 }
 
 @media screen and (min-width: 769px) and (max-width: 999px) {
-  #stocktrade .is-inline-block-tablet-only {
+  .is-inline-block-tablet-only {
     display: inline-block !important;
   }
 }
 
 @media screen and (max-width: 999px) {
-  #stocktrade .is-inline-block-touch {
+  .is-inline-block-touch {
     display: inline-block !important;
   }
 }
 
 @media screen and (min-width: 1000px) {
-  #stocktrade .is-inline-block-desktop {
+  .is-inline-block-desktop {
     display: inline-block !important;
   }
 }
 
 @media screen and (min-width: 1000px) and (max-width: 1191px) {
-  #stocktrade .is-inline-block-desktop-only {
+  .is-inline-block-desktop-only {
     display: inline-block !important;
   }
 }
 
 @media screen and (min-width: 1192px) {
-  #stocktrade .is-inline-block-widescreen {
+  .is-inline-block-widescreen {
     display: inline-block !important;
   }
 }
 
-#stocktrade .is-inline-flex {
+.is-inline-flex {
   display: -webkit-inline-box;
   display: inline-flex;
 }
 
 @media screen and (max-width: 768px) {
-  #stocktrade .is-inline-flex-mobile {
+  .is-inline-flex-mobile {
     display: -webkit-inline-box !important;
     display: inline-flex !important;
   }
 }
 
 @media screen and (min-width: 769px) {
-  #stocktrade .is-inline-flex-tablet {
+  .is-inline-flex-tablet {
     display: -webkit-inline-box !important;
     display: inline-flex !important;
   }
 }
 
 @media screen and (min-width: 769px) and (max-width: 999px) {
-  #stocktrade .is-inline-flex-tablet-only {
+  .is-inline-flex-tablet-only {
     display: -webkit-inline-box !important;
     display: inline-flex !important;
   }
 }
 
 @media screen and (max-width: 999px) {
-  #stocktrade .is-inline-flex-touch {
+  .is-inline-flex-touch {
     display: -webkit-inline-box !important;
     display: inline-flex !important;
   }
 }
 
 @media screen and (min-width: 1000px) {
-  #stocktrade .is-inline-flex-desktop {
+  .is-inline-flex-desktop {
     display: -webkit-inline-box !important;
     display: inline-flex !important;
   }
 }
 
 @media screen and (min-width: 1000px) and (max-width: 1191px) {
-  #stocktrade .is-inline-flex-desktop-only {
+  .is-inline-flex-desktop-only {
     display: -webkit-inline-box !important;
     display: inline-flex !important;
   }
 }
 
 @media screen and (min-width: 1192px) {
-  #stocktrade .is-inline-flex-widescreen {
+  .is-inline-flex-widescreen {
     display: -webkit-inline-box !important;
     display: inline-flex !important;
   }
 }
 
-#stocktrade .is-clearfix:after {
+.is-clearfix:after {
   clear: both;
   content: " ";
   display: table;
 }
 
-#stocktrade .is-pulled-left {
+.is-pulled-left {
   float: left;
 }
 
-#stocktrade .is-pulled-right {
+.is-pulled-right {
   float: right;
 }
 
-#stocktrade .is-clipped {
+.is-clipped {
   overflow: hidden !important;
 }
 
-#stocktrade .is-overlay {
+.is-overlay {
   bottom: 0;
   left: 0;
   position: absolute;
@@ -508,77 +503,77 @@
   top: 0;
 }
 
-#stocktrade .has-text-centered {
+.has-text-centered {
   text-align: center;
 }
 
-#stocktrade .has-text-left {
+.has-text-left {
   text-align: left;
 }
 
-#stocktrade .has-text-right {
+.has-text-right {
   text-align: right;
 }
 
-#stocktrade .is-hidden {
+.is-hidden {
   display: none !important;
 }
 
 @media screen and (max-width: 768px) {
-  #stocktrade .is-hidden-mobile {
+  .is-hidden-mobile {
     display: none !important;
   }
 }
 
 @media screen and (min-width: 769px) {
-  #stocktrade .is-hidden-tablet {
+  .is-hidden-tablet {
     display: none !important;
   }
 }
 
 @media screen and (min-width: 769px) and (max-width: 999px) {
-  #stocktrade .is-hidden-tablet-only {
+  .is-hidden-tablet-only {
     display: none !important;
   }
 }
 
 @media screen and (max-width: 999px) {
-  #stocktrade .is-hidden-touch {
+  .is-hidden-touch {
     display: none !important;
   }
 }
 
 @media screen and (min-width: 1000px) {
-  #stocktrade .is-hidden-desktop {
+  .is-hidden-desktop {
     display: none !important;
   }
 }
 
 @media screen and (min-width: 1000px) and (max-width: 1191px) {
-  #stocktrade .is-hidden-desktop-only {
+  .is-hidden-desktop-only {
     display: none !important;
   }
 }
 
 @media screen and (min-width: 1192px) {
-  #stocktrade .is-hidden-widescreen {
+  .is-hidden-widescreen {
     display: none !important;
   }
 }
 
-#stocktrade .is-disabled {
+.is-disabled {
   pointer-events: none;
 }
 
-#stocktrade .is-marginless {
+.is-marginless {
   margin: 0 !important;
 }
 
-#stocktrade .is-paddingless {
+.is-paddingless {
   padding: 0 !important;
 }
 
-#stocktrade .is-unselectable {
+.is-unselectable {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -586,7 +581,7 @@
   user-select: none;
 }
 
-#stocktrade .box {
+.box {
   background-color: white;
   border-radius: 5px;
   box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
@@ -594,19 +589,19 @@
   padding: 1.25rem;
 }
 
-#stocktrade .box:not(:last-child) {
+.box:not(:last-child) {
   margin-bottom: 1.5rem;
 }
 
-#stocktrade a.box:hover, #stocktrade a.box:focus {
+a.box:hover, a.box:focus {
   box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px #00d1b2;
 }
 
-#stocktrade a.box:active {
+a.box:active {
   box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.2), 0 0 0 1px #00d1b2;
 }
 
-#stocktrade .button {
+.button {
   -moz-appearance: none;
   -webkit-appearance: none;
   -webkit-box-align: center;
@@ -642,841 +637,841 @@
   white-space: nowrap;
 }
 
-#stocktrade .button:focus, #stocktrade .button.is-focused, #stocktrade .button:active, #stocktrade .button.is-active {
+.button:focus, .button.is-focused, .button:active, .button.is-active {
   outline: none;
 }
 
-#stocktrade .button[disabled], #stocktrade .button.is-disabled {
+.button[disabled], .button.is-disabled {
   pointer-events: none;
 }
 
-#stocktrade .button strong {
+.button strong {
   color: inherit;
 }
 
-#stocktrade .button .icon:first-child:not(:last-child) {
+.button .icon:first-child:not(:last-child) {
   margin-left: -0.25rem;
   margin-right: 0.5rem;
 }
 
-#stocktrade .button .icon:last-child:not(:first-child) {
+.button .icon:last-child:not(:first-child) {
   margin-left: 0.5rem;
   margin-right: -0.25rem;
 }
 
-#stocktrade .button .icon:first-child:last-child {
+.button .icon:first-child:last-child {
   margin-left: calc(-1px + -0.25rem);
   margin-right: calc(-1px + -0.25rem);
 }
 
-#stocktrade .button .icon.is-small:first-child:not(:last-child) {
+.button .icon.is-small:first-child:not(:last-child) {
   margin-left: 0rem;
 }
 
-#stocktrade .button .icon.is-small:last-child:not(:first-child) {
+.button .icon.is-small:last-child:not(:first-child) {
   margin-right: 0rem;
 }
 
-#stocktrade .button .icon.is-small:first-child:last-child {
+.button .icon.is-small:first-child:last-child {
   margin-left: calc(-1px + 0rem);
   margin-right: calc(-1px + 0rem);
 }
 
-#stocktrade .button .icon.is-medium:first-child:not(:last-child) {
+.button .icon.is-medium:first-child:not(:last-child) {
   margin-left: -0.5rem;
 }
 
-#stocktrade .button .icon.is-medium:last-child:not(:first-child) {
+.button .icon.is-medium:last-child:not(:first-child) {
   margin-right: -0.5rem;
 }
 
-#stocktrade .button .icon.is-medium:first-child:last-child {
+.button .icon.is-medium:first-child:last-child {
   margin-left: calc(-1px + -0.5rem);
   margin-right: calc(-1px + -0.5rem);
 }
 
-#stocktrade .button .icon.is-large:first-child:not(:last-child) {
+.button .icon.is-large:first-child:not(:last-child) {
   margin-left: -1rem;
 }
 
-#stocktrade .button .icon.is-large:last-child:not(:first-child) {
+.button .icon.is-large:last-child:not(:first-child) {
   margin-right: -1rem;
 }
 
-#stocktrade .button .icon.is-large:first-child:last-child {
+.button .icon.is-large:first-child:last-child {
   margin-left: calc(-1px + -1rem);
   margin-right: calc(-1px + -1rem);
 }
 
-#stocktrade .button:hover, #stocktrade .button.is-hovered {
+.button:hover, .button.is-hovered {
   border-color: #b5b5b5;
   color: #363636;
 }
 
-#stocktrade .button:focus, #stocktrade .button.is-focused {
+.button:focus, .button.is-focused {
   border-color: #00d1b2;
   box-shadow: 0 0 0.5em rgba(0, 209, 178, 0.25);
   color: #363636;
 }
 
-#stocktrade .button:active, #stocktrade .button.is-active {
+.button:active, .button.is-active {
   border-color: #4a4a4a;
   box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.2);
   color: #363636;
 }
 
-#stocktrade .button.is-link {
+.button.is-link {
   background-color: transparent;
   border-color: transparent;
   color: #4a4a4a;
   text-decoration: underline;
 }
 
-#stocktrade .button.is-link:hover, #stocktrade .button.is-link.is-hovered, #stocktrade .button.is-link:focus, #stocktrade .button.is-link.is-focused, #stocktrade .button.is-link:active, #stocktrade .button.is-link.is-active {
+.button.is-link:hover, .button.is-link.is-hovered, .button.is-link:focus, .button.is-link.is-focused, .button.is-link:active, .button.is-link.is-active {
   background-color: whitesmoke;
   color: #363636;
 }
 
-#stocktrade .button.is-white {
+.button.is-white {
   background-color: white;
   border-color: transparent;
   color: #0a0a0a;
 }
 
-#stocktrade .button.is-white:hover, #stocktrade .button.is-white.is-hovered {
+.button.is-white:hover, .button.is-white.is-hovered {
   background-color: #f9f9f9;
   border-color: transparent;
   color: #0a0a0a;
 }
 
-#stocktrade .button.is-white:focus, #stocktrade .button.is-white.is-focused {
+.button.is-white:focus, .button.is-white.is-focused {
   border-color: transparent;
   box-shadow: 0 0 0.5em rgba(255, 255, 255, 0.25);
   color: #0a0a0a;
 }
 
-#stocktrade .button.is-white:active, #stocktrade .button.is-white.is-active {
+.button.is-white:active, .button.is-white.is-active {
   background-color: #f2f2f2;
   border-color: transparent;
   box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.2);
   color: #0a0a0a;
 }
 
-#stocktrade .button.is-white.is-inverted {
+.button.is-white.is-inverted {
   background-color: #0a0a0a;
   color: white;
 }
 
-#stocktrade .button.is-white.is-inverted:hover {
+.button.is-white.is-inverted:hover {
   background-color: black;
 }
 
-#stocktrade .button.is-white.is-loading:after {
+.button.is-white.is-loading:after {
   border-color: transparent transparent #0a0a0a #0a0a0a !important;
 }
 
-#stocktrade .button.is-white.is-outlined {
+.button.is-white.is-outlined {
   background-color: transparent;
   border-color: white;
   color: white;
 }
 
-#stocktrade .button.is-white.is-outlined:hover, #stocktrade .button.is-white.is-outlined:focus {
+.button.is-white.is-outlined:hover, .button.is-white.is-outlined:focus {
   background-color: white;
   border-color: white;
   color: #0a0a0a;
 }
 
-#stocktrade .button.is-white.is-inverted.is-outlined {
+.button.is-white.is-inverted.is-outlined {
   background-color: transparent;
   border-color: #0a0a0a;
   color: #0a0a0a;
 }
 
-#stocktrade .button.is-white.is-inverted.is-outlined:hover, #stocktrade .button.is-white.is-inverted.is-outlined:focus {
+.button.is-white.is-inverted.is-outlined:hover, .button.is-white.is-inverted.is-outlined:focus {
   background-color: #0a0a0a;
   color: white;
 }
 
-#stocktrade .button.is-black {
+.button.is-black {
   background-color: #0a0a0a;
   border-color: transparent;
   color: white;
 }
 
-#stocktrade .button.is-black:hover, #stocktrade .button.is-black.is-hovered {
+.button.is-black:hover, .button.is-black.is-hovered {
   background-color: #040404;
   border-color: transparent;
   color: white;
 }
 
-#stocktrade .button.is-black:focus, #stocktrade .button.is-black.is-focused {
+.button.is-black:focus, .button.is-black.is-focused {
   border-color: transparent;
   box-shadow: 0 0 0.5em rgba(10, 10, 10, 0.25);
   color: white;
 }
 
-#stocktrade .button.is-black:active, #stocktrade .button.is-black.is-active {
+.button.is-black:active, .button.is-black.is-active {
   background-color: black;
   border-color: transparent;
   box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.2);
   color: white;
 }
 
-#stocktrade .button.is-black.is-inverted {
+.button.is-black.is-inverted {
   background-color: white;
   color: #0a0a0a;
 }
 
-#stocktrade .button.is-black.is-inverted:hover {
+.button.is-black.is-inverted:hover {
   background-color: #f2f2f2;
 }
 
-#stocktrade .button.is-black.is-loading:after {
+.button.is-black.is-loading:after {
   border-color: transparent transparent white white !important;
 }
 
-#stocktrade .button.is-black.is-outlined {
+.button.is-black.is-outlined {
   background-color: transparent;
   border-color: #0a0a0a;
   color: #0a0a0a;
 }
 
-#stocktrade .button.is-black.is-outlined:hover, #stocktrade .button.is-black.is-outlined:focus {
+.button.is-black.is-outlined:hover, .button.is-black.is-outlined:focus {
   background-color: #0a0a0a;
   border-color: #0a0a0a;
   color: white;
 }
 
-#stocktrade .button.is-black.is-inverted.is-outlined {
+.button.is-black.is-inverted.is-outlined {
   background-color: transparent;
   border-color: white;
   color: white;
 }
 
-#stocktrade .button.is-black.is-inverted.is-outlined:hover, #stocktrade .button.is-black.is-inverted.is-outlined:focus {
+.button.is-black.is-inverted.is-outlined:hover, .button.is-black.is-inverted.is-outlined:focus {
   background-color: white;
   color: #0a0a0a;
 }
 
-#stocktrade .button.is-light {
+.button.is-light {
   background-color: whitesmoke;
   border-color: transparent;
   color: #363636;
 }
 
-#stocktrade .button.is-light:hover, #stocktrade .button.is-light.is-hovered {
+.button.is-light:hover, .button.is-light.is-hovered {
   background-color: #eeeeee;
   border-color: transparent;
   color: #363636;
 }
 
-#stocktrade .button.is-light:focus, #stocktrade .button.is-light.is-focused {
+.button.is-light:focus, .button.is-light.is-focused {
   border-color: transparent;
   box-shadow: 0 0 0.5em rgba(245, 245, 245, 0.25);
   color: #363636;
 }
 
-#stocktrade .button.is-light:active, #stocktrade .button.is-light.is-active {
+.button.is-light:active, .button.is-light.is-active {
   background-color: #e8e8e8;
   border-color: transparent;
   box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.2);
   color: #363636;
 }
 
-#stocktrade .button.is-light.is-inverted {
+.button.is-light.is-inverted {
   background-color: #363636;
   color: whitesmoke;
 }
 
-#stocktrade .button.is-light.is-inverted:hover {
+.button.is-light.is-inverted:hover {
   background-color: #292929;
 }
 
-#stocktrade .button.is-light.is-loading:after {
+.button.is-light.is-loading:after {
   border-color: transparent transparent #363636 #363636 !important;
 }
 
-#stocktrade .button.is-light.is-outlined {
+.button.is-light.is-outlined {
   background-color: transparent;
   border-color: whitesmoke;
   color: whitesmoke;
 }
 
-#stocktrade .button.is-light.is-outlined:hover, #stocktrade .button.is-light.is-outlined:focus {
+.button.is-light.is-outlined:hover, .button.is-light.is-outlined:focus {
   background-color: whitesmoke;
   border-color: whitesmoke;
   color: #363636;
 }
 
-#stocktrade .button.is-light.is-inverted.is-outlined {
+.button.is-light.is-inverted.is-outlined {
   background-color: transparent;
   border-color: #363636;
   color: #363636;
 }
 
-#stocktrade .button.is-light.is-inverted.is-outlined:hover, #stocktrade .button.is-light.is-inverted.is-outlined:focus {
+.button.is-light.is-inverted.is-outlined:hover, .button.is-light.is-inverted.is-outlined:focus {
   background-color: #363636;
   color: whitesmoke;
 }
 
-#stocktrade .button.is-dark {
+.button.is-dark {
   background-color: #363636;
   border-color: transparent;
   color: whitesmoke;
 }
 
-#stocktrade .button.is-dark:hover, #stocktrade .button.is-dark.is-hovered {
+.button.is-dark:hover, .button.is-dark.is-hovered {
   background-color: #2f2f2f;
   border-color: transparent;
   color: whitesmoke;
 }
 
-#stocktrade .button.is-dark:focus, #stocktrade .button.is-dark.is-focused {
+.button.is-dark:focus, .button.is-dark.is-focused {
   border-color: transparent;
   box-shadow: 0 0 0.5em rgba(54, 54, 54, 0.25);
   color: whitesmoke;
 }
 
-#stocktrade .button.is-dark:active, #stocktrade .button.is-dark.is-active {
+.button.is-dark:active, .button.is-dark.is-active {
   background-color: #292929;
   border-color: transparent;
   box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.2);
   color: whitesmoke;
 }
 
-#stocktrade .button.is-dark.is-inverted {
+.button.is-dark.is-inverted {
   background-color: whitesmoke;
   color: #363636;
 }
 
-#stocktrade .button.is-dark.is-inverted:hover {
+.button.is-dark.is-inverted:hover {
   background-color: #e8e8e8;
 }
 
-#stocktrade .button.is-dark.is-loading:after {
+.button.is-dark.is-loading:after {
   border-color: transparent transparent whitesmoke whitesmoke !important;
 }
 
-#stocktrade .button.is-dark.is-outlined {
+.button.is-dark.is-outlined {
   background-color: transparent;
   border-color: #363636;
   color: #363636;
 }
 
-#stocktrade .button.is-dark.is-outlined:hover, #stocktrade .button.is-dark.is-outlined:focus {
+.button.is-dark.is-outlined:hover, .button.is-dark.is-outlined:focus {
   background-color: #363636;
   border-color: #363636;
   color: whitesmoke;
 }
 
-#stocktrade .button.is-dark.is-inverted.is-outlined {
+.button.is-dark.is-inverted.is-outlined {
   background-color: transparent;
   border-color: whitesmoke;
   color: whitesmoke;
 }
 
-#stocktrade .button.is-dark.is-inverted.is-outlined:hover, #stocktrade .button.is-dark.is-inverted.is-outlined:focus {
+.button.is-dark.is-inverted.is-outlined:hover, .button.is-dark.is-inverted.is-outlined:focus {
   background-color: whitesmoke;
   color: #363636;
 }
 
-#stocktrade .button.is-primary {
+.button.is-primary {
   background-color: #00d1b2;
   border-color: transparent;
   color: #fff;
 }
 
-#stocktrade .button.is-primary:hover, #stocktrade .button.is-primary.is-hovered {
+.button.is-primary:hover, .button.is-primary.is-hovered {
   background-color: #00c4a7;
   border-color: transparent;
   color: #fff;
 }
 
-#stocktrade .button.is-primary:focus, #stocktrade .button.is-primary.is-focused {
+.button.is-primary:focus, .button.is-primary.is-focused {
   border-color: transparent;
   box-shadow: 0 0 0.5em rgba(0, 209, 178, 0.25);
   color: #fff;
 }
 
-#stocktrade .button.is-primary:active, #stocktrade .button.is-primary.is-active {
+.button.is-primary:active, .button.is-primary.is-active {
   background-color: #00b89c;
   border-color: transparent;
   box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.2);
   color: #fff;
 }
 
-#stocktrade .button.is-primary.is-inverted {
+.button.is-primary.is-inverted {
   background-color: #fff;
   color: #00d1b2;
 }
 
-#stocktrade .button.is-primary.is-inverted:hover {
+.button.is-primary.is-inverted:hover {
   background-color: #f2f2f2;
 }
 
-#stocktrade .button.is-primary.is-loading:after {
+.button.is-primary.is-loading:after {
   border-color: transparent transparent #fff #fff !important;
 }
 
-#stocktrade .button.is-primary.is-outlined {
+.button.is-primary.is-outlined {
   background-color: transparent;
   border-color: #00d1b2;
   color: #00d1b2;
 }
 
-#stocktrade .button.is-primary.is-outlined:hover, #stocktrade .button.is-primary.is-outlined:focus {
+.button.is-primary.is-outlined:hover, .button.is-primary.is-outlined:focus {
   background-color: #00d1b2;
   border-color: #00d1b2;
   color: #fff;
 }
 
-#stocktrade .button.is-primary.is-inverted.is-outlined {
+.button.is-primary.is-inverted.is-outlined {
   background-color: transparent;
   border-color: #fff;
   color: #fff;
 }
 
-#stocktrade .button.is-primary.is-inverted.is-outlined:hover, #stocktrade .button.is-primary.is-inverted.is-outlined:focus {
+.button.is-primary.is-inverted.is-outlined:hover, .button.is-primary.is-inverted.is-outlined:focus {
   background-color: #fff;
   color: #00d1b2;
 }
 
-#stocktrade .button.is-info {
+.button.is-info {
   background-color: #3273dc;
   border-color: transparent;
   color: #fff;
 }
 
-#stocktrade .button.is-info:hover, #stocktrade .button.is-info.is-hovered {
+.button.is-info:hover, .button.is-info.is-hovered {
   background-color: #276cda;
   border-color: transparent;
   color: #fff;
 }
 
-#stocktrade .button.is-info:focus, #stocktrade .button.is-info.is-focused {
+.button.is-info:focus, .button.is-info.is-focused {
   border-color: transparent;
   box-shadow: 0 0 0.5em rgba(50, 115, 220, 0.25);
   color: #fff;
 }
 
-#stocktrade .button.is-info:active, #stocktrade .button.is-info.is-active {
+.button.is-info:active, .button.is-info.is-active {
   background-color: #2366d1;
   border-color: transparent;
   box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.2);
   color: #fff;
 }
 
-#stocktrade .button.is-info.is-inverted {
+.button.is-info.is-inverted {
   background-color: #fff;
   color: #3273dc;
 }
 
-#stocktrade .button.is-info.is-inverted:hover {
+.button.is-info.is-inverted:hover {
   background-color: #f2f2f2;
 }
 
-#stocktrade .button.is-info.is-loading:after {
+.button.is-info.is-loading:after {
   border-color: transparent transparent #fff #fff !important;
 }
 
-#stocktrade .button.is-info.is-outlined {
+.button.is-info.is-outlined {
   background-color: transparent;
   border-color: #3273dc;
   color: #3273dc;
 }
 
-#stocktrade .button.is-info.is-outlined:hover, #stocktrade .button.is-info.is-outlined:focus {
+.button.is-info.is-outlined:hover, .button.is-info.is-outlined:focus {
   background-color: #3273dc;
   border-color: #3273dc;
   color: #fff;
 }
 
-#stocktrade .button.is-info.is-inverted.is-outlined {
+.button.is-info.is-inverted.is-outlined {
   background-color: transparent;
   border-color: #fff;
   color: #fff;
 }
 
-#stocktrade .button.is-info.is-inverted.is-outlined:hover, #stocktrade .button.is-info.is-inverted.is-outlined:focus {
+.button.is-info.is-inverted.is-outlined:hover, .button.is-info.is-inverted.is-outlined:focus {
   background-color: #fff;
   color: #3273dc;
 }
 
-#stocktrade .button.is-success {
+.button.is-success {
   background-color: #23d160;
   border-color: transparent;
   color: #fff;
 }
 
-#stocktrade .button.is-success:hover, #stocktrade .button.is-success.is-hovered {
+.button.is-success:hover, .button.is-success.is-hovered {
   background-color: #22c65b;
   border-color: transparent;
   color: #fff;
 }
 
-#stocktrade .button.is-success:focus, #stocktrade .button.is-success.is-focused {
+.button.is-success:focus, .button.is-success.is-focused {
   border-color: transparent;
   box-shadow: 0 0 0.5em rgba(35, 209, 96, 0.25);
   color: #fff;
 }
 
-#stocktrade .button.is-success:active, #stocktrade .button.is-success.is-active {
+.button.is-success:active, .button.is-success.is-active {
   background-color: #20bc56;
   border-color: transparent;
   box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.2);
   color: #fff;
 }
 
-#stocktrade .button.is-success.is-inverted {
+.button.is-success.is-inverted {
   background-color: #fff;
   color: #23d160;
 }
 
-#stocktrade .button.is-success.is-inverted:hover {
+.button.is-success.is-inverted:hover {
   background-color: #f2f2f2;
 }
 
-#stocktrade .button.is-success.is-loading:after {
+.button.is-success.is-loading:after {
   border-color: transparent transparent #fff #fff !important;
 }
 
-#stocktrade .button.is-success.is-outlined {
+.button.is-success.is-outlined {
   background-color: transparent;
   border-color: #23d160;
   color: #23d160;
 }
 
-#stocktrade .button.is-success.is-outlined:hover, #stocktrade .button.is-success.is-outlined:focus {
+.button.is-success.is-outlined:hover, .button.is-success.is-outlined:focus {
   background-color: #23d160;
   border-color: #23d160;
   color: #fff;
 }
 
-#stocktrade .button.is-success.is-inverted.is-outlined {
+.button.is-success.is-inverted.is-outlined {
   background-color: transparent;
   border-color: #fff;
   color: #fff;
 }
 
-#stocktrade .button.is-success.is-inverted.is-outlined:hover, #stocktrade .button.is-success.is-inverted.is-outlined:focus {
+.button.is-success.is-inverted.is-outlined:hover, .button.is-success.is-inverted.is-outlined:focus {
   background-color: #fff;
   color: #23d160;
 }
 
-#stocktrade .button.is-warning {
+.button.is-warning {
   background-color: #ffdd57;
   border-color: transparent;
   color: rgba(0, 0, 0, 0.7);
 }
 
-#stocktrade .button.is-warning:hover, #stocktrade .button.is-warning.is-hovered {
+.button.is-warning:hover, .button.is-warning.is-hovered {
   background-color: #ffdb4a;
   border-color: transparent;
   color: rgba(0, 0, 0, 0.7);
 }
 
-#stocktrade .button.is-warning:focus, #stocktrade .button.is-warning.is-focused {
+.button.is-warning:focus, .button.is-warning.is-focused {
   border-color: transparent;
   box-shadow: 0 0 0.5em rgba(255, 221, 87, 0.25);
   color: rgba(0, 0, 0, 0.7);
 }
 
-#stocktrade .button.is-warning:active, #stocktrade .button.is-warning.is-active {
+.button.is-warning:active, .button.is-warning.is-active {
   background-color: #ffd83d;
   border-color: transparent;
   box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.2);
   color: rgba(0, 0, 0, 0.7);
 }
 
-#stocktrade .button.is-warning.is-inverted {
+.button.is-warning.is-inverted {
   background-color: rgba(0, 0, 0, 0.7);
   color: #ffdd57;
 }
 
-#stocktrade .button.is-warning.is-inverted:hover {
+.button.is-warning.is-inverted:hover {
   background-color: rgba(0, 0, 0, 0.7);
 }
 
-#stocktrade .button.is-warning.is-loading:after {
+.button.is-warning.is-loading:after {
   border-color: transparent transparent rgba(0, 0, 0, 0.7) rgba(0, 0, 0, 0.7) !important;
 }
 
-#stocktrade .button.is-warning.is-outlined {
+.button.is-warning.is-outlined {
   background-color: transparent;
   border-color: #ffdd57;
   color: #ffdd57;
 }
 
-#stocktrade .button.is-warning.is-outlined:hover, #stocktrade .button.is-warning.is-outlined:focus {
+.button.is-warning.is-outlined:hover, .button.is-warning.is-outlined:focus {
   background-color: #ffdd57;
   border-color: #ffdd57;
   color: rgba(0, 0, 0, 0.7);
 }
 
-#stocktrade .button.is-warning.is-inverted.is-outlined {
+.button.is-warning.is-inverted.is-outlined {
   background-color: transparent;
   border-color: rgba(0, 0, 0, 0.7);
   color: rgba(0, 0, 0, 0.7);
 }
 
-#stocktrade .button.is-warning.is-inverted.is-outlined:hover, #stocktrade .button.is-warning.is-inverted.is-outlined:focus {
+.button.is-warning.is-inverted.is-outlined:hover, .button.is-warning.is-inverted.is-outlined:focus {
   background-color: rgba(0, 0, 0, 0.7);
   color: #ffdd57;
 }
 
-#stocktrade .button.is-danger {
+.button.is-danger {
   background-color: #ff3860;
   border-color: transparent;
   color: #fff;
 }
 
-#stocktrade .button.is-danger:hover, #stocktrade .button.is-danger.is-hovered {
+.button.is-danger:hover, .button.is-danger.is-hovered {
   background-color: #ff2b56;
   border-color: transparent;
   color: #fff;
 }
 
-#stocktrade .button.is-danger:focus, #stocktrade .button.is-danger.is-focused {
+.button.is-danger:focus, .button.is-danger.is-focused {
   border-color: transparent;
   box-shadow: 0 0 0.5em rgba(255, 56, 96, 0.25);
   color: #fff;
 }
 
-#stocktrade .button.is-danger:active, #stocktrade .button.is-danger.is-active {
+.button.is-danger:active, .button.is-danger.is-active {
   background-color: #ff1f4b;
   border-color: transparent;
   box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.2);
   color: #fff;
 }
 
-#stocktrade .button.is-danger.is-inverted {
+.button.is-danger.is-inverted {
   background-color: #fff;
   color: #ff3860;
 }
 
-#stocktrade .button.is-danger.is-inverted:hover {
+.button.is-danger.is-inverted:hover {
   background-color: #f2f2f2;
 }
 
-#stocktrade .button.is-danger.is-loading:after {
+.button.is-danger.is-loading:after {
   border-color: transparent transparent #fff #fff !important;
 }
 
-#stocktrade .button.is-danger.is-outlined {
+.button.is-danger.is-outlined {
   background-color: transparent;
   border-color: #ff3860;
   color: #ff3860;
 }
 
-#stocktrade .button.is-danger.is-outlined:hover, #stocktrade .button.is-danger.is-outlined:focus {
+.button.is-danger.is-outlined:hover, .button.is-danger.is-outlined:focus {
   background-color: #ff3860;
   border-color: #ff3860;
   color: #fff;
 }
 
-#stocktrade .button.is-danger.is-inverted.is-outlined {
+.button.is-danger.is-inverted.is-outlined {
   background-color: transparent;
   border-color: #fff;
   color: #fff;
 }
 
-#stocktrade .button.is-danger.is-inverted.is-outlined:hover, #stocktrade .button.is-danger.is-inverted.is-outlined:focus {
+.button.is-danger.is-inverted.is-outlined:hover, .button.is-danger.is-inverted.is-outlined:focus {
   background-color: #fff;
   color: #ff3860;
 }
 
-#stocktrade .button.is-small {
+.button.is-small {
   border-radius: 2px;
   font-size: 0.75rem;
 }
 
-#stocktrade .button.is-small .icon:first-child:not(:last-child) {
+.button.is-small .icon:first-child:not(:last-child) {
   margin-left: -0.375rem;
   margin-right: 0.375rem;
 }
 
-#stocktrade .button.is-small .icon:last-child:not(:first-child) {
+.button.is-small .icon:last-child:not(:first-child) {
   margin-left: 0.375rem;
   margin-right: -0.375rem;
 }
 
-#stocktrade .button.is-small .icon:first-child:last-child {
+.button.is-small .icon:first-child:last-child {
   margin-left: calc(-1px + -0.375rem);
   margin-right: calc(-1px + -0.375rem);
 }
 
-#stocktrade .button.is-small .icon.is-small:first-child:not(:last-child) {
+.button.is-small .icon.is-small:first-child:not(:last-child) {
   margin-left: -0.125rem;
 }
 
-#stocktrade .button.is-small .icon.is-small:last-child:not(:first-child) {
+.button.is-small .icon.is-small:last-child:not(:first-child) {
   margin-right: -0.125rem;
 }
 
-#stocktrade .button.is-small .icon.is-small:first-child:last-child {
+.button.is-small .icon.is-small:first-child:last-child {
   margin-left: calc(-1px + -0.125rem);
   margin-right: calc(-1px + -0.125rem);
 }
 
-#stocktrade .button.is-small .icon.is-medium:first-child:not(:last-child) {
+.button.is-small .icon.is-medium:first-child:not(:last-child) {
   margin-left: -0.625rem;
 }
 
-#stocktrade .button.is-small .icon.is-medium:last-child:not(:first-child) {
+.button.is-small .icon.is-medium:last-child:not(:first-child) {
   margin-right: -0.625rem;
 }
 
-#stocktrade .button.is-small .icon.is-medium:first-child:last-child {
+.button.is-small .icon.is-medium:first-child:last-child {
   margin-left: calc(-1px + -0.625rem);
   margin-right: calc(-1px + -0.625rem);
 }
 
-#stocktrade .button.is-small .icon.is-large:first-child:not(:last-child) {
+.button.is-small .icon.is-large:first-child:not(:last-child) {
   margin-left: -1.125rem;
 }
 
-#stocktrade .button.is-small .icon.is-large:last-child:not(:first-child) {
+.button.is-small .icon.is-large:last-child:not(:first-child) {
   margin-right: -1.125rem;
 }
 
-#stocktrade .button.is-small .icon.is-large:first-child:last-child {
+.button.is-small .icon.is-large:first-child:last-child {
   margin-left: calc(-1px + -1.125rem);
   margin-right: calc(-1px + -1.125rem);
 }
 
-#stocktrade .button.is-medium {
+.button.is-medium {
   font-size: 1.25rem;
 }
 
-#stocktrade .button.is-medium .icon:first-child:not(:last-child) {
+.button.is-medium .icon:first-child:not(:last-child) {
   margin-left: -0.125rem;
   margin-right: 0.625rem;
 }
 
-#stocktrade .button.is-medium .icon:last-child:not(:first-child) {
+.button.is-medium .icon:last-child:not(:first-child) {
   margin-left: 0.625rem;
   margin-right: -0.125rem;
 }
 
-#stocktrade .button.is-medium .icon:first-child:last-child {
+.button.is-medium .icon:first-child:last-child {
   margin-left: calc(-1px + -0.125rem);
   margin-right: calc(-1px + -0.125rem);
 }
 
-#stocktrade .button.is-medium .icon.is-small:first-child:not(:last-child) {
+.button.is-medium .icon.is-small:first-child:not(:last-child) {
   margin-left: 0.125rem;
 }
 
-#stocktrade .button.is-medium .icon.is-small:last-child:not(:first-child) {
+.button.is-medium .icon.is-small:last-child:not(:first-child) {
   margin-right: 0.125rem;
 }
 
-#stocktrade .button.is-medium .icon.is-small:first-child:last-child {
+.button.is-medium .icon.is-small:first-child:last-child {
   margin-left: calc(-1px + 0.125rem);
   margin-right: calc(-1px + 0.125rem);
 }
 
-#stocktrade .button.is-medium .icon.is-medium:first-child:not(:last-child) {
+.button.is-medium .icon.is-medium:first-child:not(:last-child) {
   margin-left: -0.375rem;
 }
 
-#stocktrade .button.is-medium .icon.is-medium:last-child:not(:first-child) {
+.button.is-medium .icon.is-medium:last-child:not(:first-child) {
   margin-right: -0.375rem;
 }
 
-#stocktrade .button.is-medium .icon.is-medium:first-child:last-child {
+.button.is-medium .icon.is-medium:first-child:last-child {
   margin-left: calc(-1px + -0.375rem);
   margin-right: calc(-1px + -0.375rem);
 }
 
-#stocktrade .button.is-medium .icon.is-large:first-child:not(:last-child) {
+.button.is-medium .icon.is-large:first-child:not(:last-child) {
   margin-left: -0.875rem;
 }
 
-#stocktrade .button.is-medium .icon.is-large:last-child:not(:first-child) {
+.button.is-medium .icon.is-large:last-child:not(:first-child) {
   margin-right: -0.875rem;
 }
 
-#stocktrade .button.is-medium .icon.is-large:first-child:last-child {
+.button.is-medium .icon.is-large:first-child:last-child {
   margin-left: calc(-1px + -0.875rem);
   margin-right: calc(-1px + -0.875rem);
 }
 
-#stocktrade .button.is-large {
+.button.is-large {
   font-size: 1.5rem;
 }
 
-#stocktrade .button.is-large .icon:first-child:not(:last-child) {
+.button.is-large .icon:first-child:not(:last-child) {
   margin-left: 0rem;
   margin-right: 0.75rem;
 }
 
-#stocktrade .button.is-large .icon:last-child:not(:first-child) {
+.button.is-large .icon:last-child:not(:first-child) {
   margin-left: 0.75rem;
   margin-right: 0rem;
 }
 
-#stocktrade .button.is-large .icon:first-child:last-child {
+.button.is-large .icon:first-child:last-child {
   margin-left: calc(-1px + 0rem);
   margin-right: calc(-1px + 0rem);
 }
 
-#stocktrade .button.is-large .icon.is-small:first-child:not(:last-child) {
+.button.is-large .icon.is-small:first-child:not(:last-child) {
   margin-left: 0.25rem;
 }
 
-#stocktrade .button.is-large .icon.is-small:last-child:not(:first-child) {
+.button.is-large .icon.is-small:last-child:not(:first-child) {
   margin-right: 0.25rem;
 }
 
-#stocktrade .button.is-large .icon.is-small:first-child:last-child {
+.button.is-large .icon.is-small:first-child:last-child {
   margin-left: calc(-1px + 0.25rem);
   margin-right: calc(-1px + 0.25rem);
 }
 
-#stocktrade .button.is-large .icon.is-medium:first-child:not(:last-child) {
+.button.is-large .icon.is-medium:first-child:not(:last-child) {
   margin-left: -0.25rem;
 }
 
-#stocktrade .button.is-large .icon.is-medium:last-child:not(:first-child) {
+.button.is-large .icon.is-medium:last-child:not(:first-child) {
   margin-right: -0.25rem;
 }
 
-#stocktrade .button.is-large .icon.is-medium:first-child:last-child {
+.button.is-large .icon.is-medium:first-child:last-child {
   margin-left: calc(-1px + -0.25rem);
   margin-right: calc(-1px + -0.25rem);
 }
 
-#stocktrade .button.is-large .icon.is-large:first-child:not(:last-child) {
+.button.is-large .icon.is-large:first-child:not(:last-child) {
   margin-left: -0.75rem;
 }
 
-#stocktrade .button.is-large .icon.is-large:last-child:not(:first-child) {
+.button.is-large .icon.is-large:last-child:not(:first-child) {
   margin-right: -0.75rem;
 }
 
-#stocktrade .button.is-large .icon.is-large:first-child:last-child {
+.button.is-large .icon.is-large:first-child:last-child {
   margin-left: calc(-1px + -0.75rem);
   margin-right: calc(-1px + -0.75rem);
 }
 
-#stocktrade .button[disabled], #stocktrade .button.is-disabled {
+.button[disabled], .button.is-disabled {
   opacity: 0.5;
 }
 
-#stocktrade .button.is-fullwidth {
+.button.is-fullwidth {
   display: -webkit-box;
   display: flex;
   width: 100%;
 }
 
-#stocktrade .button.is-loading {
+.button.is-loading {
   color: transparent !important;
   pointer-events: none;
 }
 
-#stocktrade .button.is-loading:after {
+.button.is-loading:after {
   -webkit-animation: spinAround 500ms infinite linear;
   animation: spinAround 500ms infinite linear;
   border: 2px solid #dbdbdb;
@@ -1496,160 +1491,160 @@
   position: absolute !important;
 }
 
-#stocktrade .content {
+.content {
   color: #4a4a4a;
 }
 
-#stocktrade .content:not(:last-child) {
+.content:not(:last-child) {
   margin-bottom: 1.5rem;
 }
 
-#stocktrade .content li + li {
+.content li + li {
   margin-top: 0.25em;
 }
 
-#stocktrade .content p:not(:last-child),
-#stocktrade .content ol:not(:last-child),
-#stocktrade .content ul:not(:last-child),
-#stocktrade .content blockquote:not(:last-child),
-#stocktrade .content table:not(:last-child) {
+.content p:not(:last-child),
+.content ol:not(:last-child),
+.content ul:not(:last-child),
+.content blockquote:not(:last-child),
+.content table:not(:last-child) {
   margin-bottom: 1em;
 }
 
-#stocktrade .content h1,
-#stocktrade .content h2,
-#stocktrade .content h3,
-#stocktrade .content h4,
-#stocktrade .content h5,
-#stocktrade .content h6 {
+.content h1,
+.content h2,
+.content h3,
+.content h4,
+.content h5,
+.content h6 {
   color: #363636;
   font-weight: 400;
   line-height: 1.125;
 }
 
-#stocktrade .content h1 {
+.content h1 {
   font-size: 2em;
   margin-bottom: 0.5em;
 }
 
-#stocktrade .content h1:not(:first-child) {
+.content h1:not(:first-child) {
   margin-top: 1em;
 }
 
-#stocktrade .content h2 {
+.content h2 {
   font-size: 1.75em;
   margin-bottom: 0.5714em;
 }
 
-#stocktrade .content h2:not(:first-child) {
+.content h2:not(:first-child) {
   margin-top: 1.1428em;
 }
 
-#stocktrade .content h3 {
+.content h3 {
   font-size: 1.5em;
   margin-bottom: 0.6666em;
 }
 
-#stocktrade .content h3:not(:first-child) {
+.content h3:not(:first-child) {
   margin-top: 1.3333em;
 }
 
-#stocktrade .content h4 {
+.content h4 {
   font-size: 1.25em;
   margin-bottom: 0.8em;
 }
 
-#stocktrade .content h5 {
+.content h5 {
   font-size: 1.125em;
   margin-bottom: 0.8888em;
 }
 
-#stocktrade .content h6 {
+.content h6 {
   font-size: 1em;
   margin-bottom: 1em;
 }
 
-#stocktrade .content blockquote {
+.content blockquote {
   background-color: whitesmoke;
   border-left: 5px solid #dbdbdb;
   padding: 1.25em 1.5em;
 }
 
-#stocktrade .content ol {
+.content ol {
   list-style: decimal outside;
   margin-left: 2em;
   margin-right: 2em;
   margin-top: 1em;
 }
 
-#stocktrade .content ul {
+.content ul {
   list-style: disc outside;
   margin-left: 2em;
   margin-right: 2em;
   margin-top: 1em;
 }
 
-#stocktrade .content ul ul {
+.content ul ul {
   list-style-type: circle;
   margin-top: 0.5em;
 }
 
-#stocktrade .content ul ul ul {
+.content ul ul ul {
   list-style-type: square;
 }
 
-#stocktrade .content table {
+.content table {
   width: 100%;
 }
 
-#stocktrade .content table td,
-#stocktrade .content table th {
+.content table td,
+.content table th {
   border: 1px solid #dbdbdb;
   border-width: 0 0 1px;
   padding: 0.5em 0.75em;
   vertical-align: top;
 }
 
-#stocktrade .content table th {
+.content table th {
   color: #363636;
   text-align: left;
 }
 
-#stocktrade .content table tr:hover {
+.content table tr:hover {
   background-color: whitesmoke;
 }
 
-#stocktrade .content table thead td,
-#stocktrade .content table thead th {
+.content table thead td,
+.content table thead th {
   border-width: 0 0 2px;
   color: #363636;
 }
 
-#stocktrade .content table tfoot td,
-#stocktrade .content table tfoot th {
+.content table tfoot td,
+.content table tfoot th {
   border-width: 2px 0 0;
   color: #363636;
 }
 
-#stocktrade .content table tbody tr:last-child td,
-#stocktrade .content table tbody tr:last-child th {
+.content table tbody tr:last-child td,
+.content table tbody tr:last-child th {
   border-bottom-width: 0;
 }
 
-#stocktrade .content.is-small {
+.content.is-small {
   font-size: 0.75rem;
 }
 
-#stocktrade .content.is-medium {
+.content.is-medium {
   font-size: 1.25rem;
 }
 
-#stocktrade .content.is-large {
+.content.is-large {
   font-size: 1.5rem;
 }
 
-#stocktrade .input,
-#stocktrade .textarea {
+.input,
+.textarea {
   -moz-appearance: none;
   -webkit-appearance: none;
   -webkit-box-align: center;
@@ -1676,146 +1671,146 @@
   width: 100%;
 }
 
-#stocktrade .input:focus, #stocktrade .input.is-focused, #stocktrade .input:active, #stocktrade .input.is-active,
-#stocktrade .textarea:focus,
-#stocktrade .textarea.is-focused,
-#stocktrade .textarea:active,
-#stocktrade .textarea.is-active {
+.input:focus, .input.is-focused, .input:active, .input.is-active,
+.textarea:focus,
+.textarea.is-focused,
+.textarea:active,
+.textarea.is-active {
   outline: none;
 }
 
-#stocktrade .input[disabled], #stocktrade .input.is-disabled,
-#stocktrade .textarea[disabled],
-#stocktrade .textarea.is-disabled {
+.input[disabled], .input.is-disabled,
+.textarea[disabled],
+.textarea.is-disabled {
   pointer-events: none;
 }
 
-#stocktrade .input:hover, #stocktrade .input.is-hovered,
-#stocktrade .textarea:hover,
-#stocktrade .textarea.is-hovered {
+.input:hover, .input.is-hovered,
+.textarea:hover,
+.textarea.is-hovered {
   border-color: #b5b5b5;
 }
 
-#stocktrade .input:focus, #stocktrade .input.is-focused, #stocktrade .input:active, #stocktrade .input.is-active,
-#stocktrade .textarea:focus,
-#stocktrade .textarea.is-focused,
-#stocktrade .textarea:active,
-#stocktrade .textarea.is-active {
+.input:focus, .input.is-focused, .input:active, .input.is-active,
+.textarea:focus,
+.textarea.is-focused,
+.textarea:active,
+.textarea.is-active {
   border-color: #00d1b2;
 }
 
-#stocktrade .input[disabled], #stocktrade .input.is-disabled,
-#stocktrade .textarea[disabled],
-#stocktrade .textarea.is-disabled {
+.input[disabled], .input.is-disabled,
+.textarea[disabled],
+.textarea.is-disabled {
   background-color: whitesmoke;
   border-color: whitesmoke;
   box-shadow: none;
   color: #7a7a7a;
 }
 
-#stocktrade .input[disabled]::-moz-placeholder, #stocktrade .input.is-disabled::-moz-placeholder,
-#stocktrade .textarea[disabled]::-moz-placeholder,
-#stocktrade .textarea.is-disabled::-moz-placeholder {
+.input[disabled]::-moz-placeholder, .input.is-disabled::-moz-placeholder,
+.textarea[disabled]::-moz-placeholder,
+.textarea.is-disabled::-moz-placeholder {
   color: rgba(54, 54, 54, 0.3);
 }
 
-#stocktrade .input[disabled]::-webkit-input-placeholder, #stocktrade .input.is-disabled::-webkit-input-placeholder,
-#stocktrade .textarea[disabled]::-webkit-input-placeholder,
-#stocktrade .textarea.is-disabled::-webkit-input-placeholder {
+.input[disabled]::-webkit-input-placeholder, .input.is-disabled::-webkit-input-placeholder,
+.textarea[disabled]::-webkit-input-placeholder,
+.textarea.is-disabled::-webkit-input-placeholder {
   color: rgba(54, 54, 54, 0.3);
 }
 
-#stocktrade .input[disabled]:-moz-placeholder, #stocktrade .input.is-disabled:-moz-placeholder,
-#stocktrade .textarea[disabled]:-moz-placeholder,
-#stocktrade .textarea.is-disabled:-moz-placeholder {
+.input[disabled]:-moz-placeholder, .input.is-disabled:-moz-placeholder,
+.textarea[disabled]:-moz-placeholder,
+.textarea.is-disabled:-moz-placeholder {
   color: rgba(54, 54, 54, 0.3);
 }
 
-#stocktrade .input[disabled]:-ms-input-placeholder, #stocktrade .input.is-disabled:-ms-input-placeholder,
-#stocktrade .textarea[disabled]:-ms-input-placeholder,
-#stocktrade .textarea.is-disabled:-ms-input-placeholder {
+.input[disabled]:-ms-input-placeholder, .input.is-disabled:-ms-input-placeholder,
+.textarea[disabled]:-ms-input-placeholder,
+.textarea.is-disabled:-ms-input-placeholder {
   color: rgba(54, 54, 54, 0.3);
 }
 
-#stocktrade .input[type="search"],
-#stocktrade .textarea[type="search"] {
+.input[type="search"],
+.textarea[type="search"] {
   border-radius: 290486px;
 }
 
-#stocktrade .input.is-white,
-#stocktrade .textarea.is-white {
+.input.is-white,
+.textarea.is-white {
   border-color: white;
 }
 
-#stocktrade .input.is-black,
-#stocktrade .textarea.is-black {
+.input.is-black,
+.textarea.is-black {
   border-color: #0a0a0a;
 }
 
-#stocktrade .input.is-light,
-#stocktrade .textarea.is-light {
+.input.is-light,
+.textarea.is-light {
   border-color: whitesmoke;
 }
 
-#stocktrade .input.is-dark,
-#stocktrade .textarea.is-dark {
+.input.is-dark,
+.textarea.is-dark {
   border-color: #363636;
 }
 
-#stocktrade .input.is-primary,
-#stocktrade .textarea.is-primary {
+.input.is-primary,
+.textarea.is-primary {
   border-color: #00d1b2;
 }
 
-#stocktrade .input.is-info,
-#stocktrade .textarea.is-info {
+.input.is-info,
+.textarea.is-info {
   border-color: #3273dc;
 }
 
-#stocktrade .input.is-success,
-#stocktrade .textarea.is-success {
+.input.is-success,
+.textarea.is-success {
   border-color: #23d160;
 }
 
-#stocktrade .input.is-warning,
-#stocktrade .textarea.is-warning {
+.input.is-warning,
+.textarea.is-warning {
   border-color: #ffdd57;
 }
 
-#stocktrade .input.is-danger,
-#stocktrade .textarea.is-danger {
+.input.is-danger,
+.textarea.is-danger {
   border-color: #ff3860;
 }
 
-#stocktrade .input.is-small,
-#stocktrade .textarea.is-small {
+.input.is-small,
+.textarea.is-small {
   border-radius: 2px;
   font-size: 0.75rem;
 }
 
-#stocktrade .input.is-medium,
-#stocktrade .textarea.is-medium {
+.input.is-medium,
+.textarea.is-medium {
   font-size: 1.25rem;
 }
 
-#stocktrade .input.is-large,
-#stocktrade .textarea.is-large {
+.input.is-large,
+.textarea.is-large {
   font-size: 1.5rem;
 }
 
-#stocktrade .input.is-fullwidth,
-#stocktrade .textarea.is-fullwidth {
+.input.is-fullwidth,
+.textarea.is-fullwidth {
   display: block;
   width: 100%;
 }
 
-#stocktrade .input.is-inline,
-#stocktrade .textarea.is-inline {
+.input.is-inline,
+.textarea.is-inline {
   display: inline;
   width: auto;
 }
 
-#stocktrade .textarea {
+.textarea {
   display: block;
   line-height: 1.25;
   max-height: 600px;
@@ -1826,8 +1821,8 @@
   resize: vertical;
 }
 
-#stocktrade .checkbox,
-#stocktrade .radio {
+.checkbox,
+.radio {
   -webkit-box-align: center;
   align-items: center;
   cursor: pointer;
@@ -1840,40 +1835,40 @@
   vertical-align: top;
 }
 
-#stocktrade .checkbox input,
-#stocktrade .radio input {
+.checkbox input,
+.radio input {
   cursor: pointer;
   margin-right: 0.5em;
 }
 
-#stocktrade .checkbox:hover,
-#stocktrade .radio:hover {
+.checkbox:hover,
+.radio:hover {
   color: #363636;
 }
 
-#stocktrade .checkbox.is-disabled,
-#stocktrade .radio.is-disabled {
+.checkbox.is-disabled,
+.radio.is-disabled {
   color: #7a7a7a;
   pointer-events: none;
 }
 
-#stocktrade .checkbox.is-disabled input,
-#stocktrade .radio.is-disabled input {
+.checkbox.is-disabled input,
+.radio.is-disabled input {
   pointer-events: none;
 }
 
-#stocktrade .radio + .radio {
+.radio + .radio {
   margin-left: 0.5em;
 }
 
-#stocktrade .select {
+.select {
   display: inline-block;
   height: 2.5em;
   position: relative;
   vertical-align: top;
 }
 
-#stocktrade .select:after {
+.select:after {
   border: 1px solid #00d1b2;
   border-right: 0;
   border-top: 0;
@@ -1891,7 +1886,7 @@
   z-index: 4;
 }
 
-#stocktrade .select select {
+.select select {
   -moz-appearance: none;
   -webkit-appearance: none;
   -webkit-box-align: center;
@@ -1920,138 +1915,138 @@
   padding-right: 2.5em;
 }
 
-#stocktrade .select select:focus, #stocktrade .select select.is-focused, #stocktrade .select select:active, #stocktrade .select select.is-active {
+.select select:focus, .select select.is-focused, .select select:active, .select select.is-active {
   outline: none;
 }
 
-#stocktrade .select select[disabled], #stocktrade .select select.is-disabled {
+.select select[disabled], .select select.is-disabled {
   pointer-events: none;
 }
 
-#stocktrade .select select:hover, #stocktrade .select select.is-hovered {
+.select select:hover, .select select.is-hovered {
   border-color: #b5b5b5;
 }
 
-#stocktrade .select select:focus, #stocktrade .select select.is-focused, #stocktrade .select select:active, #stocktrade .select select.is-active {
+.select select:focus, .select select.is-focused, .select select:active, .select select.is-active {
   border-color: #00d1b2;
 }
 
-#stocktrade .select select[disabled], #stocktrade .select select.is-disabled {
+.select select[disabled], .select select.is-disabled {
   background-color: whitesmoke;
   border-color: whitesmoke;
   box-shadow: none;
   color: #7a7a7a;
 }
 
-#stocktrade .select select[disabled]::-moz-placeholder, #stocktrade .select select.is-disabled::-moz-placeholder {
+.select select[disabled]::-moz-placeholder, .select select.is-disabled::-moz-placeholder {
   color: rgba(54, 54, 54, 0.3);
 }
 
-#stocktrade .select select[disabled]::-webkit-input-placeholder, #stocktrade .select select.is-disabled::-webkit-input-placeholder {
+.select select[disabled]::-webkit-input-placeholder, .select select.is-disabled::-webkit-input-placeholder {
   color: rgba(54, 54, 54, 0.3);
 }
 
-#stocktrade .select select[disabled]:-moz-placeholder, #stocktrade .select select.is-disabled:-moz-placeholder {
+.select select[disabled]:-moz-placeholder, .select select.is-disabled:-moz-placeholder {
   color: rgba(54, 54, 54, 0.3);
 }
 
-#stocktrade .select select[disabled]:-ms-input-placeholder, #stocktrade .select select.is-disabled:-ms-input-placeholder {
+.select select[disabled]:-ms-input-placeholder, .select select.is-disabled:-ms-input-placeholder {
   color: rgba(54, 54, 54, 0.3);
 }
 
-#stocktrade .select select:hover {
+.select select:hover {
   border-color: #b5b5b5;
 }
 
-#stocktrade .select select::ms-expand {
+.select select::ms-expand {
   display: none;
 }
 
-#stocktrade .select:hover:after {
+.select:hover:after {
   border-color: #363636;
 }
 
-#stocktrade .select.is-small {
+.select.is-small {
   border-radius: 2px;
   font-size: 0.75rem;
 }
 
-#stocktrade .select.is-medium {
+.select.is-medium {
   font-size: 1.25rem;
 }
 
-#stocktrade .select.is-large {
+.select.is-large {
   font-size: 1.5rem;
 }
 
-#stocktrade .select.is-fullwidth {
+.select.is-fullwidth {
   width: 100%;
 }
 
-#stocktrade .select.is-fullwidth select {
+.select.is-fullwidth select {
   width: 100%;
 }
 
-#stocktrade .label {
+.label {
   color: #363636;
   display: block;
   font-weight: bold;
 }
 
-#stocktrade .label:not(:last-child) {
+.label:not(:last-child) {
   margin-bottom: 0.5em;
 }
 
-#stocktrade .help {
+.help {
   display: block;
   font-size: 0.75rem;
   margin-top: 5px;
 }
 
-#stocktrade .help.is-white {
+.help.is-white {
   color: white;
 }
 
-#stocktrade .help.is-black {
+.help.is-black {
   color: #0a0a0a;
 }
 
-#stocktrade .help.is-light {
+.help.is-light {
   color: whitesmoke;
 }
 
-#stocktrade .help.is-dark {
+.help.is-dark {
   color: #363636;
 }
 
-#stocktrade .help.is-primary {
+.help.is-primary {
   color: #00d1b2;
 }
 
-#stocktrade .help.is-info {
+.help.is-info {
   color: #3273dc;
 }
 
-#stocktrade .help.is-success {
+.help.is-success {
   color: #23d160;
 }
 
-#stocktrade .help.is-warning {
+.help.is-warning {
   color: #ffdd57;
 }
 
-#stocktrade .help.is-danger {
+.help.is-danger {
   color: #ff3860;
 }
 
 @media screen and (max-width: 768px) {
-  #stocktrade .control-label {
+  .control-label {
     margin-bottom: 0.5em;
   }
 }
 
 @media screen and (min-width: 769px) {
-  #stocktrade .control-label {
+  .control-label {
     flex-basis: 0;
     -webkit-box-flex: 1;
     flex-grow: 1;
@@ -2062,103 +2057,103 @@
   }
 }
 
-#stocktrade .control {
+.control {
   position: relative;
   text-align: left;
 }
 
-#stocktrade .control:not(:last-child) {
+.control:not(:last-child) {
   margin-bottom: 0.75rem;
 }
 
-#stocktrade .control.has-addons {
+.control.has-addons {
   display: -webkit-box;
   display: flex;
   -webkit-box-pack: start;
   justify-content: flex-start;
 }
 
-#stocktrade .control.has-addons .button,
-#stocktrade .control.has-addons .input,
-#stocktrade .control.has-addons .select {
+.control.has-addons .button,
+.control.has-addons .input,
+.control.has-addons .select {
   border-radius: 0;
   margin-right: -1px;
   width: auto;
 }
 
-#stocktrade .control.has-addons .button:hover,
-#stocktrade .control.has-addons .input:hover,
-#stocktrade .control.has-addons .select:hover {
+.control.has-addons .button:hover,
+.control.has-addons .input:hover,
+.control.has-addons .select:hover {
   z-index: 2;
 }
 
-#stocktrade .control.has-addons .button:focus, #stocktrade .control.has-addons .button:active,
-#stocktrade .control.has-addons .input:focus,
-#stocktrade .control.has-addons .input:active,
-#stocktrade .control.has-addons .select:focus,
-#stocktrade .control.has-addons .select:active {
+.control.has-addons .button:focus, .control.has-addons .button:active,
+.control.has-addons .input:focus,
+.control.has-addons .input:active,
+.control.has-addons .select:focus,
+.control.has-addons .select:active {
   z-index: 3;
 }
 
-#stocktrade .control.has-addons .button:first-child,
-#stocktrade .control.has-addons .input:first-child,
-#stocktrade .control.has-addons .select:first-child {
+.control.has-addons .button:first-child,
+.control.has-addons .input:first-child,
+.control.has-addons .select:first-child {
   border-radius: 3px 0 0 3px;
 }
 
-#stocktrade .control.has-addons .button:first-child select,
-#stocktrade .control.has-addons .input:first-child select,
-#stocktrade .control.has-addons .select:first-child select {
+.control.has-addons .button:first-child select,
+.control.has-addons .input:first-child select,
+.control.has-addons .select:first-child select {
   border-radius: 3px 0 0 3px;
 }
 
-#stocktrade .control.has-addons .button:last-child,
-#stocktrade .control.has-addons .input:last-child,
-#stocktrade .control.has-addons .select:last-child {
+.control.has-addons .button:last-child,
+.control.has-addons .input:last-child,
+.control.has-addons .select:last-child {
   border-radius: 0 3px 3px 0;
 }
 
-#stocktrade .control.has-addons .button:last-child select,
-#stocktrade .control.has-addons .input:last-child select,
-#stocktrade .control.has-addons .select:last-child select {
+.control.has-addons .button:last-child select,
+.control.has-addons .input:last-child select,
+.control.has-addons .select:last-child select {
   border-radius: 0 3px 3px 0;
 }
 
-#stocktrade .control.has-addons .button.is-expanded,
-#stocktrade .control.has-addons .input.is-expanded,
-#stocktrade .control.has-addons .select.is-expanded {
+.control.has-addons .button.is-expanded,
+.control.has-addons .input.is-expanded,
+.control.has-addons .select.is-expanded {
   -webkit-box-flex: 1;
   flex-grow: 1;
   flex-shrink: 0;
 }
 
-#stocktrade .control.has-addons .select select:hover {
+.control.has-addons .select select:hover {
   z-index: 2;
 }
 
-#stocktrade .control.has-addons .select select:focus, #stocktrade .control.has-addons .select select:active {
+.control.has-addons .select select:focus, .control.has-addons .select select:active {
   z-index: 3;
 }
 
-#stocktrade .control.has-addons.has-addons-centered {
+.control.has-addons.has-addons-centered {
   -webkit-box-pack: center;
   justify-content: center;
 }
 
-#stocktrade .control.has-addons.has-addons-right {
+.control.has-addons.has-addons-right {
   -webkit-box-pack: end;
   justify-content: flex-end;
 }
 
-#stocktrade .control.has-addons.has-addons-fullwidth .button,
-#stocktrade .control.has-addons.has-addons-fullwidth .input,
-#stocktrade .control.has-addons.has-addons-fullwidth .select {
+.control.has-addons.has-addons-fullwidth .button,
+.control.has-addons.has-addons-fullwidth .input,
+.control.has-addons.has-addons-fullwidth .select {
   -webkit-box-flex: 1;
   flex-grow: 1;
   flex-shrink: 0;
 }
 
-#stocktrade .control.has-icon .icon {
+.control.has-icon .icon {
   color: #dbdbdb;
   pointer-events: none;
   position: absolute;
@@ -2166,105 +2161,105 @@
   z-index: 4;
 }
 
-#stocktrade .control.has-icon .input:focus + .icon {
+.control.has-icon .input:focus + .icon {
   color: #7a7a7a;
 }
 
-#stocktrade .control.has-icon .input.is-small + .icon {
+.control.has-icon .input.is-small + .icon {
   top: 0.9375rem;
 }
 
-#stocktrade .control.has-icon .input.is-medium + .icon {
+.control.has-icon .input.is-medium + .icon {
   top: 1.5625rem;
 }
 
-#stocktrade .control.has-icon .input.is-large + .icon {
+.control.has-icon .input.is-large + .icon {
   top: 1.875rem;
 }
 
-#stocktrade .control.has-icon:not(.has-icon-right) .icon {
+.control.has-icon:not(.has-icon-right) .icon {
   left: 1.25rem;
   -webkit-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
 }
 
-#stocktrade .control.has-icon:not(.has-icon-right) .input {
+.control.has-icon:not(.has-icon-right) .input {
   padding-left: 2.5em;
 }
 
-#stocktrade .control.has-icon:not(.has-icon-right) .input.is-small + .icon {
+.control.has-icon:not(.has-icon-right) .input.is-small + .icon {
   left: 0.9375rem;
 }
 
-#stocktrade .control.has-icon:not(.has-icon-right) .input.is-medium + .icon {
+.control.has-icon:not(.has-icon-right) .input.is-medium + .icon {
   left: 1.5625rem;
 }
 
-#stocktrade .control.has-icon:not(.has-icon-right) .input.is-large + .icon {
+.control.has-icon:not(.has-icon-right) .input.is-large + .icon {
   left: 1.875rem;
 }
 
-#stocktrade .control.has-icon.has-icon-right .icon {
+.control.has-icon.has-icon-right .icon {
   right: 1.25rem;
   -webkit-transform: translateX(50%) translateY(-50%);
   transform: translateX(50%) translateY(-50%);
 }
 
-#stocktrade .control.has-icon.has-icon-right .input {
+.control.has-icon.has-icon-right .input {
   padding-right: 2.5em;
 }
 
-#stocktrade .control.has-icon.has-icon-right .input.is-small + .icon {
+.control.has-icon.has-icon-right .input.is-small + .icon {
   right: 0.9375rem;
 }
 
-#stocktrade .control.has-icon.has-icon-right .input.is-medium + .icon {
+.control.has-icon.has-icon-right .input.is-medium + .icon {
   right: 1.5625rem;
 }
 
-#stocktrade .control.has-icon.has-icon-right .input.is-large + .icon {
+.control.has-icon.has-icon-right .input.is-large + .icon {
   right: 1.875rem;
 }
 
-#stocktrade .control.is-grouped {
+.control.is-grouped {
   display: -webkit-box;
   display: flex;
   -webkit-box-pack: start;
   justify-content: flex-start;
 }
 
-#stocktrade .control.is-grouped > .control {
+.control.is-grouped > .control {
   flex-basis: 0;
   flex-shrink: 0;
 }
 
-#stocktrade .control.is-grouped > .control:not(:last-child) {
+.control.is-grouped > .control:not(:last-child) {
   margin-bottom: 0;
   margin-right: 0.75rem;
 }
 
-#stocktrade .control.is-grouped > .control.is-expanded {
+.control.is-grouped > .control.is-expanded {
   -webkit-box-flex: 1;
   flex-grow: 1;
   flex-shrink: 1;
 }
 
-#stocktrade .control.is-grouped.is-grouped-centered {
+.control.is-grouped.is-grouped-centered {
   -webkit-box-pack: center;
   justify-content: center;
 }
 
-#stocktrade .control.is-grouped.is-grouped-right {
+.control.is-grouped.is-grouped-right {
   -webkit-box-pack: end;
   justify-content: flex-end;
 }
 
 @media screen and (min-width: 769px) {
-  #stocktrade .control.is-horizontal {
+  .control.is-horizontal {
     display: -webkit-box;
     display: flex;
   }
-  #stocktrade .control.is-horizontal > .control {
+  .control.is-horizontal > .control {
     display: -webkit-box;
     display: flex;
     flex-basis: 0;
@@ -2274,7 +2269,7 @@
   }
 }
 
-#stocktrade .control.is-loading:after {
+.control.is-loading:after {
   -webkit-animation: spinAround 500ms infinite linear;
   animation: spinAround 500ms infinite linear;
   border: 2px solid #dbdbdb;
@@ -2291,7 +2286,7 @@
   top: 0.75em;
 }
 
-#stocktrade .icon {
+.icon {
   display: inline-block;
   font-size: 21px;
   height: 1.5rem;
@@ -2301,12 +2296,12 @@
   width: 1.5rem;
 }
 
-#stocktrade .icon .fa {
+.icon .fa {
   font-size: inherit;
   line-height: inherit;
 }
 
-#stocktrade .icon.is-small {
+.icon.is-small {
   display: inline-block;
   font-size: 14px;
   height: 1rem;
@@ -2316,7 +2311,7 @@
   width: 1rem;
 }
 
-#stocktrade .icon.is-medium {
+.icon.is-medium {
   display: inline-block;
   font-size: 28px;
   height: 2rem;
@@ -2326,7 +2321,7 @@
   width: 2rem;
 }
 
-#stocktrade .icon.is-large {
+.icon.is-large {
   display: inline-block;
   font-size: 42px;
   height: 3rem;
@@ -2336,18 +2331,18 @@
   width: 3rem;
 }
 
-#stocktrade .image {
+.image {
   display: block;
   position: relative;
 }
 
-#stocktrade .image img {
+.image img {
   display: block;
   height: auto;
   width: 100%;
 }
 
-#stocktrade .image.is-square img, #stocktrade .image.is-1by1 img, #stocktrade .image.is-4by3 img, #stocktrade .image.is-3by2 img, #stocktrade .image.is-16by9 img, #stocktrade .image.is-2by1 img {
+.image.is-square img, .image.is-1by1 img, .image.is-4by3 img, .image.is-3by2 img, .image.is-16by9 img, .image.is-2by1 img {
   bottom: 0;
   left: 0;
   position: absolute;
@@ -2357,139 +2352,139 @@
   width: 100%;
 }
 
-#stocktrade .image.is-square, #stocktrade .image.is-1by1 {
+.image.is-square, .image.is-1by1 {
   padding-top: 100%;
 }
 
-#stocktrade .image.is-4by3 {
+.image.is-4by3 {
   padding-top: 75%;
 }
 
-#stocktrade .image.is-3by2 {
+.image.is-3by2 {
   padding-top: 66.6666%;
 }
 
-#stocktrade .image.is-16by9 {
+.image.is-16by9 {
   padding-top: 56.25%;
 }
 
-#stocktrade .image.is-2by1 {
+.image.is-2by1 {
   padding-top: 50%;
 }
 
-#stocktrade .image.is-16x16 {
+.image.is-16x16 {
   height: 16px;
   width: 16px;
 }
 
-#stocktrade .image.is-24x24 {
+.image.is-24x24 {
   height: 24px;
   width: 24px;
 }
 
-#stocktrade .image.is-32x32 {
+.image.is-32x32 {
   height: 32px;
   width: 32px;
 }
 
-#stocktrade .image.is-48x48 {
+.image.is-48x48 {
   height: 48px;
   width: 48px;
 }
 
-#stocktrade .image.is-64x64 {
+.image.is-64x64 {
   height: 64px;
   width: 64px;
 }
 
-#stocktrade .image.is-96x96 {
+.image.is-96x96 {
   height: 96px;
   width: 96px;
 }
 
-#stocktrade .image.is-128x128 {
+.image.is-128x128 {
   height: 128px;
   width: 128px;
 }
 
-#stocktrade .notification {
+.notification {
   background-color: whitesmoke;
   border-radius: 3px;
   padding: 1.25rem 2.5rem 1.25rem 1.5rem;
   position: relative;
 }
 
-#stocktrade .notification:not(:last-child) {
+.notification:not(:last-child) {
   margin-bottom: 1.5rem;
 }
 
-#stocktrade .notification code,
-#stocktrade .notification pre {
+.notification code,
+.notification pre {
   background: white;
 }
 
-#stocktrade .notification pre code {
+.notification pre code {
   background: transparent;
 }
 
-#stocktrade .notification .delete {
+.notification .delete {
   position: absolute;
   right: 0.5em;
   top: 0.5em;
 }
 
-#stocktrade .notification .title,
-#stocktrade .notification .subtitle,
-#stocktrade .notification .content {
+.notification .title,
+.notification .subtitle,
+.notification .content {
   color: inherit;
 }
 
-#stocktrade .notification.is-white {
+.notification.is-white {
   background-color: white;
   color: #0a0a0a;
 }
 
-#stocktrade .notification.is-black {
+.notification.is-black {
   background-color: #0a0a0a;
   color: white;
 }
 
-#stocktrade .notification.is-light {
+.notification.is-light {
   background-color: whitesmoke;
   color: #363636;
 }
 
-#stocktrade .notification.is-dark {
+.notification.is-dark {
   background-color: #363636;
   color: whitesmoke;
 }
 
-#stocktrade .notification.is-primary {
+.notification.is-primary {
   background-color: #00d1b2;
   color: #fff;
 }
 
-#stocktrade .notification.is-info {
+.notification.is-info {
   background-color: #3273dc;
   color: #fff;
 }
 
-#stocktrade .notification.is-success {
+.notification.is-success {
   background-color: #23d160;
   color: #fff;
 }
 
-#stocktrade .notification.is-warning {
+.notification.is-warning {
   background-color: #ffdd57;
   color: rgba(0, 0, 0, 0.7);
 }
 
-#stocktrade .notification.is-danger {
+.notification.is-danger {
   background-color: #ff3860;
   color: #fff;
 }
 
-#stocktrade .progress {
+.progress {
   -moz-appearance: none;
   -webkit-appearance: none;
   border: none;
@@ -2501,177 +2496,177 @@
   width: 100%;
 }
 
-#stocktrade .progress:not(:last-child) {
+.progress:not(:last-child) {
   margin-bottom: 1.5rem;
 }
 
-#stocktrade .progress::-webkit-progress-bar {
+.progress::-webkit-progress-bar {
   background-color: #dbdbdb;
 }
 
-#stocktrade .progress::-webkit-progress-value {
+.progress::-webkit-progress-value {
   background-color: #4a4a4a;
 }
 
-#stocktrade .progress::-moz-progress-bar {
+.progress::-moz-progress-bar {
   background-color: #4a4a4a;
 }
 
-#stocktrade .progress.is-white::-webkit-progress-value {
+.progress.is-white::-webkit-progress-value {
   background-color: white;
 }
 
-#stocktrade .progress.is-white::-moz-progress-bar {
+.progress.is-white::-moz-progress-bar {
   background-color: white;
 }
 
-#stocktrade .progress.is-black::-webkit-progress-value {
+.progress.is-black::-webkit-progress-value {
   background-color: #0a0a0a;
 }
 
-#stocktrade .progress.is-black::-moz-progress-bar {
+.progress.is-black::-moz-progress-bar {
   background-color: #0a0a0a;
 }
 
-#stocktrade .progress.is-light::-webkit-progress-value {
+.progress.is-light::-webkit-progress-value {
   background-color: whitesmoke;
 }
 
-#stocktrade .progress.is-light::-moz-progress-bar {
+.progress.is-light::-moz-progress-bar {
   background-color: whitesmoke;
 }
 
-#stocktrade .progress.is-dark::-webkit-progress-value {
+.progress.is-dark::-webkit-progress-value {
   background-color: #363636;
 }
 
-#stocktrade .progress.is-dark::-moz-progress-bar {
+.progress.is-dark::-moz-progress-bar {
   background-color: #363636;
 }
 
-#stocktrade .progress.is-primary::-webkit-progress-value {
+.progress.is-primary::-webkit-progress-value {
   background-color: #00d1b2;
 }
 
-#stocktrade .progress.is-primary::-moz-progress-bar {
+.progress.is-primary::-moz-progress-bar {
   background-color: #00d1b2;
 }
 
-#stocktrade .progress.is-info::-webkit-progress-value {
+.progress.is-info::-webkit-progress-value {
   background-color: #3273dc;
 }
 
-#stocktrade .progress.is-info::-moz-progress-bar {
+.progress.is-info::-moz-progress-bar {
   background-color: #3273dc;
 }
 
-#stocktrade .progress.is-success::-webkit-progress-value {
+.progress.is-success::-webkit-progress-value {
   background-color: #23d160;
 }
 
-#stocktrade .progress.is-success::-moz-progress-bar {
+.progress.is-success::-moz-progress-bar {
   background-color: #23d160;
 }
 
-#stocktrade .progress.is-warning::-webkit-progress-value {
+.progress.is-warning::-webkit-progress-value {
   background-color: #ffdd57;
 }
 
-#stocktrade .progress.is-warning::-moz-progress-bar {
+.progress.is-warning::-moz-progress-bar {
   background-color: #ffdd57;
 }
 
-#stocktrade .progress.is-danger::-webkit-progress-value {
+.progress.is-danger::-webkit-progress-value {
   background-color: #ff3860;
 }
 
-#stocktrade .progress.is-danger::-moz-progress-bar {
+.progress.is-danger::-moz-progress-bar {
   background-color: #ff3860;
 }
 
-#stocktrade .progress.is-small {
+.progress.is-small {
   height: 0.75rem;
 }
 
-#stocktrade .progress.is-medium {
+.progress.is-medium {
   height: 1.25rem;
 }
 
-#stocktrade .progress.is-large {
+.progress.is-large {
   height: 1.5rem;
 }
 
-#stocktrade .table {
+.table {
   background-color: white;
   color: #363636;
   margin-bottom: 1.5rem;
   width: 100%;
 }
 
-#stocktrade .table td,
-#stocktrade .table th {
+.table td,
+.table th {
   border: 1px solid #dbdbdb;
   border-width: 0 0 1px;
   padding: 0.5em 0.75em;
   vertical-align: top;
 }
 
-#stocktrade .table td.is-narrow,
-#stocktrade .table th.is-narrow {
+.table td.is-narrow,
+.table th.is-narrow {
   white-space: nowrap;
   width: 1%;
 }
 
-#stocktrade .table th {
+.table th {
   color: #363636;
   text-align: left;
 }
 
-#stocktrade .table tr:hover {
+.table tr:hover {
   background-color: #fafafa;
 }
 
-#stocktrade .table thead td,
-#stocktrade .table thead th {
+.table thead td,
+.table thead th {
   border-width: 0 0 2px;
   color: #7a7a7a;
 }
 
-#stocktrade .table tfoot td,
-#stocktrade .table tfoot th {
+.table tfoot td,
+.table tfoot th {
   border-width: 2px 0 0;
   color: #7a7a7a;
 }
 
-#stocktrade .table tbody tr:last-child td,
-#stocktrade .table tbody tr:last-child th {
+.table tbody tr:last-child td,
+.table tbody tr:last-child th {
   border-bottom-width: 0;
 }
 
-#stocktrade .table.is-bordered td,
-#stocktrade .table.is-bordered th {
+.table.is-bordered td,
+.table.is-bordered th {
   border-width: 1px;
 }
 
-#stocktrade .table.is-bordered tr:last-child td,
-#stocktrade .table.is-bordered tr:last-child th {
+.table.is-bordered tr:last-child td,
+.table.is-bordered tr:last-child th {
   border-bottom-width: 1px;
 }
 
-#stocktrade .table.is-narrow td,
-#stocktrade .table.is-narrow th {
+.table.is-narrow td,
+.table.is-narrow th {
   padding: 0.25em 0.5em;
 }
 
-#stocktrade .table.is-striped tbody tr:nth-child(even) {
+.table.is-striped tbody tr:nth-child(even) {
   background-color: #fafafa;
 }
 
-#stocktrade .table.is-striped tbody tr:nth-child(even):hover {
+.table.is-striped tbody tr:nth-child(even):hover {
   background-color: whitesmoke;
 }
 
-#stocktrade .tag {
+.tag {
   -webkit-box-align: center;
   align-items: center;
   background-color: whitesmoke;
@@ -2690,199 +2685,199 @@
   white-space: nowrap;
 }
 
-#stocktrade .tag .delete {
+.tag .delete {
   margin-left: 0.25em;
   margin-right: -0.5em;
 }
 
-#stocktrade .tag.is-white {
+.tag.is-white {
   background-color: white;
   color: #0a0a0a;
 }
 
-#stocktrade .tag.is-black {
+.tag.is-black {
   background-color: #0a0a0a;
   color: white;
 }
 
-#stocktrade .tag.is-light {
+.tag.is-light {
   background-color: whitesmoke;
   color: #363636;
 }
 
-#stocktrade .tag.is-dark {
+.tag.is-dark {
   background-color: #363636;
   color: whitesmoke;
 }
 
-#stocktrade .tag.is-primary {
+.tag.is-primary {
   background-color: #00d1b2;
   color: #fff;
 }
 
-#stocktrade .tag.is-info {
+.tag.is-info {
   background-color: #3273dc;
   color: #fff;
 }
 
-#stocktrade .tag.is-success {
+.tag.is-success {
   background-color: #23d160;
   color: #fff;
 }
 
-#stocktrade .tag.is-warning {
+.tag.is-warning {
   background-color: #ffdd57;
   color: rgba(0, 0, 0, 0.7);
 }
 
-#stocktrade .tag.is-danger {
+.tag.is-danger {
   background-color: #ff3860;
   color: #fff;
 }
 
-#stocktrade .tag.is-medium {
+.tag.is-medium {
   font-size: 1rem;
 }
 
-#stocktrade .tag.is-large {
+.tag.is-large {
   font-size: 1.25rem;
 }
 
-#stocktrade .title,
-#stocktrade .subtitle {
+.title,
+.subtitle {
   word-break: break-word;
 }
 
-#stocktrade .title:not(:last-child),
-#stocktrade .subtitle:not(:last-child) {
+.title:not(:last-child),
+.subtitle:not(:last-child) {
   margin-bottom: 1.5rem;
 }
 
-#stocktrade .title em,
-#stocktrade .title span,
-#stocktrade .subtitle em,
-#stocktrade .subtitle span {
+.title em,
+.title span,
+.subtitle em,
+.subtitle span {
   font-weight: 300;
 }
 
-#stocktrade .title strong,
-#stocktrade .subtitle strong {
+.title strong,
+.subtitle strong {
   font-weight: 500;
 }
 
-#stocktrade .title .tag,
-#stocktrade .subtitle .tag {
+.title .tag,
+.subtitle .tag {
   vertical-align: middle;
 }
 
-#stocktrade .title {
+.title {
   color: #363636;
   font-size: 2rem;
   font-weight: 300;
   line-height: 1.125;
 }
 
-#stocktrade .title strong {
+.title strong {
   color: inherit;
 }
 
-#stocktrade .title + .highlight {
+.title + .highlight {
   margin-top: -0.75rem;
 }
 
-#stocktrade .title + .subtitle {
+.title + .subtitle {
   margin-top: -1.25rem;
 }
 
-#stocktrade .title.is-1 {
+.title.is-1 {
   font-size: 3.5rem;
 }
 
-#stocktrade .title.is-2 {
+.title.is-2 {
   font-size: 2.75rem;
 }
 
-#stocktrade .title.is-3 {
+.title.is-3 {
   font-size: 2rem;
 }
 
-#stocktrade .title.is-4 {
+.title.is-4 {
   font-size: 1.5rem;
 }
 
-#stocktrade .title.is-5 {
+.title.is-5 {
   font-size: 1.25rem;
 }
 
-#stocktrade .title.is-6 {
+.title.is-6 {
   font-size: 14px;
 }
 
-#stocktrade .subtitle {
+.subtitle {
   color: #4a4a4a;
   font-size: 1.25rem;
   font-weight: 300;
   line-height: 1.25;
 }
 
-#stocktrade .subtitle strong {
+.subtitle strong {
   color: #363636;
 }
 
-#stocktrade .subtitle + .title {
+.subtitle + .title {
   margin-top: -1.5rem;
 }
 
-#stocktrade .subtitle.is-1 {
+.subtitle.is-1 {
   font-size: 3.5rem;
 }
 
-#stocktrade .subtitle.is-2 {
+.subtitle.is-2 {
   font-size: 2.75rem;
 }
 
-#stocktrade .subtitle.is-3 {
+.subtitle.is-3 {
   font-size: 2rem;
 }
 
-#stocktrade .subtitle.is-4 {
+.subtitle.is-4 {
   font-size: 1.5rem;
 }
 
-#stocktrade .subtitle.is-5 {
+.subtitle.is-5 {
   font-size: 1.25rem;
 }
 
-#stocktrade .subtitle.is-6 {
+.subtitle.is-6 {
   font-size: 14px;
 }
 
-#stocktrade .block:not(:last-child) {
+.block:not(:last-child) {
   margin-bottom: 1.5rem;
 }
 
-#stocktrade .container {
+.container {
   position: relative;
 }
 
 @media screen and (min-width: 1000px) {
-  #stocktrade .container {
+  .container {
     margin: 0 auto;
     max-width: 960px;
   }
-  #stocktrade .container.is-fluid {
+  .container.is-fluid {
     margin: 0 20px;
     max-width: none;
   }
 }
 
 @media screen and (min-width: 1192px) {
-  #stocktrade .container {
+  .container {
     max-width: 1152px;
   }
 }
 
-#stocktrade .delete {
+.delete {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -2907,7 +2902,7 @@
   width: 20px;
 }
 
-#stocktrade .delete:before, #stocktrade .delete:after {
+.delete:before, .delete:after {
   background-color: white;
   content: "";
   display: block;
@@ -2918,46 +2913,46 @@
   transform: translateX(-50%) translateY(-50%);
 }
 
-#stocktrade .delete:before {
+.delete:before {
   height: 2px;
   width: 50%;
 }
 
-#stocktrade .delete:after {
+.delete:after {
   height: 50%;
   width: 2px;
 }
 
-#stocktrade .delete:hover, #stocktrade .delete:focus {
+.delete:hover, .delete:focus {
   background-color: rgba(10, 10, 10, 0.3);
 }
 
-#stocktrade .delete:active {
+.delete:active {
   background-color: rgba(10, 10, 10, 0.4);
 }
 
-#stocktrade .delete.is-small {
+.delete.is-small {
   height: 14px;
   width: 14px;
 }
 
-#stocktrade .delete.is-medium {
+.delete.is-medium {
   height: 26px;
   width: 26px;
 }
 
-#stocktrade .delete.is-large {
+.delete.is-large {
   height: 30px;
   width: 30px;
 }
 
-#stocktrade .fa {
+.fa {
   font-size: 21px;
   text-align: center;
   vertical-align: top;
 }
 
-#stocktrade .heading {
+.heading {
   display: block;
   font-size: 11px;
   letter-spacing: 1px;
@@ -2965,23 +2960,23 @@
   text-transform: uppercase;
 }
 
-#stocktrade .highlight {
+.highlight {
   font-weight: 400;
   max-width: 100%;
   overflow: hidden;
   padding: 0;
 }
 
-#stocktrade .highlight:not(:last-child) {
+.highlight:not(:last-child) {
   margin-bottom: 1.5rem;
 }
 
-#stocktrade .highlight pre {
+.highlight pre {
   overflow: auto;
   max-width: 100%;
 }
 
-#stocktrade .loader {
+.loader {
   -webkit-animation: spinAround 500ms infinite linear;
   animation: spinAround 500ms infinite linear;
   border: 2px solid #dbdbdb;
@@ -2995,7 +2990,7 @@
   width: 1rem;
 }
 
-#stocktrade .number {
+.number {
   -webkit-box-align: center;
   align-items: center;
   background-color: whitesmoke;
@@ -3013,7 +3008,7 @@
   vertical-align: top;
 }
 
-#stocktrade .card-header {
+.card-header {
   -webkit-box-align: stretch;
   align-items: stretch;
   box-shadow: 0 1px 2px rgba(10, 10, 10, 0.1);
@@ -3021,7 +3016,7 @@
   display: flex;
 }
 
-#stocktrade .card-header-title {
+.card-header-title {
   -webkit-box-align: center;
   align-items: center;
   color: #363636;
@@ -3033,7 +3028,7 @@
   padding: 0.75rem;
 }
 
-#stocktrade .card-header-icon {
+.card-header-icon {
   -webkit-box-align: center;
   align-items: center;
   cursor: pointer;
@@ -3044,20 +3039,20 @@
   padding: 0.75rem;
 }
 
-#stocktrade .card-image {
+.card-image {
   display: block;
   position: relative;
 }
 
-#stocktrade .card-content {
+.card-content {
   padding: 1.5rem;
 }
 
-#stocktrade .card-content .title + .subtitle {
+.card-content .title + .subtitle {
   margin-top: -1.5rem;
 }
 
-#stocktrade .card-footer {
+.card-footer {
   border-top: 1px solid #dbdbdb;
   -webkit-box-align: stretch;
   align-items: stretch;
@@ -3065,7 +3060,7 @@
   display: flex;
 }
 
-#stocktrade .card-footer-item {
+.card-footer-item {
   -webkit-box-align: center;
   align-items: center;
   display: -webkit-box;
@@ -3079,11 +3074,11 @@
   padding: 0.75rem;
 }
 
-#stocktrade .card-footer-item:not(:last-child) {
+.card-footer-item:not(:last-child) {
   border-right: 1px solid #dbdbdb;
 }
 
-#stocktrade .card {
+.card {
   background-color: white;
   box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
   color: #4a4a4a;
@@ -3091,11 +3086,11 @@
   position: relative;
 }
 
-#stocktrade .card .media:not(:last-child) {
+.card .media:not(:last-child) {
   margin-bottom: 0.75rem;
 }
 
-#stocktrade .level-item {
+.level-item {
   -webkit-box-align: center;
   align-items: center;
   display: -webkit-box;
@@ -3108,37 +3103,37 @@
   justify-content: center;
 }
 
-#stocktrade .level-item .title,
-#stocktrade .level-item .subtitle {
+.level-item .title,
+.level-item .subtitle {
   margin-bottom: 0;
 }
 
 @media screen and (max-width: 768px) {
-  #stocktrade .level-item:not(:last-child) {
+  .level-item:not(:last-child) {
     margin-bottom: 0.75rem;
   }
 }
 
-#stocktrade .level-left,
-#stocktrade .level-right {
+.level-left,
+.level-right {
   flex-basis: auto;
   -webkit-box-flex: 0;
   flex-grow: 0;
   flex-shrink: 0;
 }
 
-#stocktrade .level-left .level-item:not(:last-child),
-#stocktrade .level-right .level-item:not(:last-child) {
+.level-left .level-item:not(:last-child),
+.level-right .level-item:not(:last-child) {
   margin-right: 0.75rem;
 }
 
-#stocktrade .level-left .level-item.is-flexible,
-#stocktrade .level-right .level-item.is-flexible {
+.level-left .level-item.is-flexible,
+.level-right .level-item.is-flexible {
   -webkit-box-flex: 1;
   flex-grow: 1;
 }
 
-#stocktrade .level-left {
+.level-left {
   -webkit-box-align: center;
   align-items: center;
   -webkit-box-pack: start;
@@ -3146,19 +3141,19 @@
 }
 
 @media screen and (max-width: 768px) {
-  #stocktrade .level-left + .level-right {
+  .level-left + .level-right {
     margin-top: 1.5rem;
   }
 }
 
 @media screen and (min-width: 769px) {
-  #stocktrade .level-left {
+  .level-left {
     display: -webkit-box;
     display: flex;
   }
 }
 
-#stocktrade .level-right {
+.level-right {
   -webkit-box-align: center;
   align-items: center;
   -webkit-box-pack: end;
@@ -3166,74 +3161,74 @@
 }
 
 @media screen and (min-width: 769px) {
-  #stocktrade .level-right {
+  .level-right {
     display: -webkit-box;
     display: flex;
   }
 }
 
-#stocktrade .level {
+.level {
   -webkit-box-align: center;
   align-items: center;
   -webkit-box-pack: justify;
   justify-content: space-between;
 }
 
-#stocktrade .level:not(:last-child) {
+.level:not(:last-child) {
   margin-bottom: 1.5rem;
 }
 
-#stocktrade .level code {
+.level code {
   border-radius: 3px;
 }
 
-#stocktrade .level img {
+.level img {
   display: inline-block;
   vertical-align: top;
 }
 
-#stocktrade .level.is-mobile {
+.level.is-mobile {
   display: -webkit-box;
   display: flex;
 }
 
-#stocktrade .level.is-mobile > .level-item:not(:last-child) {
+.level.is-mobile > .level-item:not(:last-child) {
   margin-bottom: 0;
 }
 
-#stocktrade .level.is-mobile > .level-item:not(.is-narrow) {
+.level.is-mobile > .level-item:not(.is-narrow) {
   -webkit-box-flex: 1;
   flex-grow: 1;
 }
 
 @media screen and (min-width: 769px) {
-  #stocktrade .level {
+  .level {
     display: -webkit-box;
     display: flex;
   }
-  #stocktrade .level > .level-item:not(.is-narrow) {
+  .level > .level-item:not(.is-narrow) {
     -webkit-box-flex: 1;
     flex-grow: 1;
   }
 }
 
-#stocktrade .media-left,
-#stocktrade .media-right {
+.media-left,
+.media-right {
   flex-basis: auto;
   -webkit-box-flex: 0;
   flex-grow: 0;
   flex-shrink: 0;
 }
 
-#stocktrade .media-left {
+.media-left {
   margin-right: 1rem;
 }
 
-#stocktrade .media-right {
+.media-right {
   margin-left: 1rem;
 }
 
-#stocktrade .media-content {
+.media-content {
   flex-basis: auto;
   -webkit-box-flex: 1;
   flex-grow: 1;
@@ -3241,7 +3236,7 @@
   text-align: left;
 }
 
-#stocktrade .media {
+.media {
   -webkit-box-align: start;
   align-items: flex-start;
   display: -webkit-box;
@@ -3249,224 +3244,224 @@
   text-align: left;
 }
 
-#stocktrade .media .content:not(:last-child) {
+.media .content:not(:last-child) {
   margin-bottom: 0.75rem;
 }
 
-#stocktrade .media .media {
+.media .media {
   border-top: 1px solid rgba(219, 219, 219, 0.5);
   display: -webkit-box;
   display: flex;
   padding-top: 0.75rem;
 }
 
-#stocktrade .media .media .content:not(:last-child),
-#stocktrade .media .media .control:not(:last-child) {
+.media .media .content:not(:last-child),
+.media .media .control:not(:last-child) {
   margin-bottom: 0.5rem;
 }
 
-#stocktrade .media .media .media {
+.media .media .media {
   padding-top: 0.5rem;
 }
 
-#stocktrade .media .media .media + .media {
+.media .media .media + .media {
   margin-top: 0.5rem;
 }
 
-#stocktrade .media + .media {
+.media + .media {
   border-top: 1px solid rgba(219, 219, 219, 0.5);
   margin-top: 1rem;
   padding-top: 1rem;
 }
 
-#stocktrade .media.is-large + .media {
+.media.is-large + .media {
   margin-top: 1.5rem;
   padding-top: 1.5rem;
 }
 
-#stocktrade .menu {
+.menu {
   font-size: 1rem;
 }
 
-#stocktrade .menu-list {
+.menu-list {
   line-height: 1.25;
 }
 
-#stocktrade .menu-list a {
+.menu-list a {
   border-radius: 2px;
   color: #4a4a4a;
   display: block;
   padding: 0.5em 0.75em;
 }
 
-#stocktrade .menu-list a:hover {
+.menu-list a:hover {
   background-color: whitesmoke;
   color: #00d1b2;
 }
 
-#stocktrade .menu-list a.is-active {
+.menu-list a.is-active {
   background-color: #00d1b2;
   color: #fff;
 }
 
-#stocktrade .menu-list li ul {
+.menu-list li ul {
   border-left: 1px solid #dbdbdb;
   margin: 0.75em;
   padding-left: 0.75em;
 }
 
-#stocktrade .menu-label {
+.menu-label {
   color: #7a7a7a;
   font-size: 0.8em;
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
 
-#stocktrade .menu-label:not(:first-child) {
+.menu-label:not(:first-child) {
   margin-top: 1em;
 }
 
-#stocktrade .menu-label:not(:last-child) {
+.menu-label:not(:last-child) {
   margin-bottom: 1em;
 }
 
-#stocktrade .message {
+.message {
   background-color: whitesmoke;
   border-radius: 3px;
   font-size: 1rem;
 }
 
-#stocktrade .message:not(:last-child) {
+.message:not(:last-child) {
   margin-bottom: 1.5rem;
 }
 
-#stocktrade .message.is-white {
+.message.is-white {
   background-color: white;
 }
 
-#stocktrade .message.is-white .message-header {
+.message.is-white .message-header {
   background-color: white;
   color: #0a0a0a;
 }
 
-#stocktrade .message.is-white .message-body {
+.message.is-white .message-body {
   border-color: white;
   color: #4d4d4d;
 }
 
-#stocktrade .message.is-black {
+.message.is-black {
   background-color: #fafafa;
 }
 
-#stocktrade .message.is-black .message-header {
+.message.is-black .message-header {
   background-color: #0a0a0a;
   color: white;
 }
 
-#stocktrade .message.is-black .message-body {
+.message.is-black .message-body {
   border-color: #0a0a0a;
   color: #090909;
 }
 
-#stocktrade .message.is-light {
+.message.is-light {
   background-color: #fafafa;
 }
 
-#stocktrade .message.is-light .message-header {
+.message.is-light .message-header {
   background-color: whitesmoke;
   color: #363636;
 }
 
-#stocktrade .message.is-light .message-body {
+.message.is-light .message-body {
   border-color: whitesmoke;
   color: #505050;
 }
 
-#stocktrade .message.is-dark {
+.message.is-dark {
   background-color: #fafafa;
 }
 
-#stocktrade .message.is-dark .message-header {
+.message.is-dark .message-header {
   background-color: #363636;
   color: whitesmoke;
 }
 
-#stocktrade .message.is-dark .message-body {
+.message.is-dark .message-body {
   border-color: #363636;
   color: #2a2a2a;
 }
 
-#stocktrade .message.is-primary {
+.message.is-primary {
   background-color: #f5fffd;
 }
 
-#stocktrade .message.is-primary .message-header {
+.message.is-primary .message-header {
   background-color: #00d1b2;
   color: #fff;
 }
 
-#stocktrade .message.is-primary .message-body {
+.message.is-primary .message-body {
   border-color: #00d1b2;
   color: #021310;
 }
 
-#stocktrade .message.is-info {
+.message.is-info {
   background-color: #f6f9fe;
 }
 
-#stocktrade .message.is-info .message-header {
+.message.is-info .message-header {
   background-color: #3273dc;
   color: #fff;
 }
 
-#stocktrade .message.is-info .message-body {
+.message.is-info .message-body {
   border-color: #3273dc;
   color: #22509a;
 }
 
-#stocktrade .message.is-success {
+.message.is-success {
   background-color: #f6fef9;
 }
 
-#stocktrade .message.is-success .message-header {
+.message.is-success .message-header {
   background-color: #23d160;
   color: #fff;
 }
 
-#stocktrade .message.is-success .message-body {
+.message.is-success .message-body {
   border-color: #23d160;
   color: #0e301a;
 }
 
-#stocktrade .message.is-warning {
+.message.is-warning {
   background-color: #fffdf5;
 }
 
-#stocktrade .message.is-warning .message-header {
+.message.is-warning .message-header {
   background-color: #ffdd57;
   color: rgba(0, 0, 0, 0.7);
 }
 
-#stocktrade .message.is-warning .message-body {
+.message.is-warning .message-body {
   border-color: #ffdd57;
   color: #3b3108;
 }
 
-#stocktrade .message.is-danger {
+.message.is-danger {
   background-color: #fff5f7;
 }
 
-#stocktrade .message.is-danger .message-header {
+.message.is-danger .message-header {
   background-color: #ff3860;
   color: #fff;
 }
 
-#stocktrade .message.is-danger .message-body {
+.message.is-danger .message-body {
   border-color: #ff3860;
   color: #cd0930;
 }
 
-#stocktrade .message-header {
+.message-header {
   -webkit-box-align: center;
   align-items: center;
   background-color: #4a4a4a;
@@ -3481,54 +3476,54 @@
   position: relative;
 }
 
-#stocktrade .message-header a,
-#stocktrade .message-header strong {
+.message-header a,
+.message-header strong {
   color: inherit;
 }
 
-#stocktrade .message-header a {
+.message-header a {
   text-decoration: underline;
 }
 
-#stocktrade .message-header .delete {
+.message-header .delete {
   -webkit-box-flex: 0;
   flex-grow: 0;
   flex-shrink: 0;
   margin-left: 0.75em;
 }
 
-#stocktrade .message-header + .message-body {
+.message-header + .message-body {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
   border-top: none;
 }
 
-#stocktrade .message-body {
+.message-body {
   border: 1px solid #dbdbdb;
   border-radius: 3px;
   color: #4a4a4a;
   padding: 1em 1.25em;
 }
 
-#stocktrade .message-body a,
-#stocktrade .message-body strong {
+.message-body a,
+.message-body strong {
   color: inherit;
 }
 
-#stocktrade .message-body a {
+.message-body a {
   text-decoration: underline;
 }
 
-#stocktrade .message-body code,
-#stocktrade .message-body pre {
+.message-body code,
+.message-body pre {
   background: white;
 }
 
-#stocktrade .message-body pre code {
+.message-body pre code {
   background: transparent;
 }
 
-#stocktrade .modal-background {
+.modal-background {
   bottom: 0;
   left: 0;
   position: absolute;
@@ -3537,8 +3532,8 @@
   background-color: rgba(10, 10, 10, 0.86);
 }
 
-#stocktrade .modal-content,
-#stocktrade .modal-card {
+.modal-content,
+.modal-card {
   margin: 0 20px;
   max-height: calc(100vh - 160px);
   overflow: auto;
@@ -3547,15 +3542,15 @@
 }
 
 @media screen and (min-width: 769px) {
-  #stocktrade .modal-content,
-  #stocktrade .modal-card {
+  .modal-content,
+  .modal-card {
     margin: 0 auto;
     max-height: calc(100vh - 40px);
     width: 640px;
   }
 }
 
-#stocktrade .modal-close {
+.modal-close {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -3586,7 +3581,7 @@
   width: 40px;
 }
 
-#stocktrade .modal-close:before, #stocktrade .modal-close:after {
+.modal-close:before, .modal-close:after {
   background-color: white;
   content: "";
   display: block;
@@ -3597,40 +3592,40 @@
   transform: translateX(-50%) translateY(-50%);
 }
 
-#stocktrade .modal-close:before {
+.modal-close:before {
   height: 2px;
   width: 50%;
 }
 
-#stocktrade .modal-close:after {
+.modal-close:after {
   height: 50%;
   width: 2px;
 }
 
-#stocktrade .modal-close:hover, #stocktrade .modal-close:focus {
+.modal-close:hover, .modal-close:focus {
   background-color: rgba(10, 10, 10, 0.3);
 }
 
-#stocktrade .modal-close:active {
+.modal-close:active {
   background-color: rgba(10, 10, 10, 0.4);
 }
 
-#stocktrade .modal-close.is-small {
+.modal-close.is-small {
   height: 14px;
   width: 14px;
 }
 
-#stocktrade .modal-close.is-medium {
+.modal-close.is-medium {
   height: 26px;
   width: 26px;
 }
 
-#stocktrade .modal-close.is-large {
+.modal-close.is-large {
   height: 30px;
   width: 30px;
 }
 
-#stocktrade .modal-card {
+.modal-card {
   display: -webkit-box;
   display: flex;
   -webkit-box-orient: vertical;
@@ -3640,8 +3635,8 @@
   overflow: hidden;
 }
 
-#stocktrade .modal-card-head,
-#stocktrade .modal-card-foot {
+.modal-card-head,
+.modal-card-foot {
   -webkit-box-align: center;
   align-items: center;
   background-color: whitesmoke;
@@ -3654,13 +3649,13 @@
   position: relative;
 }
 
-#stocktrade .modal-card-head {
+.modal-card-head {
   border-bottom: 1px solid #dbdbdb;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 }
 
-#stocktrade .modal-card-title {
+.modal-card-title {
   color: #363636;
   -webkit-box-flex: 1;
   flex-grow: 1;
@@ -3669,17 +3664,17 @@
   line-height: 1;
 }
 
-#stocktrade .modal-card-foot {
+.modal-card-foot {
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   border-top: 1px solid #dbdbdb;
 }
 
-#stocktrade .modal-card-foot .button:not(:last-child) {
+.modal-card-foot .button:not(:last-child) {
   margin-right: 10px;
 }
 
-#stocktrade .modal-card-body {
+.modal-card-body {
   -webkit-overflow-scrolling: touch;
   background-color: white;
   -webkit-box-flex: 1;
@@ -3689,7 +3684,7 @@
   padding: 20px;
 }
 
-#stocktrade .modal {
+.modal {
   bottom: 0;
   left: 0;
   position: absolute;
@@ -3705,12 +3700,12 @@
   z-index: 1986;
 }
 
-#stocktrade .modal.is-active {
+.modal.is-active {
   display: -webkit-box;
   display: flex;
 }
 
-#stocktrade .nav-toggle {
+.nav-toggle {
   cursor: pointer;
   display: block;
   height: 3.5rem;
@@ -3718,7 +3713,7 @@
   width: 3.5rem;
 }
 
-#stocktrade .nav-toggle span {
+.nav-toggle span {
   background-color: #4a4a4a;
   display: block;
   height: 1px;
@@ -3735,27 +3730,27 @@
   width: 15px;
 }
 
-#stocktrade .nav-toggle span:nth-child(1) {
+.nav-toggle span:nth-child(1) {
   margin-top: -6px;
 }
 
-#stocktrade .nav-toggle span:nth-child(2) {
+.nav-toggle span:nth-child(2) {
   margin-top: -1px;
 }
 
-#stocktrade .nav-toggle span:nth-child(3) {
+.nav-toggle span:nth-child(3) {
   margin-top: 4px;
 }
 
-#stocktrade .nav-toggle:hover {
+.nav-toggle:hover {
   background-color: whitesmoke;
 }
 
-#stocktrade .nav-toggle.is-active span {
+.nav-toggle.is-active span {
   background-color: #00d1b2;
 }
 
-#stocktrade .nav-toggle.is-active span:nth-child(1) {
+.nav-toggle.is-active span:nth-child(1) {
   margin-left: -5px;
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
@@ -3763,11 +3758,11 @@
   transform-origin: left top;
 }
 
-#stocktrade .nav-toggle.is-active span:nth-child(2) {
+.nav-toggle.is-active span:nth-child(2) {
   opacity: 0;
 }
 
-#stocktrade .nav-toggle.is-active span:nth-child(3) {
+.nav-toggle.is-active span:nth-child(3) {
   margin-left: -5px;
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
@@ -3776,12 +3771,12 @@
 }
 
 @media screen and (min-width: 769px) {
-  #stocktrade .nav-toggle {
+  .nav-toggle {
     display: none;
   }
 }
 
-#stocktrade .nav-item {
+.nav-item {
   -webkit-box-align: center;
   align-items: center;
   display: -webkit-box;
@@ -3795,52 +3790,52 @@
   padding: 0.5rem 0.75rem;
 }
 
-#stocktrade .nav-item a {
+.nav-item a {
   -webkit-box-flex: 1;
   flex-grow: 1;
   flex-shrink: 0;
 }
 
-#stocktrade .nav-item img {
+.nav-item img {
   max-height: 1.75rem;
 }
 
-#stocktrade .nav-item .button + .button {
+.nav-item .button + .button {
   margin-left: 0.75rem;
 }
 
-#stocktrade .nav-item .tag:first-child:not(:last-child) {
+.nav-item .tag:first-child:not(:last-child) {
   margin-right: 0.5rem;
 }
 
-#stocktrade .nav-item .tag:last-child:not(:first-child) {
+.nav-item .tag:last-child:not(:first-child) {
   margin-left: 0.5rem;
 }
 
 @media screen and (max-width: 768px) {
-  #stocktrade .nav-item {
+  .nav-item {
     -webkit-box-pack: start;
     justify-content: flex-start;
   }
 }
 
-#stocktrade .nav-item a,
-#stocktrade a.nav-item {
+.nav-item a,
+a.nav-item {
   color: #7a7a7a;
 }
 
-#stocktrade .nav-item a:hover,
-#stocktrade a.nav-item:hover {
+.nav-item a:hover,
+a.nav-item:hover {
   color: #363636;
 }
 
-#stocktrade .nav-item a.is-active,
-#stocktrade a.nav-item.is-active {
+.nav-item a.is-active,
+a.nav-item.is-active {
   color: #363636;
 }
 
-#stocktrade .nav-item a.is-tab,
-#stocktrade a.nav-item.is-tab {
+.nav-item a.is-tab,
+a.nav-item.is-tab {
   border-bottom: 1px solid transparent;
   border-top: 1px solid transparent;
   padding-bottom: calc(0.5rem - 1px);
@@ -3849,28 +3844,28 @@
   padding-top: calc(0.5rem - 1px);
 }
 
-#stocktrade .nav-item a.is-tab:hover,
-#stocktrade a.nav-item.is-tab:hover {
+.nav-item a.is-tab:hover,
+a.nav-item.is-tab:hover {
   border-bottom-color: #00d1b2;
   border-top-color: transparent;
 }
 
-#stocktrade .nav-item a.is-tab.is-active,
-#stocktrade a.nav-item.is-tab.is-active {
+.nav-item a.is-tab.is-active,
+a.nav-item.is-tab.is-active {
   border-bottom: 3px solid #00d1b2;
   color: #00d1b2;
   padding-bottom: calc(0.5rem - 3px);
 }
 
 @media screen and (min-width: 1000px) {
-  #stocktrade .nav-item a.is-brand,
-  #stocktrade a.nav-item.is-brand {
+  .nav-item a.is-brand,
+  a.nav-item.is-brand {
     padding-left: 0;
   }
 }
 
 @media screen and (max-width: 768px) {
-  #stocktrade .nav-menu {
+  .nav-menu {
     background-color: white;
     box-shadow: 0 4px 7px rgba(10, 10, 10, 0.1);
     left: 0;
@@ -3879,23 +3874,23 @@
     top: 100%;
     position: absolute;
   }
-  #stocktrade .nav-menu .nav-item {
+  .nav-menu .nav-item {
     border-top: 1px solid rgba(219, 219, 219, 0.5);
     padding: 0.75rem;
   }
-  #stocktrade .nav-menu.is-active {
+  .nav-menu.is-active {
     display: block;
   }
 }
 
 @media screen and (min-width: 769px) and (max-width: 999px) {
-  #stocktrade .nav-menu {
+  .nav-menu {
     padding-right: 1.5rem;
   }
 }
 
-#stocktrade .nav-left,
-#stocktrade .nav-right {
+.nav-left,
+.nav-right {
   -webkit-box-align: stretch;
   align-items: stretch;
   flex-basis: 0;
@@ -3904,7 +3899,7 @@
   flex-shrink: 0;
 }
 
-#stocktrade .nav-left {
+.nav-left {
   display: -webkit-box;
   display: flex;
   -webkit-box-pack: start;
@@ -3914,7 +3909,7 @@
   white-space: nowrap;
 }
 
-#stocktrade .nav-center {
+.nav-center {
   -webkit-box-align: stretch;
   align-items: stretch;
   display: -webkit-box;
@@ -3928,19 +3923,19 @@
   margin-right: auto;
 }
 
-#stocktrade .nav-right {
+.nav-right {
   -webkit-box-pack: end;
   justify-content: flex-end;
 }
 
 @media screen and (min-width: 769px) {
-  #stocktrade .nav-right {
+  .nav-right {
     display: -webkit-box;
     display: flex;
   }
 }
 
-#stocktrade .nav {
+.nav {
   -webkit-box-align: stretch;
   align-items: stretch;
   background-color: white;
@@ -3952,7 +3947,7 @@
   z-index: 2;
 }
 
-#stocktrade .nav > .container {
+.nav > .container {
   -webkit-box-align: stretch;
   align-items: stretch;
   display: -webkit-box;
@@ -3961,12 +3956,12 @@
   width: 100%;
 }
 
-#stocktrade .nav.has-shadow {
+.nav.has-shadow {
   box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1);
 }
 
-#stocktrade .pagination,
-#stocktrade .pagination-list {
+.pagination,
+.pagination-list {
   -webkit-box-align: center;
   align-items: center;
   display: -webkit-box;
@@ -3976,10 +3971,10 @@
   text-align: center;
 }
 
-#stocktrade .pagination-previous,
-#stocktrade .pagination-next,
-#stocktrade .pagination-link,
-#stocktrade .pagination-ellipsis {
+.pagination-previous,
+.pagination-next,
+.pagination-link,
+.pagination-ellipsis {
   -moz-appearance: none;
   -webkit-appearance: none;
   -webkit-box-align: center;
@@ -4011,108 +4006,108 @@
   text-align: center;
 }
 
-#stocktrade .pagination-previous:focus, #stocktrade .pagination-previous.is-focused, #stocktrade .pagination-previous:active, #stocktrade .pagination-previous.is-active,
-#stocktrade .pagination-next:focus,
-#stocktrade .pagination-next.is-focused,
-#stocktrade .pagination-next:active,
-#stocktrade .pagination-next.is-active,
-#stocktrade .pagination-link:focus,
-#stocktrade .pagination-link.is-focused,
-#stocktrade .pagination-link:active,
-#stocktrade .pagination-link.is-active,
-#stocktrade .pagination-ellipsis:focus,
-#stocktrade .pagination-ellipsis.is-focused,
-#stocktrade .pagination-ellipsis:active,
-#stocktrade .pagination-ellipsis.is-active {
+.pagination-previous:focus, .pagination-previous.is-focused, .pagination-previous:active, .pagination-previous.is-active,
+.pagination-next:focus,
+.pagination-next.is-focused,
+.pagination-next:active,
+.pagination-next.is-active,
+.pagination-link:focus,
+.pagination-link.is-focused,
+.pagination-link:active,
+.pagination-link.is-active,
+.pagination-ellipsis:focus,
+.pagination-ellipsis.is-focused,
+.pagination-ellipsis:active,
+.pagination-ellipsis.is-active {
   outline: none;
 }
 
-#stocktrade .pagination-previous[disabled], #stocktrade .pagination-previous.is-disabled,
-#stocktrade .pagination-next[disabled],
-#stocktrade .pagination-next.is-disabled,
-#stocktrade .pagination-link[disabled],
-#stocktrade .pagination-link.is-disabled,
-#stocktrade .pagination-ellipsis[disabled],
-#stocktrade .pagination-ellipsis.is-disabled {
+.pagination-previous[disabled], .pagination-previous.is-disabled,
+.pagination-next[disabled],
+.pagination-next.is-disabled,
+.pagination-link[disabled],
+.pagination-link.is-disabled,
+.pagination-ellipsis[disabled],
+.pagination-ellipsis.is-disabled {
   pointer-events: none;
 }
 
-#stocktrade .pagination-previous,
-#stocktrade .pagination-next,
-#stocktrade .pagination-link {
+.pagination-previous,
+.pagination-next,
+.pagination-link {
   border: 1px solid #dbdbdb;
   min-width: 2.5em;
 }
 
-#stocktrade .pagination-previous:hover,
-#stocktrade .pagination-next:hover,
-#stocktrade .pagination-link:hover {
+.pagination-previous:hover,
+.pagination-next:hover,
+.pagination-link:hover {
   border-color: #b5b5b5;
   color: #363636;
 }
 
-#stocktrade .pagination-previous:focus,
-#stocktrade .pagination-next:focus,
-#stocktrade .pagination-link:focus {
+.pagination-previous:focus,
+.pagination-next:focus,
+.pagination-link:focus {
   border-color: #00d1b2;
 }
 
-#stocktrade .pagination-previous:active,
-#stocktrade .pagination-next:active,
-#stocktrade .pagination-link:active {
+.pagination-previous:active,
+.pagination-next:active,
+.pagination-link:active {
   box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.2);
 }
 
-#stocktrade .pagination-previous[disabled], #stocktrade .pagination-previous.is-disabled,
-#stocktrade .pagination-next[disabled],
-#stocktrade .pagination-next.is-disabled,
-#stocktrade .pagination-link[disabled],
-#stocktrade .pagination-link.is-disabled {
+.pagination-previous[disabled], .pagination-previous.is-disabled,
+.pagination-next[disabled],
+.pagination-next.is-disabled,
+.pagination-link[disabled],
+.pagination-link.is-disabled {
   background: #dbdbdb;
   color: #7a7a7a;
   opacity: 0.5;
   pointer-events: none;
 }
 
-#stocktrade .pagination-previous,
-#stocktrade .pagination-next {
+.pagination-previous,
+.pagination-next {
   padding-left: 0.75em;
   padding-right: 0.75em;
 }
 
-#stocktrade .pagination-link.is-current {
+.pagination-link.is-current {
   background-color: #00d1b2;
   border-color: #00d1b2;
   color: #fff;
 }
 
-#stocktrade .pagination-ellipsis {
+.pagination-ellipsis {
   color: #b5b5b5;
   pointer-events: none;
 }
 
-#stocktrade .pagination-list li:not(:first-child) {
+.pagination-list li:not(:first-child) {
   margin-left: 0.375rem;
 }
 
 @media screen and (max-width: 768px) {
-  #stocktrade .pagination {
+  .pagination {
     flex-wrap: wrap;
   }
-  #stocktrade .pagination-previous,
-  #stocktrade .pagination-next {
+  .pagination-previous,
+  .pagination-next {
     -webkit-box-flex: 1;
     flex-grow: 1;
     flex-shrink: 1;
     width: calc(50% - 0.375rem);
   }
-  #stocktrade .pagination-next {
+  .pagination-next {
     margin-left: 0.75rem;
   }
-  #stocktrade .pagination-list {
+  .pagination-list {
     margin-top: 0.75rem;
   }
-  #stocktrade .pagination-list li {
+  .pagination-list li {
     -webkit-box-flex: 1;
     flex-grow: 1;
     flex-shrink: 1;
@@ -4120,7 +4115,7 @@
 }
 
 @media screen and (min-width: 769px) {
-  #stocktrade .pagination-list {
+  .pagination-list {
     -webkit-box-flex: 1;
     flex-grow: 1;
     flex-shrink: 1;
@@ -4129,48 +4124,48 @@
     -webkit-box-ordinal-group: 2;
     order: 1;
   }
-  #stocktrade .pagination-previous,
-  #stocktrade .pagination-next {
+  .pagination-previous,
+  .pagination-next {
     margin-left: 0.75rem;
   }
-  #stocktrade .pagination-previous {
+  .pagination-previous {
     -webkit-box-ordinal-group: 3;
     order: 2;
   }
-  #stocktrade .pagination-next {
+  .pagination-next {
     -webkit-box-ordinal-group: 4;
     order: 3;
   }
-  #stocktrade .pagination {
+  .pagination {
     -webkit-box-pack: justify;
     justify-content: space-between;
   }
-  #stocktrade .pagination.is-centered .pagination-previous {
+  .pagination.is-centered .pagination-previous {
     margin-left: 0;
     -webkit-box-ordinal-group: 2;
     order: 1;
   }
-  #stocktrade .pagination.is-centered .pagination-list {
+  .pagination.is-centered .pagination-list {
     -webkit-box-pack: center;
     justify-content: center;
     -webkit-box-ordinal-group: 3;
     order: 2;
   }
-  #stocktrade .pagination.is-centered .pagination-next {
+  .pagination.is-centered .pagination-next {
     -webkit-box-ordinal-group: 4;
     order: 3;
   }
-  #stocktrade .pagination.is-right .pagination-previous {
+  .pagination.is-right .pagination-previous {
     margin-left: 0;
     -webkit-box-ordinal-group: 2;
     order: 1;
   }
-  #stocktrade .pagination.is-right .pagination-next {
+  .pagination.is-right .pagination-next {
     -webkit-box-ordinal-group: 3;
     order: 2;
     margin-right: 0.75rem;
   }
-  #stocktrade .pagination.is-right .pagination-list {
+  .pagination.is-right .pagination-list {
     -webkit-box-pack: end;
     justify-content: flex-end;
     -webkit-box-ordinal-group: 4;
@@ -4178,29 +4173,29 @@
   }
 }
 
-#stocktrade .panel {
+.panel {
   font-size: 1rem;
 }
 
-#stocktrade .panel:not(:last-child) {
+.panel:not(:last-child) {
   margin-bottom: 1.5rem;
 }
 
-#stocktrade .panel-heading,
-#stocktrade .panel-tabs,
-#stocktrade .panel-block {
+.panel-heading,
+.panel-tabs,
+.panel-block {
   border-bottom: 1px solid #dbdbdb;
   border-left: 1px solid #dbdbdb;
   border-right: 1px solid #dbdbdb;
 }
 
-#stocktrade .panel-heading:first-child,
-#stocktrade .panel-tabs:first-child,
-#stocktrade .panel-block:first-child {
+.panel-heading:first-child,
+.panel-tabs:first-child,
+.panel-block:first-child {
   border-top: 1px solid #dbdbdb;
 }
 
-#stocktrade .panel-heading {
+.panel-heading {
   background-color: whitesmoke;
   border-radius: 3px 3px 0 0;
   color: #363636;
@@ -4210,7 +4205,7 @@
   padding: 0.5em 0.75em;
 }
 
-#stocktrade .panel-tabs {
+.panel-tabs {
   -webkit-box-align: end;
   align-items: flex-end;
   display: -webkit-box;
@@ -4220,26 +4215,26 @@
   justify-content: center;
 }
 
-#stocktrade .panel-tabs a {
+.panel-tabs a {
   border-bottom: 1px solid #dbdbdb;
   margin-bottom: -1px;
   padding: 0.5em;
 }
 
-#stocktrade .panel-tabs a.is-active {
+.panel-tabs a.is-active {
   border-bottom-color: #4a4a4a;
   color: #363636;
 }
 
-#stocktrade .panel-list a {
+.panel-list a {
   color: #4a4a4a;
 }
 
-#stocktrade .panel-list a:hover {
+.panel-list a:hover {
   color: #00d1b2;
 }
 
-#stocktrade .panel-block {
+.panel-block {
   -webkit-box-align: center;
   align-items: center;
   color: #363636;
@@ -4250,37 +4245,37 @@
   padding: 0.5em 0.75em;
 }
 
-#stocktrade .panel-block input[type="checkbox"] {
+.panel-block input[type="checkbox"] {
   margin-right: 0.75em;
 }
 
-#stocktrade .panel-block > .control {
+.panel-block > .control {
   -webkit-box-flex: 1;
   flex-grow: 1;
   flex-shrink: 1;
   width: 100%;
 }
 
-#stocktrade .panel-block.is-active {
+.panel-block.is-active {
   border-left-color: #00d1b2;
   color: #363636;
 }
 
-#stocktrade .panel-block.is-active .panel-icon {
+.panel-block.is-active .panel-icon {
   color: #00d1b2;
 }
 
-#stocktrade a.panel-block,
-#stocktrade label.panel-block {
+a.panel-block,
+label.panel-block {
   cursor: pointer;
 }
 
-#stocktrade a.panel-block:hover,
-#stocktrade label.panel-block:hover {
+a.panel-block:hover,
+label.panel-block:hover {
   background-color: whitesmoke;
 }
 
-#stocktrade .panel-icon {
+.panel-icon {
   display: inline-block;
   font-size: 14px;
   height: 1em;
@@ -4292,12 +4287,12 @@
   margin-right: 0.75em;
 }
 
-#stocktrade .panel-icon .fa {
+.panel-icon .fa {
   font-size: inherit;
   line-height: inherit;
 }
 
-#stocktrade .tabs {
+.tabs {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -4315,11 +4310,11 @@
   white-space: nowrap;
 }
 
-#stocktrade .tabs:not(:last-child) {
+.tabs:not(:last-child) {
   margin-bottom: 1.5rem;
 }
 
-#stocktrade .tabs a {
+.tabs a {
   -webkit-box-align: center;
   align-items: center;
   border-bottom: 1px solid #dbdbdb;
@@ -4333,21 +4328,21 @@
   vertical-align: top;
 }
 
-#stocktrade .tabs a:hover {
+.tabs a:hover {
   border-bottom-color: #363636;
   color: #363636;
 }
 
-#stocktrade .tabs li {
+.tabs li {
   display: block;
 }
 
-#stocktrade .tabs li.is-active a {
+.tabs li.is-active a {
   border-bottom-color: #00d1b2;
   color: #00d1b2;
 }
 
-#stocktrade .tabs ul {
+.tabs ul {
   -webkit-box-align: center;
   align-items: center;
   border-bottom: 1px solid #dbdbdb;
@@ -4360,11 +4355,11 @@
   justify-content: flex-start;
 }
 
-#stocktrade .tabs ul.is-left {
+.tabs ul.is-left {
   padding-right: 0.75em;
 }
 
-#stocktrade .tabs ul.is-center {
+.tabs ul.is-center {
   -webkit-box-flex: 0;
   flex: none;
   -webkit-box-pack: center;
@@ -4373,100 +4368,100 @@
   padding-right: 0.75em;
 }
 
-#stocktrade .tabs ul.is-right {
+.tabs ul.is-right {
   -webkit-box-pack: end;
   justify-content: flex-end;
   padding-left: 0.75em;
 }
 
-#stocktrade .tabs .icon:first-child {
+.tabs .icon:first-child {
   margin-right: 0.5em;
 }
 
-#stocktrade .tabs .icon:last-child {
+.tabs .icon:last-child {
   margin-left: 0.5em;
 }
 
-#stocktrade .tabs.is-centered ul {
+.tabs.is-centered ul {
   -webkit-box-pack: center;
   justify-content: center;
 }
 
-#stocktrade .tabs.is-right ul {
+.tabs.is-right ul {
   -webkit-box-pack: end;
   justify-content: flex-end;
 }
 
-#stocktrade .tabs.is-boxed a {
+.tabs.is-boxed a {
   border: 1px solid transparent;
   border-radius: 3px 3px 0 0;
 }
 
-#stocktrade .tabs.is-boxed a:hover {
+.tabs.is-boxed a:hover {
   background-color: whitesmoke;
   border-bottom-color: #dbdbdb;
 }
 
-#stocktrade .tabs.is-boxed li.is-active a {
+.tabs.is-boxed li.is-active a {
   background-color: white;
   border-color: #dbdbdb;
   border-bottom-color: transparent !important;
 }
 
-#stocktrade .tabs.is-fullwidth li {
+.tabs.is-fullwidth li {
   -webkit-box-flex: 1;
   flex-grow: 1;
   flex-shrink: 0;
 }
 
-#stocktrade .tabs.is-toggle a {
+.tabs.is-toggle a {
   border: 1px solid #dbdbdb;
   margin-bottom: 0;
   position: relative;
 }
 
-#stocktrade .tabs.is-toggle a:hover {
+.tabs.is-toggle a:hover {
   background-color: whitesmoke;
   border-color: #b5b5b5;
   z-index: 2;
 }
 
-#stocktrade .tabs.is-toggle li + li {
+.tabs.is-toggle li + li {
   margin-left: -1px;
 }
 
-#stocktrade .tabs.is-toggle li:first-child a {
+.tabs.is-toggle li:first-child a {
   border-radius: 3px 0 0 3px;
 }
 
-#stocktrade .tabs.is-toggle li:last-child a {
+.tabs.is-toggle li:last-child a {
   border-radius: 0 3px 3px 0;
 }
 
-#stocktrade .tabs.is-toggle li.is-active a {
+.tabs.is-toggle li.is-active a {
   background-color: #00d1b2;
   border-color: #00d1b2;
   color: #fff;
   z-index: 1;
 }
 
-#stocktrade .tabs.is-toggle ul {
+.tabs.is-toggle ul {
   border-bottom: none;
 }
 
-#stocktrade .tabs.is-small {
+.tabs.is-small {
   font-size: 0.75rem;
 }
 
-#stocktrade .tabs.is-medium {
+.tabs.is-medium {
   font-size: 1.25rem;
 }
 
-#stocktrade .tabs.is-large {
+.tabs.is-large {
   font-size: 1.5rem;
 }
 
-#stocktrade .column {
+.column {
   display: block;
   flex-basis: 0;
   -webkit-box-flex: 1;
@@ -4475,860 +4470,860 @@
   padding: 0.75rem;
 }
 
-.columns.is-mobile > #stocktrade .column.is-narrow {
+.columns.is-mobile > .column.is-narrow {
   -webkit-box-flex: 0;
   flex: none;
 }
 
-.columns.is-mobile > #stocktrade .column.is-full {
+.columns.is-mobile > .column.is-full {
   -webkit-box-flex: 0;
   flex: none;
   width: 100%;
 }
 
-.columns.is-mobile > #stocktrade .column.is-three-quarters {
+.columns.is-mobile > .column.is-three-quarters {
   -webkit-box-flex: 0;
   flex: none;
   width: 75%;
 }
 
-.columns.is-mobile > #stocktrade .column.is-two-thirds {
+.columns.is-mobile > .column.is-two-thirds {
   -webkit-box-flex: 0;
   flex: none;
   width: 66.6666%;
 }
 
-.columns.is-mobile > #stocktrade .column.is-half {
+.columns.is-mobile > .column.is-half {
   -webkit-box-flex: 0;
   flex: none;
   width: 50%;
 }
 
-.columns.is-mobile > #stocktrade .column.is-one-third {
+.columns.is-mobile > .column.is-one-third {
   -webkit-box-flex: 0;
   flex: none;
   width: 33.3333%;
 }
 
-.columns.is-mobile > #stocktrade .column.is-one-quarter {
+.columns.is-mobile > .column.is-one-quarter {
   -webkit-box-flex: 0;
   flex: none;
   width: 25%;
 }
 
-.columns.is-mobile > #stocktrade .column.is-offset-three-quarters {
+.columns.is-mobile > .column.is-offset-three-quarters {
   margin-left: 75%;
 }
 
-.columns.is-mobile > #stocktrade .column.is-offset-two-thirds {
+.columns.is-mobile > .column.is-offset-two-thirds {
   margin-left: 66.6666%;
 }
 
-.columns.is-mobile > #stocktrade .column.is-offset-half {
+.columns.is-mobile > .column.is-offset-half {
   margin-left: 50%;
 }
 
-.columns.is-mobile > #stocktrade .column.is-offset-one-third {
+.columns.is-mobile > .column.is-offset-one-third {
   margin-left: 33.3333%;
 }
 
-.columns.is-mobile > #stocktrade .column.is-offset-one-quarter {
+.columns.is-mobile > .column.is-offset-one-quarter {
   margin-left: 25%;
 }
 
-.columns.is-mobile > #stocktrade .column.is-1 {
+.columns.is-mobile > .column.is-1 {
   -webkit-box-flex: 0;
   flex: none;
   width: 8.3333333333%;
 }
 
-.columns.is-mobile > #stocktrade .column.is-offset-1 {
+.columns.is-mobile > .column.is-offset-1 {
   margin-left: 8.3333333333%;
 }
 
-.columns.is-mobile > #stocktrade .column.is-2 {
+.columns.is-mobile > .column.is-2 {
   -webkit-box-flex: 0;
   flex: none;
   width: 16.6666666667%;
 }
 
-.columns.is-mobile > #stocktrade .column.is-offset-2 {
+.columns.is-mobile > .column.is-offset-2 {
   margin-left: 16.6666666667%;
 }
 
-.columns.is-mobile > #stocktrade .column.is-3 {
+.columns.is-mobile > .column.is-3 {
   -webkit-box-flex: 0;
   flex: none;
   width: 25%;
 }
 
-.columns.is-mobile > #stocktrade .column.is-offset-3 {
+.columns.is-mobile > .column.is-offset-3 {
   margin-left: 25%;
 }
 
-.columns.is-mobile > #stocktrade .column.is-4 {
+.columns.is-mobile > .column.is-4 {
   -webkit-box-flex: 0;
   flex: none;
   width: 33.3333333333%;
 }
 
-.columns.is-mobile > #stocktrade .column.is-offset-4 {
+.columns.is-mobile > .column.is-offset-4 {
   margin-left: 33.3333333333%;
 }
 
-.columns.is-mobile > #stocktrade .column.is-5 {
+.columns.is-mobile > .column.is-5 {
   -webkit-box-flex: 0;
   flex: none;
   width: 41.6666666667%;
 }
 
-.columns.is-mobile > #stocktrade .column.is-offset-5 {
+.columns.is-mobile > .column.is-offset-5 {
   margin-left: 41.6666666667%;
 }
 
-.columns.is-mobile > #stocktrade .column.is-6 {
+.columns.is-mobile > .column.is-6 {
   -webkit-box-flex: 0;
   flex: none;
   width: 50%;
 }
 
-.columns.is-mobile > #stocktrade .column.is-offset-6 {
+.columns.is-mobile > .column.is-offset-6 {
   margin-left: 50%;
 }
 
-.columns.is-mobile > #stocktrade .column.is-7 {
+.columns.is-mobile > .column.is-7 {
   -webkit-box-flex: 0;
   flex: none;
   width: 58.3333333333%;
 }
 
-.columns.is-mobile > #stocktrade .column.is-offset-7 {
+.columns.is-mobile > .column.is-offset-7 {
   margin-left: 58.3333333333%;
 }
 
-.columns.is-mobile > #stocktrade .column.is-8 {
+.columns.is-mobile > .column.is-8 {
   -webkit-box-flex: 0;
   flex: none;
   width: 66.6666666667%;
 }
 
-.columns.is-mobile > #stocktrade .column.is-offset-8 {
+.columns.is-mobile > .column.is-offset-8 {
   margin-left: 66.6666666667%;
 }
 
-.columns.is-mobile > #stocktrade .column.is-9 {
+.columns.is-mobile > .column.is-9 {
   -webkit-box-flex: 0;
   flex: none;
   width: 75%;
 }
 
-.columns.is-mobile > #stocktrade .column.is-offset-9 {
+.columns.is-mobile > .column.is-offset-9 {
   margin-left: 75%;
 }
 
-.columns.is-mobile > #stocktrade .column.is-10 {
+.columns.is-mobile > .column.is-10 {
   -webkit-box-flex: 0;
   flex: none;
   width: 83.3333333333%;
 }
 
-.columns.is-mobile > #stocktrade .column.is-offset-10 {
+.columns.is-mobile > .column.is-offset-10 {
   margin-left: 83.3333333333%;
 }
 
-.columns.is-mobile > #stocktrade .column.is-11 {
+.columns.is-mobile > .column.is-11 {
   -webkit-box-flex: 0;
   flex: none;
   width: 91.6666666667%;
 }
 
-.columns.is-mobile > #stocktrade .column.is-offset-11 {
+.columns.is-mobile > .column.is-offset-11 {
   margin-left: 91.6666666667%;
 }
 
-.columns.is-mobile > #stocktrade .column.is-12 {
+.columns.is-mobile > .column.is-12 {
   -webkit-box-flex: 0;
   flex: none;
   width: 100%;
 }
 
-.columns.is-mobile > #stocktrade .column.is-offset-12 {
+.columns.is-mobile > .column.is-offset-12 {
   margin-left: 100%;
 }
 
 @media screen and (max-width: 768px) {
-  #stocktrade .column.is-narrow-mobile {
+  .column.is-narrow-mobile {
     -webkit-box-flex: 0;
     flex: none;
   }
-  #stocktrade .column.is-full-mobile {
+  .column.is-full-mobile {
     -webkit-box-flex: 0;
     flex: none;
     width: 100%;
   }
-  #stocktrade .column.is-three-quarters-mobile {
+  .column.is-three-quarters-mobile {
     -webkit-box-flex: 0;
     flex: none;
     width: 75%;
   }
-  #stocktrade .column.is-two-thirds-mobile {
+  .column.is-two-thirds-mobile {
     -webkit-box-flex: 0;
     flex: none;
     width: 66.6666%;
   }
-  #stocktrade .column.is-half-mobile {
+  .column.is-half-mobile {
     -webkit-box-flex: 0;
     flex: none;
     width: 50%;
   }
-  #stocktrade .column.is-one-third-mobile {
+  .column.is-one-third-mobile {
     -webkit-box-flex: 0;
     flex: none;
     width: 33.3333%;
   }
-  #stocktrade .column.is-one-quarter-mobile {
+  .column.is-one-quarter-mobile {
     -webkit-box-flex: 0;
     flex: none;
     width: 25%;
   }
-  #stocktrade .column.is-offset-three-quarters-mobile {
+  .column.is-offset-three-quarters-mobile {
     margin-left: 75%;
   }
-  #stocktrade .column.is-offset-two-thirds-mobile {
+  .column.is-offset-two-thirds-mobile {
     margin-left: 66.6666%;
   }
-  #stocktrade .column.is-offset-half-mobile {
+  .column.is-offset-half-mobile {
     margin-left: 50%;
   }
-  #stocktrade .column.is-offset-one-third-mobile {
+  .column.is-offset-one-third-mobile {
     margin-left: 33.3333%;
   }
-  #stocktrade .column.is-offset-one-quarter-mobile {
+  .column.is-offset-one-quarter-mobile {
     margin-left: 25%;
   }
-  #stocktrade .column.is-1-mobile {
+  .column.is-1-mobile {
     -webkit-box-flex: 0;
     flex: none;
     width: 8.3333333333%;
   }
-  #stocktrade .column.is-offset-1-mobile {
+  .column.is-offset-1-mobile {
     margin-left: 8.3333333333%;
   }
-  #stocktrade .column.is-2-mobile {
+  .column.is-2-mobile {
     -webkit-box-flex: 0;
     flex: none;
     width: 16.6666666667%;
   }
-  #stocktrade .column.is-offset-2-mobile {
+  .column.is-offset-2-mobile {
     margin-left: 16.6666666667%;
   }
-  #stocktrade .column.is-3-mobile {
+  .column.is-3-mobile {
     -webkit-box-flex: 0;
     flex: none;
     width: 25%;
   }
-  #stocktrade .column.is-offset-3-mobile {
+  .column.is-offset-3-mobile {
     margin-left: 25%;
   }
-  #stocktrade .column.is-4-mobile {
+  .column.is-4-mobile {
     -webkit-box-flex: 0;
     flex: none;
     width: 33.3333333333%;
   }
-  #stocktrade .column.is-offset-4-mobile {
+  .column.is-offset-4-mobile {
     margin-left: 33.3333333333%;
   }
-  #stocktrade .column.is-5-mobile {
+  .column.is-5-mobile {
     -webkit-box-flex: 0;
     flex: none;
     width: 41.6666666667%;
   }
-  #stocktrade .column.is-offset-5-mobile {
+  .column.is-offset-5-mobile {
     margin-left: 41.6666666667%;
   }
-  #stocktrade .column.is-6-mobile {
+  .column.is-6-mobile {
     -webkit-box-flex: 0;
     flex: none;
     width: 50%;
   }
-  #stocktrade .column.is-offset-6-mobile {
+  .column.is-offset-6-mobile {
     margin-left: 50%;
   }
-  #stocktrade .column.is-7-mobile {
+  .column.is-7-mobile {
     -webkit-box-flex: 0;
     flex: none;
     width: 58.3333333333%;
   }
-  #stocktrade .column.is-offset-7-mobile {
+  .column.is-offset-7-mobile {
     margin-left: 58.3333333333%;
   }
-  #stocktrade .column.is-8-mobile {
+  .column.is-8-mobile {
     -webkit-box-flex: 0;
     flex: none;
     width: 66.6666666667%;
   }
-  #stocktrade .column.is-offset-8-mobile {
+  .column.is-offset-8-mobile {
     margin-left: 66.6666666667%;
   }
-  #stocktrade .column.is-9-mobile {
+  .column.is-9-mobile {
     -webkit-box-flex: 0;
     flex: none;
     width: 75%;
   }
-  #stocktrade .column.is-offset-9-mobile {
+  .column.is-offset-9-mobile {
     margin-left: 75%;
   }
-  #stocktrade .column.is-10-mobile {
+  .column.is-10-mobile {
     -webkit-box-flex: 0;
     flex: none;
     width: 83.3333333333%;
   }
-  #stocktrade .column.is-offset-10-mobile {
+  .column.is-offset-10-mobile {
     margin-left: 83.3333333333%;
   }
-  #stocktrade .column.is-11-mobile {
+  .column.is-11-mobile {
     -webkit-box-flex: 0;
     flex: none;
     width: 91.6666666667%;
   }
-  #stocktrade .column.is-offset-11-mobile {
+  .column.is-offset-11-mobile {
     margin-left: 91.6666666667%;
   }
-  #stocktrade .column.is-12-mobile {
+  .column.is-12-mobile {
     -webkit-box-flex: 0;
     flex: none;
     width: 100%;
   }
-  #stocktrade .column.is-offset-12-mobile {
+  .column.is-offset-12-mobile {
     margin-left: 100%;
   }
 }
 
 @media screen and (min-width: 769px) {
-  #stocktrade .column.is-narrow, #stocktrade .column.is-narrow-tablet {
+  .column.is-narrow, .column.is-narrow-tablet {
     -webkit-box-flex: 0;
     flex: none;
   }
-  #stocktrade .column.is-full, #stocktrade .column.is-full-tablet {
+  .column.is-full, .column.is-full-tablet {
     -webkit-box-flex: 0;
     flex: none;
     width: 100%;
   }
-  #stocktrade .column.is-three-quarters, #stocktrade .column.is-three-quarters-tablet {
+  .column.is-three-quarters, .column.is-three-quarters-tablet {
     -webkit-box-flex: 0;
     flex: none;
     width: 75%;
   }
-  #stocktrade .column.is-two-thirds, #stocktrade .column.is-two-thirds-tablet {
+  .column.is-two-thirds, .column.is-two-thirds-tablet {
     -webkit-box-flex: 0;
     flex: none;
     width: 66.6666%;
   }
-  #stocktrade .column.is-half, #stocktrade .column.is-half-tablet {
+  .column.is-half, .column.is-half-tablet {
     -webkit-box-flex: 0;
     flex: none;
     width: 50%;
   }
-  #stocktrade .column.is-one-third, #stocktrade .column.is-one-third-tablet {
+  .column.is-one-third, .column.is-one-third-tablet {
     -webkit-box-flex: 0;
     flex: none;
     width: 33.3333%;
   }
-  #stocktrade .column.is-one-quarter, #stocktrade .column.is-one-quarter-tablet {
+  .column.is-one-quarter, .column.is-one-quarter-tablet {
     -webkit-box-flex: 0;
     flex: none;
     width: 25%;
   }
-  #stocktrade .column.is-offset-three-quarters, #stocktrade .column.is-offset-three-quarters-tablet {
+  .column.is-offset-three-quarters, .column.is-offset-three-quarters-tablet {
     margin-left: 75%;
   }
-  #stocktrade .column.is-offset-two-thirds, #stocktrade .column.is-offset-two-thirds-tablet {
+  .column.is-offset-two-thirds, .column.is-offset-two-thirds-tablet {
     margin-left: 66.6666%;
   }
-  #stocktrade .column.is-offset-half, #stocktrade .column.is-offset-half-tablet {
+  .column.is-offset-half, .column.is-offset-half-tablet {
     margin-left: 50%;
   }
-  #stocktrade .column.is-offset-one-third, #stocktrade .column.is-offset-one-third-tablet {
+  .column.is-offset-one-third, .column.is-offset-one-third-tablet {
     margin-left: 33.3333%;
   }
-  #stocktrade .column.is-offset-one-quarter, #stocktrade .column.is-offset-one-quarter-tablet {
+  .column.is-offset-one-quarter, .column.is-offset-one-quarter-tablet {
     margin-left: 25%;
   }
-  #stocktrade .column.is-1, #stocktrade .column.is-1-tablet {
+  .column.is-1, .column.is-1-tablet {
     -webkit-box-flex: 0;
     flex: none;
     width: 8.3333333333%;
   }
-  #stocktrade .column.is-offset-1, #stocktrade .column.is-offset-1-tablet {
+  .column.is-offset-1, .column.is-offset-1-tablet {
     margin-left: 8.3333333333%;
   }
-  #stocktrade .column.is-2, #stocktrade .column.is-2-tablet {
+  .column.is-2, .column.is-2-tablet {
     -webkit-box-flex: 0;
     flex: none;
     width: 16.6666666667%;
   }
-  #stocktrade .column.is-offset-2, #stocktrade .column.is-offset-2-tablet {
+  .column.is-offset-2, .column.is-offset-2-tablet {
     margin-left: 16.6666666667%;
   }
-  #stocktrade .column.is-3, #stocktrade .column.is-3-tablet {
+  .column.is-3, .column.is-3-tablet {
     -webkit-box-flex: 0;
     flex: none;
     width: 25%;
   }
-  #stocktrade .column.is-offset-3, #stocktrade .column.is-offset-3-tablet {
+  .column.is-offset-3, .column.is-offset-3-tablet {
     margin-left: 25%;
   }
-  #stocktrade .column.is-4, #stocktrade .column.is-4-tablet {
+  .column.is-4, .column.is-4-tablet {
     -webkit-box-flex: 0;
     flex: none;
     width: 33.3333333333%;
   }
-  #stocktrade .column.is-offset-4, #stocktrade .column.is-offset-4-tablet {
+  .column.is-offset-4, .column.is-offset-4-tablet {
     margin-left: 33.3333333333%;
   }
-  #stocktrade .column.is-5, #stocktrade .column.is-5-tablet {
+  .column.is-5, .column.is-5-tablet {
     -webkit-box-flex: 0;
     flex: none;
     width: 41.6666666667%;
   }
-  #stocktrade .column.is-offset-5, #stocktrade .column.is-offset-5-tablet {
+  .column.is-offset-5, .column.is-offset-5-tablet {
     margin-left: 41.6666666667%;
   }
-  #stocktrade .column.is-6, #stocktrade .column.is-6-tablet {
+  .column.is-6, .column.is-6-tablet {
     -webkit-box-flex: 0;
     flex: none;
     width: 50%;
   }
-  #stocktrade .column.is-offset-6, #stocktrade .column.is-offset-6-tablet {
+  .column.is-offset-6, .column.is-offset-6-tablet {
     margin-left: 50%;
   }
-  #stocktrade .column.is-7, #stocktrade .column.is-7-tablet {
+  .column.is-7, .column.is-7-tablet {
     -webkit-box-flex: 0;
     flex: none;
     width: 58.3333333333%;
   }
-  #stocktrade .column.is-offset-7, #stocktrade .column.is-offset-7-tablet {
+  .column.is-offset-7, .column.is-offset-7-tablet {
     margin-left: 58.3333333333%;
   }
-  #stocktrade .column.is-8, #stocktrade .column.is-8-tablet {
+  .column.is-8, .column.is-8-tablet {
     -webkit-box-flex: 0;
     flex: none;
     width: 66.6666666667%;
   }
-  #stocktrade .column.is-offset-8, #stocktrade .column.is-offset-8-tablet {
+  .column.is-offset-8, .column.is-offset-8-tablet {
     margin-left: 66.6666666667%;
   }
-  #stocktrade .column.is-9, #stocktrade .column.is-9-tablet {
+  .column.is-9, .column.is-9-tablet {
     -webkit-box-flex: 0;
     flex: none;
     width: 75%;
   }
-  #stocktrade .column.is-offset-9, #stocktrade .column.is-offset-9-tablet {
+  .column.is-offset-9, .column.is-offset-9-tablet {
     margin-left: 75%;
   }
-  #stocktrade .column.is-10, #stocktrade .column.is-10-tablet {
+  .column.is-10, .column.is-10-tablet {
     -webkit-box-flex: 0;
     flex: none;
     width: 83.3333333333%;
   }
-  #stocktrade .column.is-offset-10, #stocktrade .column.is-offset-10-tablet {
+  .column.is-offset-10, .column.is-offset-10-tablet {
     margin-left: 83.3333333333%;
   }
-  #stocktrade .column.is-11, #stocktrade .column.is-11-tablet {
+  .column.is-11, .column.is-11-tablet {
     -webkit-box-flex: 0;
     flex: none;
     width: 91.6666666667%;
   }
-  #stocktrade .column.is-offset-11, #stocktrade .column.is-offset-11-tablet {
+  .column.is-offset-11, .column.is-offset-11-tablet {
     margin-left: 91.6666666667%;
   }
-  #stocktrade .column.is-12, #stocktrade .column.is-12-tablet {
+  .column.is-12, .column.is-12-tablet {
     -webkit-box-flex: 0;
     flex: none;
     width: 100%;
   }
-  #stocktrade .column.is-offset-12, #stocktrade .column.is-offset-12-tablet {
+  .column.is-offset-12, .column.is-offset-12-tablet {
     margin-left: 100%;
   }
 }
 
 @media screen and (min-width: 1000px) {
-  #stocktrade .column.is-narrow-desktop {
+  .column.is-narrow-desktop {
     -webkit-box-flex: 0;
     flex: none;
   }
-  #stocktrade .column.is-full-desktop {
+  .column.is-full-desktop {
     -webkit-box-flex: 0;
     flex: none;
     width: 100%;
   }
-  #stocktrade .column.is-three-quarters-desktop {
+  .column.is-three-quarters-desktop {
     -webkit-box-flex: 0;
     flex: none;
     width: 75%;
   }
-  #stocktrade .column.is-two-thirds-desktop {
+  .column.is-two-thirds-desktop {
     -webkit-box-flex: 0;
     flex: none;
     width: 66.6666%;
   }
-  #stocktrade .column.is-half-desktop {
+  .column.is-half-desktop {
     -webkit-box-flex: 0;
     flex: none;
     width: 50%;
   }
-  #stocktrade .column.is-one-third-desktop {
+  .column.is-one-third-desktop {
     -webkit-box-flex: 0;
     flex: none;
     width: 33.3333%;
   }
-  #stocktrade .column.is-one-quarter-desktop {
+  .column.is-one-quarter-desktop {
     -webkit-box-flex: 0;
     flex: none;
     width: 25%;
   }
-  #stocktrade .column.is-offset-three-quarters-desktop {
+  .column.is-offset-three-quarters-desktop {
     margin-left: 75%;
   }
-  #stocktrade .column.is-offset-two-thirds-desktop {
+  .column.is-offset-two-thirds-desktop {
     margin-left: 66.6666%;
   }
-  #stocktrade .column.is-offset-half-desktop {
+  .column.is-offset-half-desktop {
     margin-left: 50%;
   }
-  #stocktrade .column.is-offset-one-third-desktop {
+  .column.is-offset-one-third-desktop {
     margin-left: 33.3333%;
   }
-  #stocktrade .column.is-offset-one-quarter-desktop {
+  .column.is-offset-one-quarter-desktop {
     margin-left: 25%;
   }
-  #stocktrade .column.is-1-desktop {
+  .column.is-1-desktop {
     -webkit-box-flex: 0;
     flex: none;
     width: 8.3333333333%;
   }
-  #stocktrade .column.is-offset-1-desktop {
+  .column.is-offset-1-desktop {
     margin-left: 8.3333333333%;
   }
-  #stocktrade .column.is-2-desktop {
+  .column.is-2-desktop {
     -webkit-box-flex: 0;
     flex: none;
     width: 16.6666666667%;
   }
-  #stocktrade .column.is-offset-2-desktop {
+  .column.is-offset-2-desktop {
     margin-left: 16.6666666667%;
   }
-  #stocktrade .column.is-3-desktop {
+  .column.is-3-desktop {
     -webkit-box-flex: 0;
     flex: none;
     width: 25%;
   }
-  #stocktrade .column.is-offset-3-desktop {
+  .column.is-offset-3-desktop {
     margin-left: 25%;
   }
-  #stocktrade .column.is-4-desktop {
+  .column.is-4-desktop {
     -webkit-box-flex: 0;
     flex: none;
     width: 33.3333333333%;
   }
-  #stocktrade .column.is-offset-4-desktop {
+  .column.is-offset-4-desktop {
     margin-left: 33.3333333333%;
   }
-  #stocktrade .column.is-5-desktop {
+  .column.is-5-desktop {
     -webkit-box-flex: 0;
     flex: none;
     width: 41.6666666667%;
   }
-  #stocktrade .column.is-offset-5-desktop {
+  .column.is-offset-5-desktop {
     margin-left: 41.6666666667%;
   }
-  #stocktrade .column.is-6-desktop {
+  .column.is-6-desktop {
     -webkit-box-flex: 0;
     flex: none;
     width: 50%;
   }
-  #stocktrade .column.is-offset-6-desktop {
+  .column.is-offset-6-desktop {
     margin-left: 50%;
   }
-  #stocktrade .column.is-7-desktop {
+  .column.is-7-desktop {
     -webkit-box-flex: 0;
     flex: none;
     width: 58.3333333333%;
   }
-  #stocktrade .column.is-offset-7-desktop {
+  .column.is-offset-7-desktop {
     margin-left: 58.3333333333%;
   }
-  #stocktrade .column.is-8-desktop {
+  .column.is-8-desktop {
     -webkit-box-flex: 0;
     flex: none;
     width: 66.6666666667%;
   }
-  #stocktrade .column.is-offset-8-desktop {
+  .column.is-offset-8-desktop {
     margin-left: 66.6666666667%;
   }
-  #stocktrade .column.is-9-desktop {
+  .column.is-9-desktop {
     -webkit-box-flex: 0;
     flex: none;
     width: 75%;
   }
-  #stocktrade .column.is-offset-9-desktop {
+  .column.is-offset-9-desktop {
     margin-left: 75%;
   }
-  #stocktrade .column.is-10-desktop {
+  .column.is-10-desktop {
     -webkit-box-flex: 0;
     flex: none;
     width: 83.3333333333%;
   }
-  #stocktrade .column.is-offset-10-desktop {
+  .column.is-offset-10-desktop {
     margin-left: 83.3333333333%;
   }
-  #stocktrade .column.is-11-desktop {
+  .column.is-11-desktop {
     -webkit-box-flex: 0;
     flex: none;
     width: 91.6666666667%;
   }
-  #stocktrade .column.is-offset-11-desktop {
+  .column.is-offset-11-desktop {
     margin-left: 91.6666666667%;
   }
-  #stocktrade .column.is-12-desktop {
+  .column.is-12-desktop {
     -webkit-box-flex: 0;
     flex: none;
     width: 100%;
   }
-  #stocktrade .column.is-offset-12-desktop {
+  .column.is-offset-12-desktop {
     margin-left: 100%;
   }
 }
 
 @media screen and (min-width: 1192px) {
-  #stocktrade .column.is-narrow-widescreen {
+  .column.is-narrow-widescreen {
     -webkit-box-flex: 0;
     flex: none;
   }
-  #stocktrade .column.is-full-widescreen {
+  .column.is-full-widescreen {
     -webkit-box-flex: 0;
     flex: none;
     width: 100%;
   }
-  #stocktrade .column.is-three-quarters-widescreen {
+  .column.is-three-quarters-widescreen {
     -webkit-box-flex: 0;
     flex: none;
     width: 75%;
   }
-  #stocktrade .column.is-two-thirds-widescreen {
+  .column.is-two-thirds-widescreen {
     -webkit-box-flex: 0;
     flex: none;
     width: 66.6666%;
   }
-  #stocktrade .column.is-half-widescreen {
+  .column.is-half-widescreen {
     -webkit-box-flex: 0;
     flex: none;
     width: 50%;
   }
-  #stocktrade .column.is-one-third-widescreen {
+  .column.is-one-third-widescreen {
     -webkit-box-flex: 0;
     flex: none;
     width: 33.3333%;
   }
-  #stocktrade .column.is-one-quarter-widescreen {
+  .column.is-one-quarter-widescreen {
     -webkit-box-flex: 0;
     flex: none;
     width: 25%;
   }
-  #stocktrade .column.is-offset-three-quarters-widescreen {
+  .column.is-offset-three-quarters-widescreen {
     margin-left: 75%;
   }
-  #stocktrade .column.is-offset-two-thirds-widescreen {
+  .column.is-offset-two-thirds-widescreen {
     margin-left: 66.6666%;
   }
-  #stocktrade .column.is-offset-half-widescreen {
+  .column.is-offset-half-widescreen {
     margin-left: 50%;
   }
-  #stocktrade .column.is-offset-one-third-widescreen {
+  .column.is-offset-one-third-widescreen {
     margin-left: 33.3333%;
   }
-  #stocktrade .column.is-offset-one-quarter-widescreen {
+  .column.is-offset-one-quarter-widescreen {
     margin-left: 25%;
   }
-  #stocktrade .column.is-1-widescreen {
+  .column.is-1-widescreen {
     -webkit-box-flex: 0;
     flex: none;
     width: 8.3333333333%;
   }
-  #stocktrade .column.is-offset-1-widescreen {
+  .column.is-offset-1-widescreen {
     margin-left: 8.3333333333%;
   }
-  #stocktrade .column.is-2-widescreen {
+  .column.is-2-widescreen {
     -webkit-box-flex: 0;
     flex: none;
     width: 16.6666666667%;
   }
-  #stocktrade .column.is-offset-2-widescreen {
+  .column.is-offset-2-widescreen {
     margin-left: 16.6666666667%;
   }
-  #stocktrade .column.is-3-widescreen {
+  .column.is-3-widescreen {
     -webkit-box-flex: 0;
     flex: none;
     width: 25%;
   }
-  #stocktrade .column.is-offset-3-widescreen {
+  .column.is-offset-3-widescreen {
     margin-left: 25%;
   }
-  #stocktrade .column.is-4-widescreen {
+  .column.is-4-widescreen {
     -webkit-box-flex: 0;
     flex: none;
     width: 33.3333333333%;
   }
-  #stocktrade .column.is-offset-4-widescreen {
+  .column.is-offset-4-widescreen {
     margin-left: 33.3333333333%;
   }
-  #stocktrade .column.is-5-widescreen {
+  .column.is-5-widescreen {
     -webkit-box-flex: 0;
     flex: none;
     width: 41.6666666667%;
   }
-  #stocktrade .column.is-offset-5-widescreen {
+  .column.is-offset-5-widescreen {
     margin-left: 41.6666666667%;
   }
-  #stocktrade .column.is-6-widescreen {
+  .column.is-6-widescreen {
     -webkit-box-flex: 0;
     flex: none;
     width: 50%;
   }
-  #stocktrade .column.is-offset-6-widescreen {
+  .column.is-offset-6-widescreen {
     margin-left: 50%;
   }
-  #stocktrade .column.is-7-widescreen {
+  .column.is-7-widescreen {
     -webkit-box-flex: 0;
     flex: none;
     width: 58.3333333333%;
   }
-  #stocktrade .column.is-offset-7-widescreen {
+  .column.is-offset-7-widescreen {
     margin-left: 58.3333333333%;
   }
-  #stocktrade .column.is-8-widescreen {
+  .column.is-8-widescreen {
     -webkit-box-flex: 0;
     flex: none;
     width: 66.6666666667%;
   }
-  #stocktrade .column.is-offset-8-widescreen {
+  .column.is-offset-8-widescreen {
     margin-left: 66.6666666667%;
   }
-  #stocktrade .column.is-9-widescreen {
+  .column.is-9-widescreen {
     -webkit-box-flex: 0;
     flex: none;
     width: 75%;
   }
-  #stocktrade .column.is-offset-9-widescreen {
+  .column.is-offset-9-widescreen {
     margin-left: 75%;
   }
-  #stocktrade .column.is-10-widescreen {
+  .column.is-10-widescreen {
     -webkit-box-flex: 0;
     flex: none;
     width: 83.3333333333%;
   }
-  #stocktrade .column.is-offset-10-widescreen {
+  .column.is-offset-10-widescreen {
     margin-left: 83.3333333333%;
   }
-  #stocktrade .column.is-11-widescreen {
+  .column.is-11-widescreen {
     -webkit-box-flex: 0;
     flex: none;
     width: 91.6666666667%;
   }
-  #stocktrade .column.is-offset-11-widescreen {
+  .column.is-offset-11-widescreen {
     margin-left: 91.6666666667%;
   }
-  #stocktrade .column.is-12-widescreen {
+  .column.is-12-widescreen {
     -webkit-box-flex: 0;
     flex: none;
     width: 100%;
   }
-  #stocktrade .column.is-offset-12-widescreen {
+  .column.is-offset-12-widescreen {
     margin-left: 100%;
   }
 }
 
-#stocktrade .columns {
+.columns {
   margin-left: -0.75rem;
   margin-right: -0.75rem;
   margin-top: -0.75rem;
 }
 
-#stocktrade .columns:last-child {
+.columns:last-child {
   margin-bottom: -0.75rem;
 }
 
-#stocktrade .columns:not(:last-child) {
+.columns:not(:last-child) {
   margin-bottom: 0.75rem;
 }
 
-#stocktrade .columns.is-centered {
+.columns.is-centered {
   -webkit-box-pack: center;
   justify-content: center;
 }
 
-#stocktrade .columns.is-gapless {
+.columns.is-gapless {
   margin-left: 0;
   margin-right: 0;
   margin-top: 0;
 }
 
-#stocktrade .columns.is-gapless:last-child {
+.columns.is-gapless:last-child {
   margin-bottom: 0;
 }
 
-#stocktrade .columns.is-gapless:not(:last-child) {
+.columns.is-gapless:not(:last-child) {
   margin-bottom: 1.5rem;
 }
 
-#stocktrade .columns.is-gapless > .column {
+.columns.is-gapless > .column {
   margin: 0;
   padding: 0;
 }
 
 @media screen and (min-width: 769px) {
-  #stocktrade .columns.is-grid {
+  .columns.is-grid {
     flex-wrap: wrap;
   }
-  #stocktrade .columns.is-grid > .column {
+  .columns.is-grid > .column {
     max-width: 33.3333%;
     padding: 0.75rem;
     width: 33.3333%;
   }
-  #stocktrade .columns.is-grid > .column + .column {
+  .columns.is-grid > .column + .column {
     margin-left: 0;
   }
 }
 
-#stocktrade .columns.is-mobile {
+.columns.is-mobile {
   display: -webkit-box;
   display: flex;
 }
 
-#stocktrade .columns.is-multiline {
+.columns.is-multiline {
   flex-wrap: wrap;
 }
 
-#stocktrade .columns.is-vcentered {
+.columns.is-vcentered {
   -webkit-box-align: center;
   align-items: center;
 }
 
 @media screen and (min-width: 769px) {
-  #stocktrade .columns:not(.is-desktop) {
+  .columns:not(.is-desktop) {
     display: -webkit-box;
     display: flex;
   }
 }
 
 @media screen and (min-width: 1000px) {
-  #stocktrade .columns.is-desktop {
+  .columns.is-desktop {
     display: -webkit-box;
     display: flex;
   }
 }
 
-#stocktrade .tile {
+.tile {
   -webkit-box-align: stretch;
   align-items: stretch;
   display: block;
@@ -5341,106 +5336,106 @@
   min-height: min-content;
 }
 
-#stocktrade .tile.is-ancestor {
+.tile.is-ancestor {
   margin-left: -0.75rem;
   margin-right: -0.75rem;
   margin-top: -0.75rem;
 }
 
-#stocktrade .tile.is-ancestor:last-child {
+.tile.is-ancestor:last-child {
   margin-bottom: -0.75rem;
 }
 
-#stocktrade .tile.is-ancestor:not(:last-child) {
+.tile.is-ancestor:not(:last-child) {
   margin-bottom: 0.75rem;
 }
 
-#stocktrade .tile.is-child {
+.tile.is-child {
   margin: 0 !important;
 }
 
-#stocktrade .tile.is-parent {
+.tile.is-parent {
   padding: 0.75rem;
 }
 
-#stocktrade .tile.is-vertical {
+.tile.is-vertical {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   flex-direction: column;
 }
 
-#stocktrade .tile.is-vertical > .tile.is-child:not(:last-child) {
+.tile.is-vertical > .tile.is-child:not(:last-child) {
   margin-bottom: 1.5rem !important;
 }
 
 @media screen and (min-width: 769px) {
-  #stocktrade .tile:not(.is-child) {
+  .tile:not(.is-child) {
     display: -webkit-box;
     display: flex;
   }
-  #stocktrade .tile.is-1 {
+  .tile.is-1 {
     -webkit-box-flex: 0;
     flex: none;
     width: 8.3333333333%;
   }
-  #stocktrade .tile.is-2 {
+  .tile.is-2 {
     -webkit-box-flex: 0;
     flex: none;
     width: 16.6666666667%;
   }
-  #stocktrade .tile.is-3 {
+  .tile.is-3 {
     -webkit-box-flex: 0;
     flex: none;
     width: 25%;
   }
-  #stocktrade .tile.is-4 {
+  .tile.is-4 {
     -webkit-box-flex: 0;
     flex: none;
     width: 33.3333333333%;
   }
-  #stocktrade .tile.is-5 {
+  .tile.is-5 {
     -webkit-box-flex: 0;
     flex: none;
     width: 41.6666666667%;
   }
-  #stocktrade .tile.is-6 {
+  .tile.is-6 {
     -webkit-box-flex: 0;
     flex: none;
     width: 50%;
   }
-  #stocktrade .tile.is-7 {
+  .tile.is-7 {
     -webkit-box-flex: 0;
     flex: none;
     width: 58.3333333333%;
   }
-  #stocktrade .tile.is-8 {
+  .tile.is-8 {
     -webkit-box-flex: 0;
     flex: none;
     width: 66.6666666667%;
   }
-  #stocktrade .tile.is-9 {
+  .tile.is-9 {
     -webkit-box-flex: 0;
     flex: none;
     width: 75%;
   }
-  #stocktrade .tile.is-10 {
+  .tile.is-10 {
     -webkit-box-flex: 0;
     flex: none;
     width: 83.3333333333%;
   }
-  #stocktrade .tile.is-11 {
+  .tile.is-11 {
     -webkit-box-flex: 0;
     flex: none;
     width: 91.6666666667%;
   }
-  #stocktrade .tile.is-12 {
+  .tile.is-12 {
     -webkit-box-flex: 0;
     flex: none;
     width: 100%;
   }
 }
 
-#stocktrade .hero-video {
+.hero-video {
   bottom: 0;
   left: 0;
   position: absolute;
@@ -5449,7 +5444,7 @@
   overflow: hidden;
 }
 
-#stocktrade .hero-video video {
+.hero-video video {
   left: 50%;
   min-height: 100%;
   min-width: 100%;
@@ -5459,50 +5454,50 @@
   transform: translate3d(-50%, -50%, 0);
 }
 
-#stocktrade .hero-video.is-transparent {
+.hero-video.is-transparent {
   opacity: 0.3;
 }
 
 @media screen and (max-width: 768px) {
-  #stocktrade .hero-video {
+  .hero-video {
     display: none;
   }
 }
 
-#stocktrade .hero-buttons {
+.hero-buttons {
   margin-top: 1.5rem;
 }
 
 @media screen and (max-width: 768px) {
-  #stocktrade .hero-buttons .button {
+  .hero-buttons .button {
     display: -webkit-box;
     display: flex;
   }
-  #stocktrade .hero-buttons .button:not(:last-child) {
+  .hero-buttons .button:not(:last-child) {
     margin-bottom: 0.75rem;
   }
 }
 
 @media screen and (min-width: 769px) {
-  #stocktrade .hero-buttons {
+  .hero-buttons {
     display: -webkit-box;
     display: flex;
     -webkit-box-pack: center;
     justify-content: center;
   }
-  #stocktrade .hero-buttons .button:not(:last-child) {
+  .hero-buttons .button:not(:last-child) {
     margin-right: 1.5rem;
   }
 }
 
-#stocktrade .hero-head,
-#stocktrade .hero-foot {
+.hero-head,
+.hero-foot {
   -webkit-box-flex: 0;
   flex-grow: 0;
   flex-shrink: 0;
 }
 
-#stocktrade .hero-body {
+.hero-body {
   -webkit-box-flex: 1;
   flex-grow: 1;
   flex-shrink: 0;
@@ -5510,13 +5505,13 @@
 }
 
 @media screen and (min-width: 1192px) {
-  #stocktrade .hero-body {
+  .hero-body {
     padding-left: 0;
     padding-right: 0;
   }
 }
 
-#stocktrade .hero {
+.hero {
   -webkit-box-align: stretch;
   align-items: stretch;
   background-color: white;
@@ -5529,882 +5524,886 @@
   justify-content: space-between;
 }
 
-#stocktrade .hero .nav {
+.hero .nav {
   background: none;
   box-shadow: 0 1px 0 rgba(219, 219, 219, 0.3);
 }
 
-#stocktrade .hero .tabs ul {
+.hero .tabs ul {
   border-bottom: none;
 }
 
-#stocktrade .hero.is-white {
+.hero.is-white {
   background-color: white;
   color: #0a0a0a;
 }
 
-#stocktrade .hero.is-white a,
-#stocktrade .hero.is-white strong {
+.hero.is-white a,
+.hero.is-white strong {
   color: inherit;
 }
 
-#stocktrade .hero.is-white .title {
+.hero.is-white .title {
   color: #0a0a0a;
 }
 
-#stocktrade .hero.is-white .subtitle {
+.hero.is-white .subtitle {
   color: rgba(10, 10, 10, 0.9);
 }
 
-#stocktrade .hero.is-white .subtitle a,
-#stocktrade .hero.is-white .subtitle strong {
+.hero.is-white .subtitle a,
+.hero.is-white .subtitle strong {
   color: #0a0a0a;
 }
 
-#stocktrade .hero.is-white .nav {
+.hero.is-white .nav {
   box-shadow: 0 1px 0 rgba(10, 10, 10, 0.2);
 }
 
 @media screen and (max-width: 768px) {
-  #stocktrade .hero.is-white .nav-menu {
+  .hero.is-white .nav-menu {
     background-color: white;
   }
 }
 
-#stocktrade .hero.is-white a.nav-item,
-#stocktrade .hero.is-white .nav-item a:not(.button) {
+.hero.is-white a.nav-item,
+.hero.is-white .nav-item a:not(.button) {
   color: rgba(10, 10, 10, 0.7);
 }
 
-#stocktrade .hero.is-white a.nav-item:hover, #stocktrade .hero.is-white a.nav-item.is-active,
-#stocktrade .hero.is-white .nav-item a:not(.button):hover,
-#stocktrade .hero.is-white .nav-item a:not(.button).is-active {
+.hero.is-white a.nav-item:hover, .hero.is-white a.nav-item.is-active,
+.hero.is-white .nav-item a:not(.button):hover,
+.hero.is-white .nav-item a:not(.button).is-active {
   color: #0a0a0a;
 }
 
-#stocktrade .hero.is-white .tabs a {
+.hero.is-white .tabs a {
   color: #0a0a0a;
   opacity: 0.9;
 }
 
-#stocktrade .hero.is-white .tabs a:hover {
+.hero.is-white .tabs a:hover {
   opacity: 1;
 }
 
-#stocktrade .hero.is-white .tabs li.is-active a {
+.hero.is-white .tabs li.is-active a {
   opacity: 1;
 }
 
-#stocktrade .hero.is-white .tabs.is-boxed a, #stocktrade .hero.is-white .tabs.is-toggle a {
+.hero.is-white .tabs.is-boxed a, .hero.is-white .tabs.is-toggle a {
   color: #0a0a0a;
 }
 
-#stocktrade .hero.is-white .tabs.is-boxed a:hover, #stocktrade .hero.is-white .tabs.is-toggle a:hover {
+.hero.is-white .tabs.is-boxed a:hover, .hero.is-white .tabs.is-toggle a:hover {
   background-color: rgba(10, 10, 10, 0.1);
 }
 
-#stocktrade .hero.is-white .tabs.is-boxed li.is-active a, #stocktrade .hero.is-white .tabs.is-boxed li.is-active a:hover, #stocktrade .hero.is-white .tabs.is-toggle li.is-active a, #stocktrade .hero.is-white .tabs.is-toggle li.is-active a:hover {
+.hero.is-white .tabs.is-boxed li.is-active a, .hero.is-white .tabs.is-boxed li.is-active a:hover, .hero.is-white .tabs.is-toggle li.is-active a, .hero.is-white .tabs.is-toggle li.is-active a:hover {
   background-color: #0a0a0a;
   border-color: #0a0a0a;
   color: white;
 }
 
-#stocktrade .hero.is-white.is-bold {
+.hero.is-white.is-bold {
   background-image: -webkit-linear-gradient(309deg, #e6e6e6 0%, white 71%, white 100%);
   background-image: linear-gradient(141deg, #e6e6e6 0%, white 71%, white 100%);
 }
 
 @media screen and (max-width: 768px) {
-  #stocktrade .hero.is-white .nav-toggle span {
+  .hero.is-white .nav-toggle span {
     background-color: #0a0a0a;
   }
-  #stocktrade .hero.is-white .nav-toggle:hover {
+  .hero.is-white .nav-toggle:hover {
     background-color: rgba(10, 10, 10, 0.1);
   }
-  #stocktrade .hero.is-white .nav-toggle.is-active span {
+  .hero.is-white .nav-toggle.is-active span {
     background-color: #0a0a0a;
   }
-  #stocktrade .hero.is-white .nav-menu .nav-item {
+  .hero.is-white .nav-menu .nav-item {
     border-top-color: rgba(10, 10, 10, 0.2);
   }
 }
 
-#stocktrade .hero.is-black {
+.hero.is-black {
   background-color: #0a0a0a;
   color: white;
 }
 
-#stocktrade .hero.is-black a,
-#stocktrade .hero.is-black strong {
+.hero.is-black a,
+.hero.is-black strong {
   color: inherit;
 }
 
-#stocktrade .hero.is-black .title {
+.hero.is-black .title {
   color: white;
 }
 
-#stocktrade .hero.is-black .subtitle {
+.hero.is-black .subtitle {
   color: rgba(255, 255, 255, 0.9);
 }
 
-#stocktrade .hero.is-black .subtitle a,
-#stocktrade .hero.is-black .subtitle strong {
+.hero.is-black .subtitle a,
+.hero.is-black .subtitle strong {
   color: white;
 }
 
-#stocktrade .hero.is-black .nav {
+.hero.is-black .nav {
   box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2);
 }
 
 @media screen and (max-width: 768px) {
-  #stocktrade .hero.is-black .nav-menu {
+  .hero.is-black .nav-menu {
     background-color: #0a0a0a;
   }
 }
 
-#stocktrade .hero.is-black a.nav-item,
-#stocktrade .hero.is-black .nav-item a:not(.button) {
+.hero.is-black a.nav-item,
+.hero.is-black .nav-item a:not(.button) {
   color: rgba(255, 255, 255, 0.7);
 }
 
-#stocktrade .hero.is-black a.nav-item:hover, #stocktrade .hero.is-black a.nav-item.is-active,
-#stocktrade .hero.is-black .nav-item a:not(.button):hover,
-#stocktrade .hero.is-black .nav-item a:not(.button).is-active {
+.hero.is-black a.nav-item:hover, .hero.is-black a.nav-item.is-active,
+.hero.is-black .nav-item a:not(.button):hover,
+.hero.is-black .nav-item a:not(.button).is-active {
   color: white;
 }
 
-#stocktrade .hero.is-black .tabs a {
+.hero.is-black .tabs a {
   color: white;
   opacity: 0.9;
 }
 
-#stocktrade .hero.is-black .tabs a:hover {
+.hero.is-black .tabs a:hover {
   opacity: 1;
 }
 
-#stocktrade .hero.is-black .tabs li.is-active a {
+.hero.is-black .tabs li.is-active a {
   opacity: 1;
 }
 
-#stocktrade .hero.is-black .tabs.is-boxed a, #stocktrade .hero.is-black .tabs.is-toggle a {
+.hero.is-black .tabs.is-boxed a, .hero.is-black .tabs.is-toggle a {
   color: white;
 }
 
-#stocktrade .hero.is-black .tabs.is-boxed a:hover, #stocktrade .hero.is-black .tabs.is-toggle a:hover {
+.hero.is-black .tabs.is-boxed a:hover, .hero.is-black .tabs.is-toggle a:hover {
   background-color: rgba(10, 10, 10, 0.1);
 }
 
-#stocktrade .hero.is-black .tabs.is-boxed li.is-active a, #stocktrade .hero.is-black .tabs.is-boxed li.is-active a:hover, #stocktrade .hero.is-black .tabs.is-toggle li.is-active a, #stocktrade .hero.is-black .tabs.is-toggle li.is-active a:hover {
+.hero.is-black .tabs.is-boxed li.is-active a, .hero.is-black .tabs.is-boxed li.is-active a:hover, .hero.is-black .tabs.is-toggle li.is-active a, .hero.is-black .tabs.is-toggle li.is-active a:hover {
   background-color: white;
   border-color: white;
   color: #0a0a0a;
 }
 
-#stocktrade .hero.is-black.is-bold {
+.hero.is-black.is-bold {
   background-image: -webkit-linear-gradient(309deg, black 0%, #0a0a0a 71%, #181616 100%);
   background-image: linear-gradient(141deg, black 0%, #0a0a0a 71%, #181616 100%);
 }
 
 @media screen and (max-width: 768px) {
-  #stocktrade .hero.is-black .nav-toggle span {
+  .hero.is-black .nav-toggle span {
     background-color: white;
   }
-  #stocktrade .hero.is-black .nav-toggle:hover {
+  .hero.is-black .nav-toggle:hover {
     background-color: rgba(10, 10, 10, 0.1);
   }
-  #stocktrade .hero.is-black .nav-toggle.is-active span {
+  .hero.is-black .nav-toggle.is-active span {
     background-color: white;
   }
-  #stocktrade .hero.is-black .nav-menu .nav-item {
+  .hero.is-black .nav-menu .nav-item {
     border-top-color: rgba(255, 255, 255, 0.2);
   }
 }
 
-#stocktrade .hero.is-light {
+.hero.is-light {
   background-color: whitesmoke;
   color: #363636;
 }
 
-#stocktrade .hero.is-light a,
-#stocktrade .hero.is-light strong {
+.hero.is-light a,
+.hero.is-light strong {
   color: inherit;
 }
 
-#stocktrade .hero.is-light .title {
+.hero.is-light .title {
   color: #363636;
 }
 
-#stocktrade .hero.is-light .subtitle {
+.hero.is-light .subtitle {
   color: rgba(54, 54, 54, 0.9);
 }
 
-#stocktrade .hero.is-light .subtitle a,
-#stocktrade .hero.is-light .subtitle strong {
+.hero.is-light .subtitle a,
+.hero.is-light .subtitle strong {
   color: #363636;
 }
 
-#stocktrade .hero.is-light .nav {
+.hero.is-light .nav {
   box-shadow: 0 1px 0 rgba(54, 54, 54, 0.2);
 }
 
 @media screen and (max-width: 768px) {
-  #stocktrade .hero.is-light .nav-menu {
+  .hero.is-light .nav-menu {
     background-color: whitesmoke;
   }
 }
 
-#stocktrade .hero.is-light a.nav-item,
-#stocktrade .hero.is-light .nav-item a:not(.button) {
+.hero.is-light a.nav-item,
+.hero.is-light .nav-item a:not(.button) {
   color: rgba(54, 54, 54, 0.7);
 }
 
-#stocktrade .hero.is-light a.nav-item:hover, #stocktrade .hero.is-light a.nav-item.is-active,
-#stocktrade .hero.is-light .nav-item a:not(.button):hover,
-#stocktrade .hero.is-light .nav-item a:not(.button).is-active {
+.hero.is-light a.nav-item:hover, .hero.is-light a.nav-item.is-active,
+.hero.is-light .nav-item a:not(.button):hover,
+.hero.is-light .nav-item a:not(.button).is-active {
   color: #363636;
 }
 
-#stocktrade .hero.is-light .tabs a {
+.hero.is-light .tabs a {
   color: #363636;
   opacity: 0.9;
 }
 
-#stocktrade .hero.is-light .tabs a:hover {
+.hero.is-light .tabs a:hover {
   opacity: 1;
 }
 
-#stocktrade .hero.is-light .tabs li.is-active a {
+.hero.is-light .tabs li.is-active a {
   opacity: 1;
 }
 
-#stocktrade .hero.is-light .tabs.is-boxed a, #stocktrade .hero.is-light .tabs.is-toggle a {
+.hero.is-light .tabs.is-boxed a, .hero.is-light .tabs.is-toggle a {
   color: #363636;
 }
 
-#stocktrade .hero.is-light .tabs.is-boxed a:hover, #stocktrade .hero.is-light .tabs.is-toggle a:hover {
+.hero.is-light .tabs.is-boxed a:hover, .hero.is-light .tabs.is-toggle a:hover {
   background-color: rgba(10, 10, 10, 0.1);
 }
 
-#stocktrade .hero.is-light .tabs.is-boxed li.is-active a, #stocktrade .hero.is-light .tabs.is-boxed li.is-active a:hover, #stocktrade .hero.is-light .tabs.is-toggle li.is-active a, #stocktrade .hero.is-light .tabs.is-toggle li.is-active a:hover {
+.hero.is-light .tabs.is-boxed li.is-active a, .hero.is-light .tabs.is-boxed li.is-active a:hover, .hero.is-light .tabs.is-toggle li.is-active a, .hero.is-light .tabs.is-toggle li.is-active a:hover {
   background-color: #363636;
   border-color: #363636;
   color: whitesmoke;
 }
 
-#stocktrade .hero.is-light.is-bold {
+.hero.is-light.is-bold {
   background-image: -webkit-linear-gradient(309deg, #dfd8d8 0%, whitesmoke 71%, white 100%);
   background-image: linear-gradient(141deg, #dfd8d8 0%, whitesmoke 71%, white 100%);
 }
 
 @media screen and (max-width: 768px) {
-  #stocktrade .hero.is-light .nav-toggle span {
+  .hero.is-light .nav-toggle span {
     background-color: #363636;
   }
-  #stocktrade .hero.is-light .nav-toggle:hover {
+  .hero.is-light .nav-toggle:hover {
     background-color: rgba(10, 10, 10, 0.1);
   }
-  #stocktrade .hero.is-light .nav-toggle.is-active span {
+  .hero.is-light .nav-toggle.is-active span {
     background-color: #363636;
   }
-  #stocktrade .hero.is-light .nav-menu .nav-item {
+  .hero.is-light .nav-menu .nav-item {
     border-top-color: rgba(54, 54, 54, 0.2);
   }
 }
 
-#stocktrade .hero.is-dark {
+.hero.is-dark {
   background-color: #363636;
   color: whitesmoke;
 }
 
-#stocktrade .hero.is-dark a,
-#stocktrade .hero.is-dark strong {
+.hero.is-dark a,
+.hero.is-dark strong {
   color: inherit;
 }
 
-#stocktrade .hero.is-dark .title {
+.hero.is-dark .title {
   color: whitesmoke;
 }
 
-#stocktrade .hero.is-dark .subtitle {
+.hero.is-dark .subtitle {
   color: rgba(245, 245, 245, 0.9);
 }
 
-#stocktrade .hero.is-dark .subtitle a,
-#stocktrade .hero.is-dark .subtitle strong {
+.hero.is-dark .subtitle a,
+.hero.is-dark .subtitle strong {
   color: whitesmoke;
 }
 
-#stocktrade .hero.is-dark .nav {
+.hero.is-dark .nav {
   box-shadow: 0 1px 0 rgba(245, 245, 245, 0.2);
 }
 
 @media screen and (max-width: 768px) {
-  #stocktrade .hero.is-dark .nav-menu {
+  .hero.is-dark .nav-menu {
     background-color: #363636;
   }
 }
 
-#stocktrade .hero.is-dark a.nav-item,
-#stocktrade .hero.is-dark .nav-item a:not(.button) {
+.hero.is-dark a.nav-item,
+.hero.is-dark .nav-item a:not(.button) {
   color: rgba(245, 245, 245, 0.7);
 }
 
-#stocktrade .hero.is-dark a.nav-item:hover, #stocktrade .hero.is-dark a.nav-item.is-active,
-#stocktrade .hero.is-dark .nav-item a:not(.button):hover,
-#stocktrade .hero.is-dark .nav-item a:not(.button).is-active {
+.hero.is-dark a.nav-item:hover, .hero.is-dark a.nav-item.is-active,
+.hero.is-dark .nav-item a:not(.button):hover,
+.hero.is-dark .nav-item a:not(.button).is-active {
   color: whitesmoke;
 }
 
-#stocktrade .hero.is-dark .tabs a {
+.hero.is-dark .tabs a {
   color: whitesmoke;
   opacity: 0.9;
 }
 
-#stocktrade .hero.is-dark .tabs a:hover {
+.hero.is-dark .tabs a:hover {
   opacity: 1;
 }
 
-#stocktrade .hero.is-dark .tabs li.is-active a {
+.hero.is-dark .tabs li.is-active a {
   opacity: 1;
 }
 
-#stocktrade .hero.is-dark .tabs.is-boxed a, #stocktrade .hero.is-dark .tabs.is-toggle a {
+.hero.is-dark .tabs.is-boxed a, .hero.is-dark .tabs.is-toggle a {
   color: whitesmoke;
 }
 
-#stocktrade .hero.is-dark .tabs.is-boxed a:hover, #stocktrade .hero.is-dark .tabs.is-toggle a:hover {
+.hero.is-dark .tabs.is-boxed a:hover, .hero.is-dark .tabs.is-toggle a:hover {
   background-color: rgba(10, 10, 10, 0.1);
 }
 
-#stocktrade .hero.is-dark .tabs.is-boxed li.is-active a, #stocktrade .hero.is-dark .tabs.is-boxed li.is-active a:hover, #stocktrade .hero.is-dark .tabs.is-toggle li.is-active a, #stocktrade .hero.is-dark .tabs.is-toggle li.is-active a:hover {
+.hero.is-dark .tabs.is-boxed li.is-active a, .hero.is-dark .tabs.is-boxed li.is-active a:hover, .hero.is-dark .tabs.is-toggle li.is-active a, .hero.is-dark .tabs.is-toggle li.is-active a:hover {
   background-color: whitesmoke;
   border-color: whitesmoke;
   color: #363636;
 }
 
-#stocktrade .hero.is-dark.is-bold {
+.hero.is-dark.is-bold {
   background-image: -webkit-linear-gradient(309deg, #1f1919 0%, #363636 71%, #463f3f 100%);
   background-image: linear-gradient(141deg, #1f1919 0%, #363636 71%, #463f3f 100%);
 }
 
 @media screen and (max-width: 768px) {
-  #stocktrade .hero.is-dark .nav-toggle span {
+  .hero.is-dark .nav-toggle span {
     background-color: whitesmoke;
   }
-  #stocktrade .hero.is-dark .nav-toggle:hover {
+  .hero.is-dark .nav-toggle:hover {
     background-color: rgba(10, 10, 10, 0.1);
   }
-  #stocktrade .hero.is-dark .nav-toggle.is-active span {
+  .hero.is-dark .nav-toggle.is-active span {
     background-color: whitesmoke;
   }
-  #stocktrade .hero.is-dark .nav-menu .nav-item {
+  .hero.is-dark .nav-menu .nav-item {
     border-top-color: rgba(245, 245, 245, 0.2);
   }
 }
 
-#stocktrade .hero.is-primary {
+.hero.is-primary {
   background-color: #00d1b2;
   color: #fff;
 }
 
-#stocktrade .hero.is-primary a,
-#stocktrade .hero.is-primary strong {
+.hero.is-primary a,
+.hero.is-primary strong {
   color: inherit;
 }
 
-#stocktrade .hero.is-primary .title {
+.hero.is-primary .title {
   color: #fff;
 }
 
-#stocktrade .hero.is-primary .subtitle {
+.hero.is-primary .subtitle {
   color: rgba(255, 255, 255, 0.9);
 }
 
-#stocktrade .hero.is-primary .subtitle a,
-#stocktrade .hero.is-primary .subtitle strong {
+.hero.is-primary .subtitle a,
+.hero.is-primary .subtitle strong {
   color: #fff;
 }
 
-#stocktrade .hero.is-primary .nav {
+.hero.is-primary .nav {
   box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2);
 }
 
 @media screen and (max-width: 768px) {
-  #stocktrade .hero.is-primary .nav-menu {
+  .hero.is-primary .nav-menu {
     background-color: #00d1b2;
   }
 }
 
-#stocktrade .hero.is-primary a.nav-item,
-#stocktrade .hero.is-primary .nav-item a:not(.button) {
+.hero.is-primary a.nav-item,
+.hero.is-primary .nav-item a:not(.button) {
   color: rgba(255, 255, 255, 0.7);
 }
 
-#stocktrade .hero.is-primary a.nav-item:hover, #stocktrade .hero.is-primary a.nav-item.is-active,
-#stocktrade .hero.is-primary .nav-item a:not(.button):hover,
-#stocktrade .hero.is-primary .nav-item a:not(.button).is-active {
+.hero.is-primary a.nav-item:hover, .hero.is-primary a.nav-item.is-active,
+.hero.is-primary .nav-item a:not(.button):hover,
+.hero.is-primary .nav-item a:not(.button).is-active {
   color: #fff;
 }
 
-#stocktrade .hero.is-primary .tabs a {
+.hero.is-primary .tabs a {
   color: #fff;
   opacity: 0.9;
 }
 
-#stocktrade .hero.is-primary .tabs a:hover {
+.hero.is-primary .tabs a:hover {
   opacity: 1;
 }
 
-#stocktrade .hero.is-primary .tabs li.is-active a {
+.hero.is-primary .tabs li.is-active a {
   opacity: 1;
 }
 
-#stocktrade .hero.is-primary .tabs.is-boxed a, #stocktrade .hero.is-primary .tabs.is-toggle a {
+.hero.is-primary .tabs.is-boxed a, .hero.is-primary .tabs.is-toggle a {
   color: #fff;
 }
 
-#stocktrade .hero.is-primary .tabs.is-boxed a:hover, #stocktrade .hero.is-primary .tabs.is-toggle a:hover {
+.hero.is-primary .tabs.is-boxed a:hover, .hero.is-primary .tabs.is-toggle a:hover {
   background-color: rgba(10, 10, 10, 0.1);
 }
 
-#stocktrade .hero.is-primary .tabs.is-boxed li.is-active a, #stocktrade .hero.is-primary .tabs.is-boxed li.is-active a:hover, #stocktrade .hero.is-primary .tabs.is-toggle li.is-active a, #stocktrade .hero.is-primary .tabs.is-toggle li.is-active a:hover {
+.hero.is-primary .tabs.is-boxed li.is-active a, .hero.is-primary .tabs.is-boxed li.is-active a:hover, .hero.is-primary .tabs.is-toggle li.is-active a, .hero.is-primary .tabs.is-toggle li.is-active a:hover {
   background-color: #fff;
   border-color: #fff;
   color: #00d1b2;
 }
 
-#stocktrade .hero.is-primary.is-bold {
+.hero.is-primary.is-bold {
   background-image: -webkit-linear-gradient(309deg, #009e6c 0%, #00d1b2 71%, #00e7eb 100%);
   background-image: linear-gradient(141deg, #009e6c 0%, #00d1b2 71%, #00e7eb 100%);
 }
 
 @media screen and (max-width: 768px) {
-  #stocktrade .hero.is-primary .nav-toggle span {
+  .hero.is-primary .nav-toggle span {
     background-color: #fff;
   }
-  #stocktrade .hero.is-primary .nav-toggle:hover {
+  .hero.is-primary .nav-toggle:hover {
     background-color: rgba(10, 10, 10, 0.1);
   }
-  #stocktrade .hero.is-primary .nav-toggle.is-active span {
+  .hero.is-primary .nav-toggle.is-active span {
     background-color: #fff;
   }
-  #stocktrade .hero.is-primary .nav-menu .nav-item {
+  .hero.is-primary .nav-menu .nav-item {
     border-top-color: rgba(255, 255, 255, 0.2);
   }
 }
 
-#stocktrade .hero.is-info {
+.hero.is-info {
   background-color: #3273dc;
   color: #fff;
 }
 
-#stocktrade .hero.is-info a,
-#stocktrade .hero.is-info strong {
+.hero.is-info a,
+.hero.is-info strong {
   color: inherit;
 }
 
-#stocktrade .hero.is-info .title {
+.hero.is-info .title {
   color: #fff;
 }
 
-#stocktrade .hero.is-info .subtitle {
+.hero.is-info .subtitle {
   color: rgba(255, 255, 255, 0.9);
 }
 
-#stocktrade .hero.is-info .subtitle a,
-#stocktrade .hero.is-info .subtitle strong {
+.hero.is-info .subtitle a,
+.hero.is-info .subtitle strong {
   color: #fff;
 }
 
-#stocktrade .hero.is-info .nav {
+.hero.is-info .nav {
   box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2);
 }
 
 @media screen and (max-width: 768px) {
-  #stocktrade .hero.is-info .nav-menu {
+  .hero.is-info .nav-menu {
     background-color: #3273dc;
   }
 }
 
-#stocktrade .hero.is-info a.nav-item,
-#stocktrade .hero.is-info .nav-item a:not(.button) {
+.hero.is-info a.nav-item,
+.hero.is-info .nav-item a:not(.button) {
   color: rgba(255, 255, 255, 0.7);
 }
 
-#stocktrade .hero.is-info a.nav-item:hover, #stocktrade .hero.is-info a.nav-item.is-active,
-#stocktrade .hero.is-info .nav-item a:not(.button):hover,
-#stocktrade .hero.is-info .nav-item a:not(.button).is-active {
+.hero.is-info a.nav-item:hover, .hero.is-info a.nav-item.is-active,
+.hero.is-info .nav-item a:not(.button):hover,
+.hero.is-info .nav-item a:not(.button).is-active {
   color: #fff;
 }
 
-#stocktrade .hero.is-info .tabs a {
+.hero.is-info .tabs a {
   color: #fff;
   opacity: 0.9;
 }
 
-#stocktrade .hero.is-info .tabs a:hover {
+.hero.is-info .tabs a:hover {
   opacity: 1;
 }
 
-#stocktrade .hero.is-info .tabs li.is-active a {
+.hero.is-info .tabs li.is-active a {
   opacity: 1;
 }
 
-#stocktrade .hero.is-info .tabs.is-boxed a, #stocktrade .hero.is-info .tabs.is-toggle a {
+.hero.is-info .tabs.is-boxed a, .hero.is-info .tabs.is-toggle a {
   color: #fff;
 }
 
-#stocktrade .hero.is-info .tabs.is-boxed a:hover, #stocktrade .hero.is-info .tabs.is-toggle a:hover {
+.hero.is-info .tabs.is-boxed a:hover, .hero.is-info .tabs.is-toggle a:hover {
   background-color: rgba(10, 10, 10, 0.1);
 }
 
-#stocktrade .hero.is-info .tabs.is-boxed li.is-active a, #stocktrade .hero.is-info .tabs.is-boxed li.is-active a:hover, #stocktrade .hero.is-info .tabs.is-toggle li.is-active a, #stocktrade .hero.is-info .tabs.is-toggle li.is-active a:hover {
+.hero.is-info .tabs.is-boxed li.is-active a, .hero.is-info .tabs.is-boxed li.is-active a:hover, .hero.is-info .tabs.is-toggle li.is-active a, .hero.is-info .tabs.is-toggle li.is-active a:hover {
   background-color: #fff;
   border-color: #fff;
   color: #3273dc;
 }
 
-#stocktrade .hero.is-info.is-bold {
+.hero.is-info.is-bold {
   background-image: -webkit-linear-gradient(309deg, #1577c6 0%, #3273dc 71%, #4366e5 100%);
   background-image: linear-gradient(141deg, #1577c6 0%, #3273dc 71%, #4366e5 100%);
 }
 
 @media screen and (max-width: 768px) {
-  #stocktrade .hero.is-info .nav-toggle span {
+  .hero.is-info .nav-toggle span {
     background-color: #fff;
   }
-  #stocktrade .hero.is-info .nav-toggle:hover {
+  .hero.is-info .nav-toggle:hover {
     background-color: rgba(10, 10, 10, 0.1);
   }
-  #stocktrade .hero.is-info .nav-toggle.is-active span {
+  .hero.is-info .nav-toggle.is-active span {
     background-color: #fff;
   }
-  #stocktrade .hero.is-info .nav-menu .nav-item {
+  .hero.is-info .nav-menu .nav-item {
     border-top-color: rgba(255, 255, 255, 0.2);
   }
 }
 
-#stocktrade .hero.is-success {
+.hero.is-success {
   background-color: #23d160;
   color: #fff;
 }
 
-#stocktrade .hero.is-success a,
-#stocktrade .hero.is-success strong {
+.hero.is-success a,
+.hero.is-success strong {
   color: inherit;
 }
 
-#stocktrade .hero.is-success .title {
+.hero.is-success .title {
   color: #fff;
 }
 
-#stocktrade .hero.is-success .subtitle {
+.hero.is-success .subtitle {
   color: rgba(255, 255, 255, 0.9);
 }
 
-#stocktrade .hero.is-success .subtitle a,
-#stocktrade .hero.is-success .subtitle strong {
+.hero.is-success .subtitle a,
+.hero.is-success .subtitle strong {
   color: #fff;
 }
 
-#stocktrade .hero.is-success .nav {
+.hero.is-success .nav {
   box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2);
 }
 
 @media screen and (max-width: 768px) {
-  #stocktrade .hero.is-success .nav-menu {
+  .hero.is-success .nav-menu {
     background-color: #23d160;
   }
 }
 
-#stocktrade .hero.is-success a.nav-item,
-#stocktrade .hero.is-success .nav-item a:not(.button) {
+.hero.is-success a.nav-item,
+.hero.is-success .nav-item a:not(.button) {
   color: rgba(255, 255, 255, 0.7);
 }
 
-#stocktrade .hero.is-success a.nav-item:hover, #stocktrade .hero.is-success a.nav-item.is-active,
-#stocktrade .hero.is-success .nav-item a:not(.button):hover,
-#stocktrade .hero.is-success .nav-item a:not(.button).is-active {
+.hero.is-success a.nav-item:hover, .hero.is-success a.nav-item.is-active,
+.hero.is-success .nav-item a:not(.button):hover,
+.hero.is-success .nav-item a:not(.button).is-active {
   color: #fff;
 }
 
-#stocktrade .hero.is-success .tabs a {
+.hero.is-success .tabs a {
   color: #fff;
   opacity: 0.9;
 }
 
-#stocktrade .hero.is-success .tabs a:hover {
+.hero.is-success .tabs a:hover {
   opacity: 1;
 }
 
-#stocktrade .hero.is-success .tabs li.is-active a {
+.hero.is-success .tabs li.is-active a {
   opacity: 1;
 }
 
-#stocktrade .hero.is-success .tabs.is-boxed a, #stocktrade .hero.is-success .tabs.is-toggle a {
+.hero.is-success .tabs.is-boxed a, .hero.is-success .tabs.is-toggle a {
   color: #fff;
 }
 
-#stocktrade .hero.is-success .tabs.is-boxed a:hover, #stocktrade .hero.is-success .tabs.is-toggle a:hover {
+.hero.is-success .tabs.is-boxed a:hover, .hero.is-success .tabs.is-toggle a:hover {
   background-color: rgba(10, 10, 10, 0.1);
 }
 
-#stocktrade .hero.is-success .tabs.is-boxed li.is-active a, #stocktrade .hero.is-success .tabs.is-boxed li.is-active a:hover, #stocktrade .hero.is-success .tabs.is-toggle li.is-active a, #stocktrade .hero.is-success .tabs.is-toggle li.is-active a:hover {
+.hero.is-success .tabs.is-boxed li.is-active a, .hero.is-success .tabs.is-boxed li.is-active a:hover, .hero.is-success .tabs.is-toggle li.is-active a, .hero.is-success .tabs.is-toggle li.is-active a:hover {
   background-color: #fff;
   border-color: #fff;
   color: #23d160;
 }
 
-#stocktrade .hero.is-success.is-bold {
+.hero.is-success.is-bold {
   background-image: -webkit-linear-gradient(309deg, #12af2f 0%, #23d160 71%, #2ce28a 100%);
   background-image: linear-gradient(141deg, #12af2f 0%, #23d160 71%, #2ce28a 100%);
 }
 
 @media screen and (max-width: 768px) {
-  #stocktrade .hero.is-success .nav-toggle span {
+  .hero.is-success .nav-toggle span {
     background-color: #fff;
   }
-  #stocktrade .hero.is-success .nav-toggle:hover {
+  .hero.is-success .nav-toggle:hover {
     background-color: rgba(10, 10, 10, 0.1);
   }
-  #stocktrade .hero.is-success .nav-toggle.is-active span {
+  .hero.is-success .nav-toggle.is-active span {
     background-color: #fff;
   }
-  #stocktrade .hero.is-success .nav-menu .nav-item {
+  .hero.is-success .nav-menu .nav-item {
     border-top-color: rgba(255, 255, 255, 0.2);
   }
 }
 
-#stocktrade .hero.is-warning {
+.hero.is-warning {
   background-color: #ffdd57;
   color: rgba(0, 0, 0, 0.7);
 }
 
-#stocktrade .hero.is-warning a,
-#stocktrade .hero.is-warning strong {
+.hero.is-warning a,
+.hero.is-warning strong {
   color: inherit;
 }
 
-#stocktrade .hero.is-warning .title {
+.hero.is-warning .title {
   color: rgba(0, 0, 0, 0.7);
 }
 
-#stocktrade .hero.is-warning .subtitle {
+.hero.is-warning .subtitle {
   color: rgba(0, 0, 0, 0.9);
 }
 
-#stocktrade .hero.is-warning .subtitle a,
-#stocktrade .hero.is-warning .subtitle strong {
+.hero.is-warning .subtitle a,
+.hero.is-warning .subtitle strong {
   color: rgba(0, 0, 0, 0.7);
 }
 
-#stocktrade .hero.is-warning .nav {
+.hero.is-warning .nav {
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
 }
 
 @media screen and (max-width: 768px) {
-  #stocktrade .hero.is-warning .nav-menu {
+  .hero.is-warning .nav-menu {
     background-color: #ffdd57;
   }
 }
 
-#stocktrade .hero.is-warning a.nav-item,
-#stocktrade .hero.is-warning .nav-item a:not(.button) {
+.hero.is-warning a.nav-item,
+.hero.is-warning .nav-item a:not(.button) {
   color: rgba(0, 0, 0, 0.7);
 }
 
-#stocktrade .hero.is-warning a.nav-item:hover, #stocktrade .hero.is-warning a.nav-item.is-active,
-#stocktrade .hero.is-warning .nav-item a:not(.button):hover,
-#stocktrade .hero.is-warning .nav-item a:not(.button).is-active {
+.hero.is-warning a.nav-item:hover, .hero.is-warning a.nav-item.is-active,
+.hero.is-warning .nav-item a:not(.button):hover,
+.hero.is-warning .nav-item a:not(.button).is-active {
   color: rgba(0, 0, 0, 0.7);
 }
 
-#stocktrade .hero.is-warning .tabs a {
+.hero.is-warning .tabs a {
   color: rgba(0, 0, 0, 0.7);
   opacity: 0.9;
 }
 
-#stocktrade .hero.is-warning .tabs a:hover {
+.hero.is-warning .tabs a:hover {
   opacity: 1;
 }
 
-#stocktrade .hero.is-warning .tabs li.is-active a {
+.hero.is-warning .tabs li.is-active a {
   opacity: 1;
 }
 
-#stocktrade .hero.is-warning .tabs.is-boxed a, #stocktrade .hero.is-warning .tabs.is-toggle a {
+.hero.is-warning .tabs.is-boxed a, .hero.is-warning .tabs.is-toggle a {
   color: rgba(0, 0, 0, 0.7);
 }
 
-#stocktrade .hero.is-warning .tabs.is-boxed a:hover, #stocktrade .hero.is-warning .tabs.is-toggle a:hover {
+.hero.is-warning .tabs.is-boxed a:hover, .hero.is-warning .tabs.is-toggle a:hover {
   background-color: rgba(10, 10, 10, 0.1);
 }
 
-#stocktrade .hero.is-warning .tabs.is-boxed li.is-active a, #stocktrade .hero.is-warning .tabs.is-boxed li.is-active a:hover, #stocktrade .hero.is-warning .tabs.is-toggle li.is-active a, #stocktrade .hero.is-warning .tabs.is-toggle li.is-active a:hover {
+.hero.is-warning .tabs.is-boxed li.is-active a, .hero.is-warning .tabs.is-boxed li.is-active a:hover, .hero.is-warning .tabs.is-toggle li.is-active a, .hero.is-warning .tabs.is-toggle li.is-active a:hover {
   background-color: rgba(0, 0, 0, 0.7);
   border-color: rgba(0, 0, 0, 0.7);
   color: #ffdd57;
 }
 
-#stocktrade .hero.is-warning.is-bold {
+.hero.is-warning.is-bold {
   background-image: -webkit-linear-gradient(309deg, #ffaf24 0%, #ffdd57 71%, #fffa70 100%);
   background-image: linear-gradient(141deg, #ffaf24 0%, #ffdd57 71%, #fffa70 100%);
 }
 
 @media screen and (max-width: 768px) {
-  #stocktrade .hero.is-warning .nav-toggle span {
+  .hero.is-warning .nav-toggle span {
     background-color: rgba(0, 0, 0, 0.7);
   }
-  #stocktrade .hero.is-warning .nav-toggle:hover {
+  .hero.is-warning .nav-toggle:hover {
     background-color: rgba(10, 10, 10, 0.1);
   }
-  #stocktrade .hero.is-warning .nav-toggle.is-active span {
+  .hero.is-warning .nav-toggle.is-active span {
     background-color: rgba(0, 0, 0, 0.7);
   }
-  #stocktrade .hero.is-warning .nav-menu .nav-item {
+  .hero.is-warning .nav-menu .nav-item {
     border-top-color: rgba(0, 0, 0, 0.2);
   }
 }
 
-#stocktrade .hero.is-danger {
+.hero.is-danger {
   background-color: #ff3860;
   color: #fff;
 }
 
-#stocktrade .hero.is-danger a,
-#stocktrade .hero.is-danger strong {
+.hero.is-danger a,
+.hero.is-danger strong {
   color: inherit;
 }
 
-#stocktrade .hero.is-danger .title {
+.hero.is-danger .title {
   color: #fff;
 }
 
-#stocktrade .hero.is-danger .subtitle {
+.hero.is-danger .subtitle {
   color: rgba(255, 255, 255, 0.9);
 }
 
-#stocktrade .hero.is-danger .subtitle a,
-#stocktrade .hero.is-danger .subtitle strong {
+.hero.is-danger .subtitle a,
+.hero.is-danger .subtitle strong {
   color: #fff;
 }
 
-#stocktrade .hero.is-danger .nav {
+.hero.is-danger .nav {
   box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2);
 }
 
 @media screen and (max-width: 768px) {
-  #stocktrade .hero.is-danger .nav-menu {
+  .hero.is-danger .nav-menu {
     background-color: #ff3860;
   }
 }
 
-#stocktrade .hero.is-danger a.nav-item,
-#stocktrade .hero.is-danger .nav-item a:not(.button) {
+.hero.is-danger a.nav-item,
+.hero.is-danger .nav-item a:not(.button) {
   color: rgba(255, 255, 255, 0.7);
 }
 
-#stocktrade .hero.is-danger a.nav-item:hover, #stocktrade .hero.is-danger a.nav-item.is-active,
-#stocktrade .hero.is-danger .nav-item a:not(.button):hover,
-#stocktrade .hero.is-danger .nav-item a:not(.button).is-active {
+.hero.is-danger a.nav-item:hover, .hero.is-danger a.nav-item.is-active,
+.hero.is-danger .nav-item a:not(.button):hover,
+.hero.is-danger .nav-item a:not(.button).is-active {
   color: #fff;
 }
 
-#stocktrade .hero.is-danger .tabs a {
+.hero.is-danger .tabs a {
   color: #fff;
   opacity: 0.9;
 }
 
-#stocktrade .hero.is-danger .tabs a:hover {
+.hero.is-danger .tabs a:hover {
   opacity: 1;
 }
 
-#stocktrade .hero.is-danger .tabs li.is-active a {
+.hero.is-danger .tabs li.is-active a {
   opacity: 1;
 }
 
-#stocktrade .hero.is-danger .tabs.is-boxed a, #stocktrade .hero.is-danger .tabs.is-toggle a {
+.hero.is-danger .tabs.is-boxed a, .hero.is-danger .tabs.is-toggle a {
   color: #fff;
 }
 
-#stocktrade .hero.is-danger .tabs.is-boxed a:hover, #stocktrade .hero.is-danger .tabs.is-toggle a:hover {
+.hero.is-danger .tabs.is-boxed a:hover, .hero.is-danger .tabs.is-toggle a:hover {
   background-color: rgba(10, 10, 10, 0.1);
 }
 
-#stocktrade .hero.is-danger .tabs.is-boxed li.is-active a, #stocktrade .hero.is-danger .tabs.is-boxed li.is-active a:hover, #stocktrade .hero.is-danger .tabs.is-toggle li.is-active a, #stocktrade .hero.is-danger .tabs.is-toggle li.is-active a:hover {
+.hero.is-danger .tabs.is-boxed li.is-active a, .hero.is-danger .tabs.is-boxed li.is-active a:hover, .hero.is-danger .tabs.is-toggle li.is-active a, .hero.is-danger .tabs.is-toggle li.is-active a:hover {
   background-color: #fff;
   border-color: #fff;
   color: #ff3860;
 }
 
-#stocktrade .hero.is-danger.is-bold {
+.hero.is-danger.is-bold {
   background-image: -webkit-linear-gradient(309deg, #ff0561 0%, #ff3860 71%, #ff5257 100%);
   background-image: linear-gradient(141deg, #ff0561 0%, #ff3860 71%, #ff5257 100%);
 }
 
 @media screen and (max-width: 768px) {
-  #stocktrade .hero.is-danger .nav-toggle span {
+  .hero.is-danger .nav-toggle span {
     background-color: #fff;
   }
-  #stocktrade .hero.is-danger .nav-toggle:hover {
+  .hero.is-danger .nav-toggle:hover {
     background-color: rgba(10, 10, 10, 0.1);
   }
-  #stocktrade .hero.is-danger .nav-toggle.is-active span {
+  .hero.is-danger .nav-toggle.is-active span {
     background-color: #fff;
   }
-  #stocktrade .hero.is-danger .nav-menu .nav-item {
+  .hero.is-danger .nav-menu .nav-item {
     border-top-color: rgba(255, 255, 255, 0.2);
   }
 }
 
 @media screen and (min-width: 769px) {
-  #stocktrade .hero.is-medium .hero-body {
+  .hero.is-medium .hero-body {
     padding-bottom: 9rem;
     padding-top: 9rem;
   }
 }
 
 @media screen and (min-width: 769px) {
-  #stocktrade .hero.is-large .hero-body {
+  .hero.is-large .hero-body {
     padding-bottom: 18rem;
     padding-top: 18rem;
   }
 }
 
-#stocktrade .hero.is-fullheight {
+.hero.is-fullheight {
   min-height: 100vh;
 }
 
-#stocktrade .hero.is-fullheight .hero-body {
+.hero.is-fullheight .hero-body {
   -webkit-box-align: center;
   align-items: center;
   display: -webkit-box;
   display: flex;
 }
 
-#stocktrade .hero.is-fullheight .hero-body > .container {
+.hero.is-fullheight .hero-body > .container {
   -webkit-box-flex: 1;
   flex-grow: 1;
   flex-shrink: 1;
 }
 
-#stocktrade .section {
+.section {
   background-color: white;
   padding: 3rem 1.5rem;
 }
 
 @media screen and (min-width: 1000px) {
-  #stocktrade .section.is-medium {
+  .section.is-medium {
     padding: 9rem 1.5rem;
   }
-  #stocktrade .section.is-large {
+  .section.is-large {
     padding: 18rem 1.5rem;
   }
 }
 
-#stocktrade .footer {
+.footer {
   background-color: whitesmoke;
   padding: 3rem 1.5rem 6rem;
+}
+
+#stocktrade {
+  font-size: 14px;
 }
 
 #stocktrade .panel, #stocktrade .tabs {
