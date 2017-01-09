@@ -6,3 +6,6 @@
 Homestead.json
 Homestead.yaml
 .env
+public/api/v1/js/stocktrade.js
+public/css
+public/js/app.js
