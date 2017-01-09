@@ -1,53 +1,22 @@
-var apihost = 'http://localhost:8000';
-var stocktradeWatchList = new Vue({
-    el: '#stocktrade-watchlist',
-    data: {
-        isLoading: true,
-        message: 'Hello Vue!',
-        messages : {
-            loading : 'Getting favorite quotes...'
-        },
-        api : {
-            getWatchlist : {
-                url : apihost + "/user/watchlist",
-                response : null
-            }
-        }
-    },
-    components: {
-        'stockitem' : {
-            props: ['symbol'],
-            template : '<li>{{ symbol }}</li>',
-            data : function(){
-                return {
-                    symbol : ''
-                };
-            }
-        }
-    },
-    methods: {
-        fetchData: function () {
-            var xhr = new XMLHttpRequest()
-            var self = this
-            xhr.open('GET', self.api.getWatchlist.url)
-            xhr.onreadystatechange = function (oEvent) {
-                if (xhr.readyState === 4) {
-                    if (xhr.status === 200) {
-                        self.api.getWatchlist.response = JSON.parse(xhr.responseText)
-                        self.isLoading = false;
-
-                    } else {
-                        self.messages.loading = 'Error: Failed getting watchlist';
-                    }
-                }
-            };
-            xhr.send()
-        }
-    },
-    created: function(){
-        console.log('component ready');
-
-        this.fetchData();
-
-    }
-})
+var dmStockTradeID = document.getElementById('dm-stock-trade');
+var thisScript = document.getElementById('dm-stock-trade-js');
+var parent = thisScript.parentElement;
+var z = document.createElement('iframe');
+z.setAttribute('id','dm-stock-trade');
+z.setAttribute('src','http://stocktrade.demo/embed/watchlist');
+z.setAttribute('width','100%');
+z.setAttribute('height','400px');
+z.setAttribute('frameborder','0');
+z.setAttribute('allowtransparency','true');
+z.setAttribute('scrolling','no');
+parent.appendChild(z);
+var dmStockTradeID = document.getElementById('dm-stock-trade');
+dmStockTradeID.addEventListener("load",function(){
+    var eventMethod = window.addEventListener ? "addEventListener" : "attachEvent";
+    var eventer = window[eventMethod];
+    var messageEvent = eventMethod == "attachEvent" ? "onmessage" : "message";
+    eventer(messageEvent, function(e) {
+        if (isNaN(e.data)) return;
+        dmStockTradeID.style.height = e.data + 'px';
+    }, false);
+});
