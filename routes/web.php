@@ -30,6 +30,8 @@ Route::group(['prefix' => 'api/v1'], function () {
     Route::get('/stock/search', 'StockController@search');
     Route::get('/stock/data/{symbol}/{options?}', 'StockController@show');
     Route::get('/user/watchlist/add/{symbol}', 'UserController@addToWatchlist');
+    Route::post('/user/isUsernameAvailable', 'UserController@isUsernameAvailable');
+    Route::post('/user/create', 'UserController@store');
 });
 Route::get('/user/watchlist', function (Request $request) {
     return response()

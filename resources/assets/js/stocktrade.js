@@ -1,11 +1,21 @@
 import StockTradeWatchList from './components/StockTradeWatchList.vue';
+import StockTradeLogin from './components/StockTradeLogin.vue';
 import Events from './components/Events.js';
 
 const stocktrade = new Vue({
     el: '#stocktrade',
-    template : '<stocktrade-watchlist></stocktrade-watchlist>',
+    template : `
+    <div>
+        <stocktrade-watchlist v-if="isLoggedIn"></stocktrade-watchlist>
+        <stocktrade-login v-else></stocktrade-login>
+    </div>
+    `,
+    data: {
+        isLoggedIn: false,
+    },
     components: {
-        'stocktrade-watchlist' : StockTradeWatchList
+        'stocktrade-watchlist' : StockTradeWatchList,
+        'stocktrade-login' : StockTradeLogin
     },
 });
 
