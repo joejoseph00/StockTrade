@@ -1,6 +1,22 @@
 <template lang="html">
     <div id="stocktrade-login">
-        <div class="container is-fluid">
+        <section class="hero is-primary">
+            <div class="hero-body">
+                <div class="container">
+                    <div class="columns is-vcentered">
+                        <div class="column">
+                            <p class="title">
+                                Demo Trading Account
+                            </p>
+                            <p class="subtitle">
+                                Compete, Risk Free with <strong>$100,000</strong> in Virtual Cash
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="container">
             <div class="columns">
                 <div class="column">
                     <div class="section content">
@@ -11,21 +27,7 @@
                 <div class="column">
                     <div class="section content">
                         <h3>Login to start trading</h3>
-                        <div class="is-boxed">
-                            <label class="label">Email</label>
-                            <p class="control">
-                                <input class="input" type="text" placeholder="jsmith@example.org">
-                            </p>
-                            <label class="label">Password</label>
-                            <p class="control">
-                                <input class="input" type="password">
-                            </p>
-                            <hr>
-                            <p class="control">
-                                <button class="button is-primary">Login</button>
-                                <button class="button is-default">Cancel</button>
-                            </p>
-                        </div>
+                        <stocktrade-signin></stocktrade-signin>
                     </div>
                 </div>
             </div>
@@ -36,11 +38,13 @@
 <script>
 
 import StockTradeRegistration from './StockTradeRegistration.vue';
+import StockTradeSignin from './StockTradeSignin.vue';
 
 export default {
     name : 'stocktrade-login',
     components : {
-        'stocktrade-registration' : StockTradeRegistration
+        'stocktrade-registration' : StockTradeRegistration,
+        'stocktrade-signin' : StockTradeSignin,
     }
 }
 </script>

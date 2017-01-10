@@ -32,6 +32,9 @@ Route::group(['prefix' => 'api/v1'], function () {
     Route::get('/user/watchlist/add/{symbol}', 'UserController@addToWatchlist');
     Route::post('/user/isUsernameAvailable', 'UserController@isUsernameAvailable');
     Route::post('/user/create', 'UserController@store');
+    Route::post('/user/authenticate', 'UserController@authenticate');
+    Route::post('/user/isLoggedIn', 'UserController@isLoggedIn');
+    Route::post('/user/logout', 'UserController@logout');
 });
 Route::get('/user/watchlist', function (Request $request) {
     return response()

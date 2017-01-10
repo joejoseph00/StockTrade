@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Validator;
 use Illuminate\Http\Request;
 use App\User;
+use Auth;
 
 class UserController extends Controller
 {
@@ -154,6 +155,49 @@ class UserController extends Controller
             ]);
         }
 
+    }
+
+    public function authenticate(Request $request){
+        if (Auth::attempt(['username' => $request->get('username'), 'password' => $request->get('password')])) {
+            // Authentication passed...
+
+            $user = User::select('username','fullname')->where(['username' => $request->get('username')])->first();
+
+            return response()->json([
+                'error' => [],
+                'status' => 'OK',
+                'user' => $user
+            ]);
+        }
+
+        return response()->json([
+            'error' => ['Username or Password incorrect'],
+            'status' => 'FAILED',
+        ]);
+    }
+
+    public function logout(){
+        Auth::logout();
+
+        return response()->json([
+            'error' => [],
+            'status' => 'OK',
+        ]);
+    }
+
+    public function isLoggedIn(){
+        if (Auth::check()) {
+            return response()->json([
+                'error' => [],
+                'status' => 'OK',
+                'user' => Auth::user()
+            ]);
+        }
+
+        return response()->json([
+            'error' => ['No user logged in.'],
+            'status' => 'FAILED',
+        ]);
     }
 
 }
