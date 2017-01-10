@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Stock extends Model
+class Watchlist extends Model
 {
 
     /**
@@ -13,13 +13,8 @@ class Stock extends Model
      * @var array
      */
     protected $fillable = [
-        'symbol',
-        'name',
-        'issuer',
-        'type',
-        'recordts',
-        'statistics',
-        'profile',
+        'user_id',
+        'stock_symbol',
     ];
 
     /**

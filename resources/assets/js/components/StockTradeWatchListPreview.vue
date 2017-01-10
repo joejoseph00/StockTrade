@@ -11,7 +11,7 @@
                     <h5 class="subtitle">{{ stockData.details['name'] }}</h5>
                 </div>
                 <div class="columns">
-                    <div class="column is-half is-offset-one-quarter">
+                    <div v-if="!isWatched" class="column is-half is-offset-one-quarter">
                         <a v-if="!isAdding" class="button block is-fullwidth is-primary is-medium" :class=" { 'is-danger' : isAdded == 'error' , 'is-disabled' : isAdded } " @click="addToWatchlist(stockData.details['symbol'])" >
                             <span  class="icon is-small">
                                 <i class="fa" :class=" { 'fa-check' : isAdded === true, 'fa-exclamation-triangle' : isAdded == 'error', 'fa-heart' : !isAdded } "></i>
@@ -21,6 +21,17 @@
                             <span v-else>Add to Watchlist</span>
                         </a>
                         <a v-else class="button block is-fullwidth is-primary is-medium is-loading"></a>
+                    </div>
+                    <div v-else class="column is-half is-offset-one-quarter">
+                        <a v-if="!isRemoving" class="button block is-fullwidth is-danger is-medium" @click="removeFromWatchlist(stockData.details['symbol'])" >
+                            <span  class="icon is-small">
+                                <i class="fa" :class=" { 'fa-ban' : isAdded === true, 'fa-exclamation-triangle' : isAdded == 'error', 'fa-heart' : !isAdded } "></i>
+                            </span>
+                            <span v-if="isRemoved === true ">Stock Unfollowed</span>
+                            <span v-else-if="isRemoved == 'error'">Unfollow Failed</span>
+                            <span v-else>Unfollow Stock</span>
+                        </a>
+                        <a v-else class="button block is-fullwidth is-danger is-medium is-loading"></a>
                     </div>
                 </div>
                 <div class="columns has-text-centered">
@@ -104,17 +115,22 @@ export default {
             isSearched : false,
             isLoading: false,
             isLoadingFailed : false,
+            isWatched : false,
             progressInterval : null,
             messages : {
                 loading : 'Initializing quote data...',
             },
             loadingPercent : 0,
             stockData : [],
+            stockWatched : false,
             api : {
-                addToWatchlist : hostname + "/api/v1/user/watchlist/add/"
+                addToWatchlist : hostname + "/api/v1/user/watchlist/add/",
+                removeFromWatchlist : hostname + "/api/v1/user/watchlist/remove/"
             },
             isAdding : false,
             isAdded : false,
+            isRemoving : false,
+            isRemoved : false,
         }
     },
     methods: {
@@ -127,11 +143,35 @@ export default {
                 self.isAdding = false;
                 if(response.status == 200 && response.data.status == 'OK'){
                     self.isAdded = true;
+                    self.isWatched = true;
+                    self.isRemoving = false;
+                    self.isRemoved = false;
                 }
                 else{
                     self.isAdded = 'error';
                     setTimeout(function(){
                         self.isAdded = false;
+                    },3000);
+                }
+            });
+        },
+        removeFromWatchlist(symbol){
+            var self = this;
+            self.isRemoving = true;
+            self.isRemoved = false;
+
+            Axios.get(self.api.removeFromWatchlist + symbol).then(function(response){
+                self.isAdding = false;
+                if(response.status == 200 && response.data.status == 'OK'){
+                    self.isAdded = false;
+                    self.isWatched = false;
+                    self.isRemoved = true;
+                    self.isRemoving = true;
+                }
+                else{
+                    self.isRemoved = 'error';
+                    setTimeout(function(){
+                        self.isRemoved = false;
                     },3000);
                 }
             });
@@ -146,6 +186,12 @@ export default {
             self.isLoadingFailed = false;
             self.isLoading = true;
             self.isSearched = true;
+
+            self.isAdded = false;
+            self.isWatched = false;
+            self.isRemoved = false;
+            self.isRemoving = false;
+
             self.progressInterval = setInterval(function(){
                 self.loadingPercent += 1;
                 if(self.loadingPercent>100) self.loadingPercent = 0;
@@ -158,6 +204,7 @@ export default {
             self.isLoadingFailed = false;
             self.isLoading = false;
             self.stockData = data;
+            self.isWatched = data.watched;
         });
 
         Events.$on('symbolDataLoadFailed',function(symbol){

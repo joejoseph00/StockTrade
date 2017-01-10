@@ -2,11 +2,11 @@
     <div id="stocktrade">
         <section class="hero is-primary">
             <div class="hero-head">
-            <div class="nav-right nav-menu">
-                <a class="nav-item is-active" @click="onLogout">
-                  Logout Account
-                </a>
-              </div>
+                <div class="nav-right nav-menu">
+                    <a class="nav-item is-active" @click="onLogout">
+                        Logout Account
+                    </a>
+                </div>
             </div>
             <div class="hero-body">
                 <div class="container">
@@ -62,7 +62,7 @@
                 <div class="preloader preloader-indefinite"></div>
             </div>
             <div class="section content" v-if="!isLoading">
-
+                <div class="container">
                     <div class="card">
                         <header class="card-header">
                             <p class="card-header-title">
@@ -71,9 +71,9 @@
                         </header>
                         <div class="card-content">
                             <div class="content">
-                                <ul id="stockitem-list" class="list-unstyled">
-                                    <stock-item v-for="stock in stocks">{{ stock.symbol }}</stock-item>
-                                </ul>
+                                <div id="stockitem-list" class="columns">
+                                    <stock-item v-for="stock in stocks" :symbol="stock.symbol" :data="stock.data"></stock-item>
+                                </div>
                             </div>
                         </div>
                         <footer class="card-footer">
@@ -94,9 +94,7 @@
                             </modal>
                         </footer>
                     </div>
-
-
-
+                </div>
             </div>
         </div>
     </div>
@@ -106,6 +104,7 @@
 import Autocomplete from 'vue2-autocomplete-js';
 import Events from './Events.js';
 import Preview from './StockTradeWatchListPreview.vue';
+import StockItems from './StockWatchListItems.vue';
 import Axios from 'axios';
 import Modal from './utils/Modal.vue';
 
@@ -128,7 +127,7 @@ export default {
             stocks : [],
             api : {
                 getWatchlist : {
-                    url : hostname + "/user/watchlist",
+                    url : hostname + "/api/v1/user/watchlist",
                     response : null
                 },
                 getStockData : {
@@ -146,10 +145,7 @@ export default {
         autocomplete,
         'modal' : Modal,
         'preview' : Preview,
-        'stock-item' : {
-            name : 'stock-item',
-            template : '<li><slot></slot></li>'
-        }
+        'stock-item' : StockItems
     },
     methods: {
         onLogout(){
@@ -167,7 +163,7 @@ export default {
             var self = this;
             Axios.get(self.api.getWatchlist.url).then(function(response){
                 self.api.getWatchlist.response = response;
-                self.stocks = response.data;
+                self.stocks = response.data.watchlist;
                 self.isLoading = false;
             }).catch(function (error) {
                 self.messages.loading = 'Error: Failed getting watchlist';
