@@ -106,7 +106,7 @@
         display: none;
     }
 
-    .modal-card-body{
+    .modal-card-body.has-minheight{
         min-height: 400px;
     }
 }

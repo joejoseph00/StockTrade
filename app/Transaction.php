@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Stock extends Model
+class Transaction extends Model
 {
 
     /**
@@ -13,13 +13,11 @@ class Stock extends Model
      * @var array
      */
     protected $fillable = [
-        'symbol',
-        'name',
-        'issuer',
+        'user_id',
         'type',
-        'recordts',
-        'statistics',
-        'profile',
+        'symbol',
+        'qty',
+        'price',
     ];
 
     /**

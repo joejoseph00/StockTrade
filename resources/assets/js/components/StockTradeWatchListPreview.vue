@@ -3,6 +3,7 @@
         <div v-if="isLoading">
             {{ messages.loading }}
             <progress class="progress is-small" v-bind:class="{ 'is-danger' : isLoadingFailed }" v-bind:value="loadingPercent" max="100">{{ loadingPercent }}%</progress>
+            <a v-if="isLoadingFailed" class="button is-link" @click="onRetryFetch">Try Again</a>
         </div>
         <div v-if="!isLoading && isSearched">
             <div class="content">
@@ -146,6 +147,7 @@ export default {
                     self.isWatched = true;
                     self.isRemoving = false;
                     self.isRemoved = false;
+                    Events.$emit('symbolWatchlistAdded');
                 }
                 else{
                     self.isAdded = 'error';
@@ -167,6 +169,7 @@ export default {
                     self.isWatched = false;
                     self.isRemoved = true;
                     self.isRemoving = true;
+                    Events.$emit('symbolWatchlistRemoved');
                 }
                 else{
                     self.isRemoved = 'error';
@@ -175,6 +178,9 @@ export default {
                     },3000);
                 }
             });
+        },
+        onRetryFetch(){
+            Events.$emit('retrySymbolDataFetch');
         }
     },
     created: function(){

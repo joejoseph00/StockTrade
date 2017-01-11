@@ -81,7 +81,6 @@ class StockController extends Controller
     */
     public function show($symbol,$options = "n,s,a,b,o,p,v,c1,p2,g,h,s6,k,j,j5,k4,j6,k5,j1,x,f6,j2,a5,b6,k3,a2,e")
     {
-
         $symbol = urlencode($symbol);
 
         // Check if Symbol already on database, if yes, check last updated time
@@ -91,10 +90,7 @@ class StockController extends Controller
         $updateData = false;
 
         // Check if symbol in watchlist
-        $isWatched = Watchlist::where([
-            'user_id' => Auth::id(),
-            'stock_symbol' => $symbol
-        ])->exists();
+        $isWatched = Watchlist::where([ 'user_id' => Auth::id(), 'stock_symbol' => $symbol ])->exists();
 
 
         if(!empty($isExist)){
@@ -125,10 +121,13 @@ class StockController extends Controller
             $data = array_map(function($row) use ($options){
                 $data = str_getcsv($row);
                 if(count($data) === count($options)){
+
                     $newdata = [];
                     foreach ($data as $key => $value) {
                         $newdata[str_slug($this->options[$options[$key]])] = $data[$key];
                     }
+
+
 
                     if($newdata['name']=='N/A') return null;
                     return $newdata;
@@ -158,114 +157,116 @@ class StockController extends Controller
                     'detail',
                 ]),
                 'corsDomain' => 'finance.yahoo.com',
-                ] )
-                ->asJson()
-                ->get();
-
-                if($response && count($response->quoteSummary->result)){
-                    $profile = $response->quoteSummary->result[0]->summaryProfile;
-                }else{
-                    return response()->json([
-                        'error' => 'Failed to get data',
-                        'message' => 'Could not fetch profile for ' . $symbol
-                    ]);
-                }
-
-                $details = $data[0];
-                // If everythings ok, check if symbol already on DB
-                if($updateData){
-                    Stock::where('symbol',$symbol)->update([
-                        'issuer' => $details['stock-exchange'],
-                        'type' => $profile->sector,
-                        'statistics' => json_encode($details),
-                        'profile' => json_encode($profile),
-                    ]);
-                }else{
-                    Stock::create([
-                        'symbol' => $symbol,
-                        'name' => $details['name'],
-                        'issuer' => $details['stock-exchange'],
-                        'type' => $profile->sector,
-                        'statistics' => json_encode($details),
-                        'profile' => json_encode($profile),
-                    ]);
-                }
-
-                return response()->json([
-                    'profile' => $profile,
-                    'details' => $details,
-                    'watched' => $isWatched,
-                    'status' => 'OK'
-                ]);
-            }else{
-
-                // Return response from DB
-
-                if(!empty($isExist)){
-                    return response()->json([
-                        'profile' => json_decode($isExist->profile),
-                        'details' => json_decode($isExist->statistics),
-                        'watched' => $isWatched,
-                        'status' => 'OK'
-                    ]);
-                }
-
-                return response()->json([
-                    'status' => 'FAILED'
-                ]);
-            }
-
-        }
-
-        /**
-        * Show the form for editing the specified resource.
-        *
-        * @param  int  $id
-        * @return \Illuminate\Http\Response
-        */
-        public function edit($id)
-        {
-            //
-        }
-
-        /**
-        * Update the specified resource in storage.
-        *
-        * @param  \Illuminate\Http\Request  $request
-        * @param  int  $id
-        * @return \Illuminate\Http\Response
-        */
-        public function update(Request $request, $id)
-        {
-            //
-        }
-
-        /**
-        * Remove the specified resource from storage.
-        *
-        * @param  int  $id
-        * @return \Illuminate\Http\Response
-        */
-        public function destroy($id)
-        {
-            //
-        }
-        /**
-        * Display a listing of stock symbols.
-        *
-        * @return \Illuminate\Http\Response
-        */
-        public function search(Request $request)
-        {
-            $term = $request->input('q');
-            if(empty($term)) return response()->json([]);
-
-            $response = Curl::to('http://d.yimg.com/autoc.finance.yahoo.com/autoc?region=us&lang=en&query='.$term)
+            ])
             ->asJson()
             ->get();
 
-            if(!empty($response->ResultSet->Result)) return response()->json($response->ResultSet->Result);
-            return response()->json([]);
+            if($response && count($response->quoteSummary->result)){
+                $profile = $response->quoteSummary->result[0]->summaryProfile;
+            }else{
+                return response()->json([
+                    'error' => 'Failed to get data',
+                    'message' => 'Could not fetch profile for ' . $symbol
+                ]);
+            }
+
+            $details = $data[0];
+            // If everythings ok, check if symbol already on DB
+            if($updateData){
+                Stock::where('symbol',$symbol)->update([
+                    'issuer' => $details['stock-exchange'],
+                    'type' => $profile->sector,
+                    'statistics' => json_encode($details),
+                    'profile' => json_encode($profile),
+                ]);
+            }else{
+                Stock::create([
+                    'symbol' => $symbol,
+                    'name' => $details['name'],
+                    'issuer' => $details['stock-exchange'],
+                    'type' => $profile->sector,
+                    'statistics' => json_encode($details),
+                    'profile' => json_encode($profile),
+                ]);
+            }
+
+            return response()->json([
+                'profile' => $profile,
+                'details' => $details,
+                'watched' => $isWatched,
+                'status' => 'OK'
+            ]);
+        }else{
+
+            // Return response from DB
+
+            if(!empty($isExist)){
+                return response()->json([
+                    'profile' => json_decode($isExist->profile),
+                    'details' => json_decode($isExist->statistics),
+                    'watched' => $isWatched,
+                    'status' => 'OK'
+                ]);
+            }
+
+            return response()->json([
+                'status' => 'FAILED'
+            ]);
         }
 
     }
+
+    /**
+    * Show the form for editing the specified resource.
+    *
+    * @param  int  $id
+    * @return \Illuminate\Http\Response
+    */
+    public function edit($id)
+    {
+        //
+    }
+
+    /**
+    * Update the specified resource in storage.
+    *
+    * @param  \Illuminate\Http\Request  $request
+    * @param  int  $id
+    * @return \Illuminate\Http\Response
+    */
+    public function update(Request $request, $id)
+    {
+        //
+    }
+
+    /**
+    * Remove the specified resource from storage.
+    *
+    * @param  int  $id
+    * @return \Illuminate\Http\Response
+    */
+    public function destroy($id)
+    {
+        //
+    }
+
+    
+    /**
+    * Display a listing of stock symbols.
+    *
+    * @return \Illuminate\Http\Response
+    */
+    public function search(Request $request)
+    {
+        $term = $request->input('q');
+        if(empty($term)) return response()->json([]);
+
+        $response = Curl::to('http://d.yimg.com/autoc.finance.yahoo.com/autoc?region=us&lang=en&query='.$term)
+        ->asJson()
+        ->get();
+
+        if(!empty($response->ResultSet->Result)) return response()->json($response->ResultSet->Result);
+        return response()->json([]);
+    }
+
+}

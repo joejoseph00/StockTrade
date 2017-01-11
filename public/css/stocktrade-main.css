@@ -6500,7 +6500,7 @@ label.panel-block:hover {
   display: none;
 }
 
-#stocktrade .modal-card-body {
+#stocktrade .modal-card-body.has-minheight {
   min-height: 400px;
 }
 

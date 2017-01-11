@@ -29,6 +29,7 @@ Route::get('/embed/watchlist', function () {
 Route::group(['prefix' => 'api/v1'], function () {
 
     Route::get('/stock/search', 'StockController@search');
+    Route::post('/stock/buy', 'TransactionController@store');
     Route::get('/stock/data/{symbol}/{options?}', 'StockController@show');
 
     Route::get('/user/watchlist/add/{symbol}', 'UserController@addToWatchlist');

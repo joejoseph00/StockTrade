@@ -4,14 +4,14 @@
         <div class="modal is-active" v-if="isModalOpen">
             <div class="modal-background" @click=" isModalOpen = false "></div>
             <div class="modal-card">
-                <header class="modal-card-head">
+                <header v-if="minimal" class="modal-card-head">
                     <p class="modal-card-title is-marginless"><slot name="header"></slot></p>
                     <button class="delete" @click=" isModalOpen = false "></button>
                 </header>
-                <section class="modal-card-body">
+                <section class="modal-card-body" :class="{ 'has-minheight' : minheight }">
                     <slot></slot>
                 </section>
-                <footer class="modal-card-foot">
+                <footer v-if="minimal" class="modal-card-foot">
                     <slot name="footer">
                         <a class="button is-pulled-right" @click=" isModalOpen = false ">Close</a>
                     </slot>
@@ -25,10 +25,12 @@
 <script>
 export default{
     name : 'modal',
-    props : {
-        btnText : String,
-        btnClass : String
-    },
+    props : [
+        'btnText',
+        'btnClass',
+        'minimal',
+        'minheight',
+    ],
     data : function(){
         return {
             isModalOpen : false
