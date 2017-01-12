@@ -28,14 +28,14 @@
             <tab name="Dashboard">
                 <h1>Here is the content for Dashboard</h1>
             </tab>
-            <tab name="Watchlist" :selected="true">
+            <tab name="Watchlist">
                 <stocktrade-watchlist></stocktrade-watchlist>
             </tab>
             <tab name="My Portfolio">
                 <h1>Here is the content for My Portfolio</h1>
             </tab>
-            <tab name="Transaction History">
-                <h1>Here is the content for Transaction History</h1>
+            <tab name="Transaction History" :selected="true">
+                <stocktrade-transactions></stocktrade-transactions>
             </tab>
         </tabs>
 
@@ -45,6 +45,7 @@
 <script>
 import Events from './Events.js';
 import StockTradeWatchList from './StockTradeWatchList.vue';
+import StockTransactions from './StockTransactions.vue';
 import Tabs from './utils/Tabs.vue';
 import Tab from './utils/Tab.vue';
 
@@ -52,6 +53,7 @@ import Tab from './utils/Tab.vue';
 export default {
     components: {
         'stocktrade-watchlist' : StockTradeWatchList,
+        'stocktrade-transactions' : StockTransactions,
         'tabs' : Tabs,
         'tab' : Tab,
     },

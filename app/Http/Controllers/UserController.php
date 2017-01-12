@@ -264,4 +264,11 @@ class UserController extends Controller
                 ]);
             }
 
+            public function getTransactions(){
+                return response()->json([
+                    'data' => User::find(Auth::id())->transactions,
+                    'status' => 'OK'
+                ]);
+            }
+
         }

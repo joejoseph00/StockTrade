@@ -40,4 +40,5 @@ Route::group(['prefix' => 'api/v1'], function () {
     Route::post('/user/isLoggedIn', 'UserController@isLoggedIn');
     Route::post('/user/logout', 'UserController@logout');
     Route::get('/user/watchlist', 'UserController@getWatchlist');
+    Route::get('/user/transactions', 'UserController@getTransactions');
 });

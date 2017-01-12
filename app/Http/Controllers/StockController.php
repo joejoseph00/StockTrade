@@ -123,11 +123,8 @@ class StockController extends Controller
             ];
             $url = 'https://query1.finance.yahoo.com/v7/finance/chart/GOOGL?'.http_build_query($options);
 
-            // $response = Curl::to('download.finance.yahoo.com/d/quotes.csv?s='.$symbol.'&f='.implode('',$options))
-            // ->get();
             $response = Curl::to($url)
             ->get();
-
 
             // $response = explode("\n", $response);
             $data = [];
@@ -152,25 +149,6 @@ class StockController extends Controller
 
                 }
 
-                // $data = array_map(function($row) use ($options){
-                //     $data = str_getcsv($row);
-                //     if(count($data) === count($options)){
-                //
-                //         $newdata = [];
-                //         foreach ($data as $key => $value) {
-                //             $newdata[str_slug($this->options[$options[$key]])] = $data[$key];
-                //         }
-                //
-                //
-                //
-                //         if($newdata['name']=='N/A') return null;
-                //         return $newdata;
-                //     }
-                //     return null;
-                // },$response);
-
-                // $data = array_filter($data, 'is_array');
-
                 if(empty($data)){
                     return response()->json([
                         'error' => 'Failed to get data',
@@ -179,7 +157,7 @@ class StockController extends Controller
                 }
 
                 $baseURLQuote = "https://query2.finance.yahoo.com/v7/finance/quote";
-                
+
                 $infoStats = Curl::to($baseURLQuote)
                 ->withData([
                     'formatted' => 'true',
@@ -187,17 +165,11 @@ class StockController extends Controller
                     'region' => 'US',
                     'symbols' => 'GOOGL',
                     'fields' => implode(',',[
-                        // 'messageBoardId',
                         'longName',
                         'shortName',
                         'underlyingSymbol',
                         'underlyingExchangeSymbol',
                         'headSymbolAsString',
-                        // 'regularMarketPrice',
-                        // 'regularMarketChange',
-                        // 'regularMarketChangePercent',
-                        // 'regularMarketVolume',
-                        // 'uuid'
                     ]),
                     'corsDomain' => 'finance.yahoo.com',
                 ])
@@ -249,14 +221,7 @@ class StockController extends Controller
                     ]);
                 }
 
-                // $details = $data[0];
                 $details = $data;
-
-
-
-
-
-
 
                 // If everythings ok, check if symbol already on DB
                 if($updateData){

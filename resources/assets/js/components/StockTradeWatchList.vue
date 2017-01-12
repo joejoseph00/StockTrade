@@ -1,10 +1,6 @@
 <template>
     <div id="stocktrade">
-        <div id="tab-watchlist" v-if="!isLoading">
-            <div v-if="isLoading">
-                {{ messages.loading }}
-                <div class="preloader preloader-indefinite"></div>
-            </div>
+        <div id="tab-watchlist">
             <div class="section content" v-if="!isLoading">
                 <div class="container">
 
@@ -48,6 +44,9 @@
                             </footer>
                         </div>
                     </div>
+                </div>
+                <div v-else>
+
                 </div>
             </div>
         </div>
