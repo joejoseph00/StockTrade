@@ -1,61 +1,5 @@
 <template>
     <div id="stocktrade">
-        <section class="hero is-primary">
-            <div class="hero-head">
-                <div class="nav-right nav-menu">
-                    <a class="nav-item is-active" @click="onLogout">
-                        Logout Account
-                    </a>
-                </div>
-            </div>
-            <div class="hero-body">
-                <div class="container">
-                    <div class="columns is-vcentered">
-                        <div class="column">
-                            <p class="title">
-                                Demo Trading Account
-                            </p>
-                            <p class="subtitle">
-                                Compete, Risk Free with <strong>$100,000</strong> in Virtual Cash
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="hero-foot">
-                <div class="container">
-                    <nav class="tabs is-centered is-boxed">
-                        <ul>
-                            <li>
-                                <a>
-                                    <span class="icon is-small"><i class="fa fa-dashboard"></i></span>
-                                    <span>Dashboard</span>
-                                </a>
-                            </li>
-                            <li class="is-active">
-                                <a>
-                                    <span class="icon is-small"><i class="fa fa-star"></i></span>
-                                    <span>Watchlist</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a>
-                                    <span class="icon is-small"><i class="fa fa-area-chart"></i></span>
-                                    <span>My Portfolio</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a>
-                                    <span class="icon is-small"><i class="fa fa-clock-o"></i></span>
-                                    <span>Transaction History</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-
-        </section>
         <div id="tab-watchlist" v-if="!isLoading">
             <div v-if="isLoading">
                 {{ messages.loading }}
@@ -63,6 +7,7 @@
             </div>
             <div class="section content" v-if="!isLoading">
                 <div class="container">
+
                     <div class="card">
                         <header class="card-header">
                             <p class="card-header-title">
@@ -115,6 +60,8 @@
     import StockItems from './StockWatchListItems.vue';
     import Axios from 'axios';
     import Modal from './utils/Modal.vue';
+    import Tabs from './utils/Tabs.vue';
+    import Tab from './utils/Tab.vue';
 
     var autocomplete = Vue.extend({
         mixins: [Autocomplete],
@@ -159,20 +106,13 @@
         components: {
             autocomplete,
             'modal' : Modal,
+            'tabs' : Tabs,
+            'tab' : Tab,
             'preview' : Preview,
             'stock-item' : StockItems
         },
         methods: {
-            onLogout(){
-                var self = this;
-                Axios.post(self.api.logoutAccount.url).then(function(response){
-                    if(response.status===200){
-                        if(response.data.status=="OK"){
-                            Events.$emit('userLoggedOut');
-                        }
-                    }
-                });
-            },
+
             getWatchList() {
                 // Fetch Symbols from Database
                 var self = this;

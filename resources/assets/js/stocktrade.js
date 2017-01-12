@@ -1,4 +1,4 @@
-import StockTradeWatchList from './components/StockTradeWatchList.vue';
+import StockTrade from './components/StockTrade.vue';
 import StockTradeLogin from './components/StockTradeLogin.vue';
 import Events from './components/Events.js';
 import Axios from 'axios';
@@ -8,7 +8,7 @@ const stocktrade = new Vue({
     template : `
     <div>
     <div v-if="userStatusChecked">
-    <stocktrade-watchlist v-if="isLoggedIn"></stocktrade-watchlist>
+    <stocktrade v-if="isLoggedIn"></stocktrade>
     <stocktrade-login v-else></stocktrade-login>
     </div>
     <div v-else>
@@ -42,8 +42,8 @@ const stocktrade = new Vue({
         },
     },
     components: {
-        'stocktrade-watchlist' : StockTradeWatchList,
-        'stocktrade-login' : StockTradeLogin
+        'stocktrade-login' : StockTradeLogin,
+        'stocktrade' : StockTrade,
     },
     methods: {
         checkUserStatus(){

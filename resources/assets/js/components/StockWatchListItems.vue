@@ -13,18 +13,18 @@
             </header>
             <div class="card-content">
                 <div class="content">
-                    <p class="is-small has-text-centered is-block">{{ details.statistics['name'] }}</p>
+                    <p class="is-small has-text-centered is-block">{{ details.name }}</p>
                     <nav class="level is-mobile">
                         <div class="level-item has-text-centered">
                             <div>
-                                <p class="heading">Open</p>
-                                <p class="title">{{ details.statistics['open'] }}</p>
+                                <p class="heading">Price</p>
+                                <p class="title">{{ details.statistics.financialData.currentPrice.fmt }}</p>
                             </div>
                         </div>
                         <div class="level-item has-text-centered">
                             <div>
-                                <p class="heading">Close</p>
-                                <p class="title">{{ details.statistics['previous-close'] }}</p>
+                                <p class="heading">Target</p>
+                                <p class="title">{{ details.statistics.financialData.targetHighPrice.fmt }}</p>
                             </div>
                         </div>
                     </nav>
@@ -32,28 +32,27 @@
             </div>
             <footer class="card-footer">
                 <div class="card-footer-item">
-                    <modal btnText="Buy" btnClass="is-block">
-                        <template slot="header">Buy {{ details.statistics['symbol'] }} at {{ details.statistics['open'] }}</template>
+                    <modal btnText="Buy" btnClass="is-block" :minimal="true" :minheight="false">
+                        <template slot="header">Buy {{ details.sumbol }} at {{ details.statistics.financialData.currentPrice.fmt }}</template>
                         <stock-buy
-                        :symbol="details.statistics['symbol']"
-                        :name="details.statistics['name']"
-                        :price="details.statistics['open']"
-                        :minimal="true"
-                        :minheight="false"
+                        :symbol="details.symbol"
+                        :name="details.name"
+                        :price="details.statistics.financialData.currentPrice.fmt"
+
                         ></stock-buy>
                     </modal>
                 </div>
                 <a class="card-footer-item">Sell</a>
                 <modal btnText="More Info" btnClass="card-footer-item">
-                    <template slot="header">{{ details.statistics['symbol'] }} : {{ details.statistics['name'] }}</template>
+                    <template slot="header">{{ details.symbol }} : {{ details.name }}</template>
                     <div class="content">
                         <div class="has-text-centered">
-                            <h1 class="title is-2">{{ details.statistics['symbol'] }}</h1>
-                            <h5 class="subtitle">{{ details.statistics['name'] }}</h5>
+                            <h1 class="title is-2">{{ details.symbol }}</h1>
+                            <h5 class="subtitle">{{ details.name }}</h5>
                         </div>
                         <div class="columns">
                             <div v-if="!isWatched" class="column is-half is-offset-one-quarter">
-                                <a v-if="!isAdding" class="button block is-fullwidth is-primary is-medium" :class=" { 'is-danger' : isAdded == 'error' , 'is-disabled' : isAdded } " @click="addToWatchlist(details.statistics['symbol'])" >
+                                <a v-if="!isAdding" class="button block is-fullwidth is-primary is-medium" :class=" { 'is-danger' : isAdded == 'error' , 'is-disabled' : isAdded } " @click="addToWatchlist(details.symbol)" >
                                     <span  class="icon is-small">
                                         <i class="fa" :class=" { 'fa-check' : isAdded === true, 'fa-exclamation-triangle' : isAdded == 'error', 'fa-heart' : !isAdded } "></i>
                                     </span>
@@ -64,7 +63,7 @@
                                 <a v-else class="button block is-fullwidth is-primary is-medium is-loading"></a>
                             </div>
                             <div v-else class="column is-half is-offset-one-quarter">
-                                <a v-if="!isRemoving" class="button block is-fullwidth is-danger is-medium" @click="removeFromWatchlist(details.statistics['symbol'])" >
+                                <a v-if="!isRemoving" class="button block is-fullwidth is-danger is-medium" @click="removeFromWatchlist(details.symbol)" >
                                     <span  class="icon is-small">
                                         <i class="fa" :class=" { 'fa-ban' : isAdded === true, 'fa-exclamation-triangle' : isAdded == 'error', 'fa-heart' : !isAdded } "></i>
                                     </span>
@@ -77,70 +76,54 @@
                         </div>
                         <div class="columns has-text-centered">
                             <div class="column">
-                                <h3 class="title">{{ details.statistics['open'] }}</h3>
-                                <h6 class="subtitle is-6">Open</h6>
+                                <h3 class="title">{{ details.statistics.financialData.currentPrice.fmt }}</h3>
+                                <h6 class="subtitle is-6">Current Price</h6>
                             </div>
                             <div class="column">
-                                <h3 class="title">{{ details.statistics['previous-close'] }}</h3>
-                                <h6 class="subtitle is-6">Previous Close</h6>
+                                <h3 class="title">{{ details.statistics.financialData.targetLowPrice.fmt }}</h3>
+                                <h6 class="subtitle is-6">Target Low</h6>
                             </div>
                             <div class="column">
-                                <h3 class="title">{{ details.statistics['revenue'] }}</h3>
-                                <h6 class="subtitle is-6">Revenue</h6>
+                                <h3 class="title">{{ details.statistics.financialData.targetHighPrice.fmt }}</h3>
+                                <h6 class="subtitle is-6">Target High</h6>
                             </div>
                             <div class="column">
-                                <h3 class="title">{{ details.statistics['percent-change'] }}</h3>
-                                <h6 class="subtitle is-6">Change</h6>
+                                <h3 class="title">{{ details.statistics.financialData.totalRevenue.fmt }}</h3>
+                                <h6 class="subtitle is-6">Total Revenue</h6>
                             </div>
                         </div>
                         <p>{{ details.profile.longBusinessSummary }}</p>
-                        <table class="table">
-                            <thead>
-                                <tr>
-                                    <th colspan="2">Statistics</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr><td>Market Capitalization</td><td>{{ details.statistics['market-capitalization'] }}</td></tr>
-                                <tr><td>Outstanding Shares</td><td>{{ details.statistics['outstanding-shares'] }}</td></tr>
-                                <tr><td>Float Shares</td><td>{{ details.statistics['float-shares'] }}</td></tr>
-                                <tr><td>Last Trade Size</td><td>{{ details.statistics['last-trade-size'] }}</td></tr>
-                                <tr><td>Stock Exchange</td><td>{{ details.statistics['stock-exchange'] }}</td></tr>
-                                <tr><td>Day High</td><td>{{ details.statistics['day-high'] }}</td></tr>
-                                <tr><td>Day Low</td><td>{{ details.statistics['day-low'] }}</td></tr>
-                                <tr><td>Year High</td><td>{{ details.statistics['year-high'] }}</td></tr>
-                                <tr><td>Year High Change</td><td>{{ details.statistics['year-high-change'] }} ({{ details.statistics['year-high-change-percent'] }})</td></tr>
-                                <tr><td>Year Low</td><td>{{ details.statistics['year-low'] }}</td></tr>
-                                <tr><td>Year Low Change</td><td>{{ details.statistics['year-low-change'] }} ({{ details.statistics['year-low-change-percent'] }})</td></tr>
-                                <tr><td>Earnings per Share</td><td>{{ details.statistics['earnings-per-share'] }}</td></tr>
-                                <tr><td>Ask Price</td><td>{{ details.statistics['ask-price'] }}</td></tr>
-                                <tr><td>Ask Size</td><td>{{ details.statistics['ask-size'] }}</td></tr>
-                                <tr><td>Bid Price</td><td>{{ details.statistics['bid-price'] }}</td></tr>
-                                <tr><td>Bid Size</td><td>{{ details.statistics['bid-size'] }}</td></tr>
-                                <tr><td>Average Daily Volume</td><td>{{ details.statistics['average-daily-volume'] }}</td></tr>
-                            </tbody>
-                        </table>
 
-                        <table class="table">
-                            <thead>
-                                <tr>
-                                    <th colspan="2">Other Details</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr><td>Website</td><td><a :href="details.profile['website']" target="_blank">{{ details.profile['website'] }}</a></td></tr>
-                                <tr><td>Address</td><td>{{ details.profile['address1'] }}</td></tr>
-                                <tr><td>City</td><td>{{ details.profile['city'] }}</td></tr>
-                                <tr><td>State</td><td>{{ details.profile['state'] }}</td></tr>
-                                <tr><td>Country</td><td>{{ details.profile['country'] }}</td></tr>
-                                <tr><td>ZIP</td><td>{{ details.profile['zip'] }}</td></tr>
-                                <tr><td>Industry</td><td>{{ details.profile['industry'] }}</td></tr>
-                                <tr><td>Fulltime Employees</td><td>{{ details.profile['fullTimeEmployees'] }}</td></tr>
-                                <tr><td>Phone</td><td>{{ details.profile['phone'] }}</td></tr>
-                                <tr><td>Sector</td><td>{{ details.profile['sector'] }}</td></tr>
-                            </tbody>
-                        </table>
-
+                        <tabs tabclass="">
+                            <tab name="Profile" :selected="true">
+                                <table class="table">
+                                    <tbody>
+                                        <tr :class="{ 'hidden' : isIgnored(type,stats)}" v-for="(stats, type) in details.statistics.info"><td>{{ getStatName(type) }}</td><td v-html="displayStatData(type,stats)"></td></tr>
+                                    </tbody>
+                                </table>
+                            </tab>
+                            <tab name="Key Statistics">
+                                <table class="table">
+                                    <tbody>
+                                        <tr :class="{ 'hidden' : isIgnored(type,stats)}" v-for="(stats, type) in details.statistics.defaultKeyStatistics"><td>{{ getStatName(type) }}</td><td v-html="displayStatData(type,stats)"></td></tr>
+                                    </tbody>
+                                </table>
+                            </tab>
+                            <tab name="Financial Data">
+                                <table class="table">
+                                    <tbody>
+                                        <tr :class="{ 'hidden' : isIgnored(type,stats)}" v-for="(stats, type) in details.statistics.financialData"><td>{{ getStatName(type) }}</td><td v-html="displayStatData(type,stats)"></td></tr>
+                                    </tbody>
+                                </table>
+                            </tab>
+                            <tab name="More Details">
+                                <table class="table">
+                                    <tbody>
+                                        <tr :class="{ 'hidden' : isIgnored(type,stats)}" v-for="(stats, type) in details.profile"><td>{{ getStatName(type) }}</td><td v-html="displayStatData(type,stats)"></td></tr>
+                                    </tbody>
+                                </table>
+                            </tab>
+                        </tabs>
                     </div>
                 </modal>
             </footer>
@@ -154,6 +137,8 @@ import Events from './Events.js';
 import Modal from './utils/Modal.vue';
 import Axios from 'axios';
 import StockBuy from './StockBuy.vue';
+import Tabs from './utils/Tabs.vue';
+import Tab from './utils/Tab.vue';
 
 export default {
     data: function(){
@@ -175,7 +160,9 @@ export default {
     },
     components: {
         'modal' : Modal,
-        'stock-buy' : StockBuy
+        'stock-buy' : StockBuy,
+        'tabs' : Tabs,
+        'tab' : Tab,
     },
     methods: {
         addToWatchlist(symbol){
@@ -221,7 +208,201 @@ export default {
                     },3000);
                 }
             });
-        }
+        },
+        isIgnored(type,stats){
+
+            var ignores = [
+                "maxAge",
+                "exchange",
+                "exchangeTimezoneShortName",
+                "gmtOffSetMilliseconds",
+                "language",
+                "sourceInterval",
+                "longBusinessSummary",
+                "maxAge",
+                "industrySymbol",
+            ];
+            if(ignores.indexOf(type) !== -1){
+                return true;
+            }
+
+            if(stats==null || (typeof stats == 'object' && Object.keys(stats).length==0)) return true;
+
+            return false;
+        },
+        getStatName(type){
+            var statLabels = {
+                'fundFamily' : 'Fund Family',
+                'annualHoldingsTurnover' : 'Annual Holdings Turnover',
+                'SandP52WeekChange' : 'SandP 52-Week Change',
+                '52WeekChange' : '52-Week Change',
+                'legalType' : 'Legal Type',
+                'floatShares' : 'Floating Shares',
+                'enterpriseToEbitda' : 'Enterprise To Ebitda',
+                'enterpriseToRevenue' : 'Enterprise To Revenue',
+                'earningsQuarterlyGrowth' : 'Earnings Quarterly Growth',
+                'fiveYearAverageReturn' : '5-Yr Ave Return',
+                'enterpriseValue' : 'Enterprise Value',
+                'beta3Year' : 'Beta 3-Yr',
+                'beta' : 'Beta',
+                'annualReportExpenseRatio' : 'Annual Report Expense Ratio',
+                'bookValue' : 'Book Value',
+                'category' : 'Category',
+                'mostRecentQuarter' : 'Most Recent Quarter',
+                'maxAge' : 'Max Age',
+                'lastCapGain' : 'Last Capital Gain',
+                'lastDividendValue' : 'Last Dividend Value',
+                'forwardPE' : 'Forward PE',
+                'lastSplitDate' : 'Last Split Data',
+                'lastSplitFactor' : 'Last Split Factor',
+                'forwardEps' : 'Forward EPS',
+                'fundInceptionDate' : 'Fund Inception Date',
+                'heldPercentInsiders' : 'Held % Insiders',
+                'lastFiscalYearEnd' : 'Last Fiscal Year End',
+                'heldPercentInstitutions' : 'Held % Institutions',
+                'pegRatio' : 'peg Ratio',
+                'morningStarRiskRating' : 'Morning Star Risk Rating',
+                'morningStarOverallRating' : 'Morning Star Overall Rating',
+                'totalAssets' : 'Total Assets',
+                'priceToBook' : 'Price to Book',
+                'nextFiscalYearEnd' : 'Next Fiscal Year End',
+                'netIncomeToCommon' : 'Next Income to Common',
+                'sharesShort' : 'Short Shares',
+                'priceToSalesTrailing12Months' : 'Price to Sales Trailing 12mos',
+                'profitMargins' : 'Profit Margins',
+                'revenueQuarterlyGrowth' : 'Revenue Quarterly Growth',
+                'sharesOutstanding' : 'Outstanding Shares',
+                'sharesShortPriorMonth' : 'Short Prior Month Shares',
+                'shortPercentOfFloat' : 'Short % Floating Shares',
+                'shortRatio' : 'Short Ratio',
+                'threeYearAverageReturn' : '3-Yr Ave Return',
+                'trailingEps' : 'Trailing EPS',
+                'yield' : 'Yield',
+                'ytdReturn' : 'Yield Return',
+                "currentPrice" : "Current Price",
+                "targetHighPrice" : "Target High Price",
+                "targetLowPrice" : "Target Low Price",
+                "targetMeanPrice" : "Target Mean Price",
+                "targetMedianPrice" : "Target Median Price",
+                "recommendationMean" : "Recommendation Mean",
+                "recommendationKey" : "Recommendation Key",
+                "numberOfAnalystOpinions" : "Number of Analyst Opinions",
+                "totalCash" : "Total Cash",
+                "totalCashPerShare" : "Total Cash Per Share",
+                "ebitda" : "Ebitda",
+                "totalDebt" : "Total Debt",
+                "quickRatio" : "Quick Ratio",
+                "currentRatio" : "Current Ratio",
+                "totalRevenue" : "Total Revenue",
+                "debtToEquity" : "Debt to Equity",
+                "revenuePerShare" : "Revenue per Share",
+                "returnOnAssets" : "Return on Assets",
+                "returnOnEquity" : "Return on Equity",
+                "grossProfits" : "Gross Profits",
+                "freeCashflow" : "Free Cash Flow",
+                "operatingCashflow" : "Operating Cash Flow",
+                "earningsGrowth" : "Earnings Growth",
+                "revenueGrowth" : "Revenue Growth",
+                "grossMargins" : "Gross Margins",
+                "ebitdaMargins" : "Ebitda Margins",
+                "operatingMargins" : "Operating Margins",
+                "profitMargins" : "Profit Margins",
+                "quoteType":"Quote Type",
+                "exchangeTimezoneName":"Exchange Timezone",
+                "fullExchangeName":"Full Exchange Name",
+                "longName":"Long Name",
+                "market":"Market",
+                "marketState":"Market Status",
+                "shortName":"Short Name",
+                "symbol":"Symbol",
+                "address1":"Address",
+                "fullTimeEmployees": "Fulltime Employess",
+                "country":"Country",
+                "compensationAsOfEpochDate": "Compensation Since",
+                "governanceEpochDate": "Governance Start",
+                "industry":"Industry",
+                "compensationRisk":"Compensation Risk",
+                "city":"City",
+                "boardRisk":"Board Risk",
+                "companyOfficers":"Company Officers",
+                "auditRisk":"Audit Risk",
+                "overallRisk":"Overall Risk",
+                "phone":"Phone",
+                "sector":"Sector",
+                "shareHolderRightsRisk":"Shareholder Rights Risk",
+                "state":"State",
+                "website":"Website",
+                "zip":"Zip",
+            };
+
+            return statLabels.hasOwnProperty(type) ? statLabels[type] : type;
+        },
+        padZero(str,len, c){
+            var s = ''+str, c = c || '0';
+            while(s.length< len) s = c + s;
+            return s;
+        },
+        timeConverter(UNIX_timestamp){
+            var a = new Date(UNIX_timestamp * 1000);
+            var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+            var year = a.getFullYear();
+            var month = months[a.getMonth()];
+            var date = a.getDate();
+            var hour = a.getHours();
+            var min = a.getMinutes();
+            var sec = a.getSeconds();
+            var time = this.padZero(date,2) + ' ' + month + ' ' + year + ' ' + this.padZero(hour,2) + ':' + this.padZero(min,2) + ':' + this.padZero(sec,2) ;
+            return time;
+        },
+        displayStatData(type,stats){
+            var value = '-';
+
+            if(!stats) return '-';
+
+            if(typeof stats === 'object' && stats.length==0){
+                return '-';
+            }
+
+            switch (type) {
+                case 'companyOfficers':
+                value = '<ul>';
+                stats.forEach(stat => { value+= '<li><span>'+stat.name+'</span><br><small>'+stat.title+'</small></li>'; });
+                value += '</ul>'
+                break;
+                case 'compensationAsOfEpochDate':
+                case 'governanceEpochDate':
+                value = this.timeConverter(stats);
+                break;
+                case 'compensationRisk':
+                case 'boardRisk':
+                case 'auditRisk':
+                case 'overallRisk':
+                case 'shareHolderRightsRisk':
+                var part = (parseInt(stats)/10)*100;
+                value = '<progress class="progress is-small" value="'+part+'" max="100">'+part+'%</progress>';
+                break;
+                default:
+                if(typeof stats === 'object'){
+                    if(stats.hasOwnProperty('fmt')){
+                        value = stats.fmt;
+                        if(stats.hasOwnProperty('raw')){
+                            value = '<span title="'+stats.raw+'">'+stats.fmt+'</span>';
+                        }
+                    }else{
+                        value = stats.raw;
+                    }
+                }else if(typeof stats === 'array'){
+                    value = '<ul>';
+                    stats.forEach(stat => { value+= '<li><span>'+stat.toString()+'</span></li>'; });
+                    value += '</ul>'
+                }else{
+                    value = stats;
+                }
+                break;
+            }
+
+            return value;
+        },
     }
 
 }

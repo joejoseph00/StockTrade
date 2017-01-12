@@ -110,3 +110,37 @@
         min-height: 400px;
     }
 }
+
+#StockTradeWrapper{
+    .tabs-bulma.is-primary > .tabs > ul {
+        background-color: #00d1b2;
+        color: #fff;
+    }
+    .tabs-bulma > .tabs > ul > li{
+            margin-top: 0.25em;
+    }
+    .tabs-bulma.is-primary > .tabs a {
+        color: #fff;
+        opacity: .9
+    }
+
+    .tabs-bulma.is-primary > .tabs a:hover,.tabs-bulma.is-primary > .tabs li.is-active a {
+        opacity: 1
+    }
+
+    .tabs-bulma.is-primary > .tabs.is-boxed a:hover,.tabs-bulma.is-primary > .tabs.is-toggle a:hover {
+        background-color: rgba(10,10,10,.1)
+    }
+
+    .tabs-bulma.is-primary > .tabs.is-boxed li.is-active a,.tabs-bulma.is-primary > .tabs.is-boxed li.is-active a:hover,.tabs-bulma.is-primary > .tabs.is-toggle li.is-active a,.tabs-bulma.is-primary > .tabs.is-toggle li.is-active a:hover {
+        background-color: #fff;
+        border-color: #fff;
+        color: #00d1b2
+    }
+
+    .hidden{
+        display: none!important;
+        visibility: hidden!important;
+        opacity: 0!important;
+    }
+}
