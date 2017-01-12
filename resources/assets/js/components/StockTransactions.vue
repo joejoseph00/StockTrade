@@ -7,6 +7,11 @@
                         <p class="card-header-title">
                             Latest Transactions
                         </p>
+                        <a class="card-header-icon">
+                            <span class="icon" @click="fetchTransactionPage">
+                                <i class="fa fa-refresh"></i>
+                            </span>
+                        </a>
                     </header>
                     <div class="card-content">
                         <div class="content">
@@ -41,15 +46,20 @@
                                             <th>Purchase Date</th>
                                         </tr>
                                     </tfoot>
-                                    <tbody>
-                                        <tr v-for="log in transactions">
-                                            <td>{{ log.id }}</td>
+                                    <tbody v-if="transactions.length > 0">
+                                        <tr v-for="log in transactions" :data-id="log.id">
+                                            <td>{{ log.idFormatted }}</td>
                                             <td>{{ log.type }}</td>
                                             <td>{{ log.symbol }}</td>
-                                            <td>{{ log.price }}</td>
+                                            <td>{{ log.priceFormatted }}</td>
                                             <td>{{ log.qty }}</td>
-                                            <td>{{ log.price * log.qty }}</td>
-                                            <td>{{ log.updated_at }}</td>
+                                            <td>{{ log.totalFormatted }}</td>
+                                            <td><span :title="log.updated_at">{{ log.purchasedTimeAgo }}</span></td>
+                                        </tr>
+                                    </tbody>
+                                    <tbody v-else>
+                                        <tr>
+                                            <td colspan="7" class="has-text-centered"> No records yet </td>
                                         </tr>
                                     </tbody>
                                 </div>

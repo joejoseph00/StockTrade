@@ -89,8 +89,6 @@ class StockController extends Controller
         $fetchData = true;
         $updateData = false;
 
-        // Check if symbol in watchlist
-        $isWatched = Watchlist::where([ 'user_id' => Auth::id(), 'stock_symbol' => $symbol ])->exists();
 
 
         if(!empty($isExist)){
@@ -121,7 +119,7 @@ class StockController extends Controller
                 'includeTimestamps' => true,
                 'corsDomain' => 'finance.yahoo.com'
             ];
-            $url = 'https://query1.finance.yahoo.com/v7/finance/chart/GOOGL?'.http_build_query($options);
+            $url = 'https://query1.finance.yahoo.com/v7/finance/chart/' . $symbol . '?' . http_build_query($options);
 
             $response = Curl::to($url)
             ->get();
@@ -163,7 +161,7 @@ class StockController extends Controller
                     'formatted' => 'true',
                     'lang' => 'en-US',
                     'region' => 'US',
-                    'symbols' => 'GOOGL',
+                    'symbols' => $symbol,
                     'fields' => implode(',',[
                         'longName',
                         'shortName',
@@ -223,9 +221,16 @@ class StockController extends Controller
 
                 $details = $data;
 
+
+                $isWatched = Watchlist::where([ 'user_id' => Auth::id(), 'stock_symbol' => $detailedStats['info']['symbol'] ])->exists();
+
+                $isExist = Stock::where('symbol',$detailedStats['info']['symbol'])->first();
+                if(!empty($isExist)){
+                    $updateData = true;
+                }
                 // If everythings ok, check if symbol already on DB
                 if($updateData){
-                    Stock::where('symbol',$symbol)->update([
+                    Stock::where('symbol',$detailedStats['info']['symbol'])->update([
                         'issuer' => $details['exchangeName'],
                         'type' => $details['instrumentType'],
                         'statistics' => json_encode($detailedStats),
@@ -233,7 +238,7 @@ class StockController extends Controller
                     ]);
                 }else{
                     Stock::create([
-                        'symbol' => $symbol,
+                        'symbol' => $detailedStats['info']['symbol'],
                         'issuer' => $details['exchangeName'],
                         'name' => $infoStats['shortName'],
                         'type' => $details['instrumentType'],
@@ -250,12 +255,17 @@ class StockController extends Controller
                 ]);
             }else{
 
+                $statistics = json_decode($isExist->statistics);
+                $profile = json_decode($isExist->profile);
+                // Check if symbol in watchlist
+                $isWatched = Watchlist::where([ 'user_id' => Auth::id(), 'stock_symbol' => $statistics->info->symbol ])->exists();
+
                 // Return response from DB
 
                 if(!empty($isExist)){
                     return response()->json([
-                        'profile' => json_decode($isExist->profile),
-                        'details' => json_decode($isExist->statistics),
+                        'profile' => $profile,
+                        'details' => $statistics,
                         'watched' => $isWatched,
                         'status' => 'OK'
                     ]);

@@ -3,7 +3,7 @@
         <div v-if="isLoading">
             {{ messages.loading }}
             <progress class="progress is-small" v-bind:class="{ 'is-danger' : isLoadingFailed }" v-bind:value="loadingPercent" max="100">{{ loadingPercent }}%</progress>
-            <a v-if="isLoadingFailed" class="button is-link" @click="onRetryFetch">Try Again</a>
+            <a v-if="isLoadingFailed" class="button is-link" @click.prevent="onRetryFetch">Try Again</a>
         </div>
         <div v-if="!isLoading && isSearched">
             <div class="content">

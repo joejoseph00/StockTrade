@@ -135,14 +135,14 @@ class UserController extends Controller
 
                 $stockdata = \App::call('\App\Http\Controllers\StockController@show', [ 'symbol' => $stock['symbol'], 'options' => 'n,s,a,b,o,p,v,c1,p2,g,h,s6,k,j,j5,k4,j6,k5,j1,x,f6,j2,a5,b6,k3,a2,e' ]);
 
-
-
-                $stock['data'] = Stock::where([
+                $stockdata = Stock::where([
                     'symbol' => $stock['symbol']
                     ])->first();
 
-                    $stock['data']['profile'] = json_decode($stock['data']['profile']);
-                    $stock['data']['statistics'] = json_decode($stock['data']['statistics']);
+                    $stockdata['profile'] = json_decode($stockdata['profile']);
+                    $stockdata['statistics'] = json_decode($stockdata['statistics']);
+
+                    $watchlist[$key]['data'] = $stockdata;
                 }
 
                 return response()->json([
@@ -266,7 +266,15 @@ class UserController extends Controller
 
             public function getTransactions(){
                 return response()->json([
-                    'data' => User::find(Auth::id())->transactions,
+                    'data' => User::find(Auth::id())->transactions()->latest()->get()->map(function ($item, $key) {
+                        $item->type = strtoupper($item->type);
+                        $item->priceFormatted = '$' . number_format($item->price,2);
+                        $item->total = $item->price * $item->qty;
+                        $item->totalFormatted = '$' . number_format($item->total,2);
+                        $item->idFormatted = str_pad($item->id, 6, "0", STR_PAD_LEFT);
+                        $item->purchasedTimeAgo = $item->updated_at->diffForHumans();
+                        return $item;
+                    }),
                     'status' => 'OK'
                 ]);
             }
