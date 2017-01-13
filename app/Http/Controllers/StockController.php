@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Stock;
 use App\Watchlist;
+use App\History;
 use Curl;
 use Auth;
 use Carbon\Carbon;
@@ -81,7 +82,7 @@ class StockController extends Controller
     */
     public function show($symbol,$options = "n,s,a,b,o,p,v,c1,p2,g,h,s6,k,j,j5,k4,j6,k5,j1,x,f6,j2,a5,b6,k3,a2,e")
     {
-        $symbol = urlencode($symbol);
+        // $symbol = urlencode($symbol);
 
         // Check if Symbol already on database, if yes, check last updated time
         $isExist = Stock::where('symbol',$symbol)->first();
@@ -111,12 +112,16 @@ class StockController extends Controller
             // If symbol not yet in database, or if saved data was outdated already, proceed fetch
 
             $options = explode(",",$options);
+            $range = 'max';
+
+            if($updateData)
+            $range = '1d';
 
             $options = [
-                'range' => 'max',
+                'range' => $range,
                 'interval' => '1d',
                 'indicators' => 'quote',
-                'includeTimestamps' => true,
+                'includeTimestamps' => 'true',
                 'corsDomain' => 'finance.yahoo.com'
             ];
             $url = 'https://query1.finance.yahoo.com/v7/finance/chart/' . $symbol . '?' . http_build_query($options);
@@ -135,6 +140,8 @@ class StockController extends Controller
                     if(is_array($result))
                     $result = array_shift($result);
 
+                    $timestamps = array_keys((array)$result);
+
                     $data = array_filter((array)$result->meta,function($key,$value){
                         if(in_array($key,[
                             'currentTradingPeriod',
@@ -143,6 +150,29 @@ class StockController extends Controller
                             ])) return false;
                             return true;
                         },ARRAY_FILTER_USE_BOTH);
+                    }
+
+                    // Save Historical Data
+                    $history = [];
+
+                    foreach ((array)$result->timestamp as $key => $unix) {
+                        History::updateOrCreate(
+                            [
+                                'symbol' => $symbol,
+                                'timestamp' => Carbon::createFromTimestamp($unix)->toDateTimeString()
+                            ],
+                            [
+                                'high' => $result->indicators->quote[0]->high[$key],
+                                'open' => $result->indicators->quote[0]->open[$key],
+                                'close' => $result->indicators->quote[0]->close[$key],
+                                'low' => $result->indicators->quote[0]->low[$key],
+                                'volume' => $result->indicators->quote[0]->volume[$key],
+                                'unadjhigh' => $result->indicators->unadjquote[0]->unadjhigh[$key],
+                                'unadjlow' => $result->indicators->unadjquote[0]->unadjlow[$key],
+                                'unadjopen' => $result->indicators->unadjquote[0]->unadjopen[$key],
+                                'unadjclose' => $result->indicators->unadjquote[0]->unadjclose[$key]
+                            ]
+                        );
                     }
 
                 }
@@ -205,7 +235,7 @@ class StockController extends Controller
                 ->asJson()
                 ->get();
 
-                if($response && count($response->quoteSummary->result)){
+                if($response && isset($response->quoteSummary->result[0]->defaultKeyStatistics)){
                     $profile = $response->quoteSummary->result[0]->assetProfile;
                     $detailedStats = [
                         'defaultKeyStatistics' => $response->quoteSummary->result[0]->defaultKeyStatistics,

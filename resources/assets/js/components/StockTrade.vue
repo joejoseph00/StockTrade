@@ -28,13 +28,13 @@
             <tab name="Dashboard">
                 <h1>Here is the content for Dashboard</h1>
             </tab>
-            <tab name="Watchlist">
+            <tab name="Watchlist" :selected="true">
                 <stocktrade-watchlist></stocktrade-watchlist>
             </tab>
             <tab name="My Portfolio">
                 <h1>Here is the content for My Portfolio</h1>
             </tab>
-            <tab name="Transaction History" :selected="true">
+            <tab name="Transaction History">
                 <stocktrade-transactions></stocktrade-transactions>
             </tab>
         </tabs>

@@ -12,7 +12,7 @@
                         </header>
                         <div class="card-content">
                             <div class="content">
-                                <div v-if="stocks.length" id="stockitem-list" class="columns">
+                                <div v-if="stocks.length" id="stockitem-list" class="columns is-multiline">
                                     <stock-item v-for="stock in stocks" :symbol="stock.symbol" :details="stock.data"></stock-item>
                                 </div>
                                 <div v-else class="has-text-centered">
@@ -116,7 +116,7 @@
                 // Fetch Symbols from Database
                 var self = this;
                 Axios.get(self.api.getWatchlist.url).then(function(response){
-                    self.api.getWatchlist.response = response;
+                    console.log(response);
                     self.stocks = response.data.watchlist;
                     self.isLoading = false;
                 }).catch(function (error) {

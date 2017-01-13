@@ -2,18 +2,16 @@
     <div class="column is-one-quarter">
         <div class="card">
             <header class="card-header">
-                <p class="card-header-title">
+                <p class="card-header-title is-marginless">
                     {{ symbol }}
                 </p>
-                <a class="card-header-icon">
-                    <span class="icon">
-                        <i class="fa fa-angle-down"></i>
-                    </span>
-                </a>
+                <modal btnText='<span class="icon is-small" title="View Historical Data"> <i class="fa fa-line-chart"></i> </span>' btnClass="card-header-icon" :minimal="true" :minheight="false">
+                    <stock-history-chart :symbol="details.symbol"></stock-history-chart>
+                </modal>
             </header>
             <div class="card-content">
                 <div class="content">
-                    <p class="is-small has-text-centered is-block">{{ details.name }}</p>
+                    <p class="is-small is-textnowrap has-text-centered is-block" :title="details.name">{{ details.name }}</p>
                     <nav class="level is-mobile">
                         <div class="level-item has-text-centered">
                             <div>
@@ -135,6 +133,7 @@
 
 import Events from './Events.js';
 import Modal from './utils/Modal.vue';
+import StockHistoricalChart from './StockHistoricalChart.vue';
 import Axios from 'axios';
 import StockBuy from './StockBuy.vue';
 import Tabs from './utils/Tabs.vue';
@@ -159,6 +158,7 @@ export default {
         details : Object()
     },
     components: {
+        'stock-history-chart' : StockHistoricalChart,
         'modal' : Modal,
         'stock-buy' : StockBuy,
         'tabs' : Tabs,

@@ -144,3 +144,10 @@
         opacity: 0!important;
     }
 }
+
+.is-textnowrap{
+    white-space: nowrap;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

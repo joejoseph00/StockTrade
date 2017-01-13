@@ -1,6 +1,6 @@
 <template>
-    <div>
-        <a @click=" isModalOpen = true " :class="btnClass ? btnClass : 'button is-small'">{{ btnText }}</a>
+    <div class="modal-wrapper">
+        <a @click=" isModalOpen = true " :class="btnClass ? btnClass : 'button is-small'" v-html="btnText"></a>
         <div class="modal is-active" v-if="isModalOpen">
             <div class="modal-background" @click=" isModalOpen = false "></div>
             <div class="modal-card">
