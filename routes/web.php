@@ -31,6 +31,7 @@ Route::group(['prefix' => 'api/v1'], function () {
     Route::get('/stock/search', 'StockController@search');
     Route::post('/stock/buy', 'TransactionController@store');
     Route::get('/stock/data/{symbol}/{options?}', 'StockController@show');
+    Route::get('/stock/history/{symbol}/{options?}', 'StockController@getHistory');
 
     Route::get('/user/watchlist/add/{symbol}', 'UserController@addToWatchlist');
     Route::get('/user/watchlist/remove/{symbol}', 'UserController@removeFromWatchlist');

@@ -17,5 +17,6 @@ elixir((mix) => {
     mix.sass('app.scss')
     .sass('stocktrade-main.scss')
     .webpack('app.js')
-    .webpack('stocktrade.js','./public/api/v1/js');
+    .webpack( 'stocktrade.js' ,'./public/api/v1/js');
+
 });

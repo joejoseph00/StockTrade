@@ -3,6 +3,9 @@ import StockTradeLogin from './components/StockTradeLogin.vue';
 import Events from './components/Events.js';
 import Axios from 'axios';
 
+require('amstock3');
+require('amcharts3');
+
 const stocktrade = new Vue({
     el: '#stocktrade',
     template : `
@@ -53,6 +56,7 @@ const stocktrade = new Vue({
                 if(self.loadingPercent>100) self.loadingPercent = 0;
             },50);
             Axios.post(self.api.isUserLoggedIn).then(function(response){
+                self.loadingPercent = 0
                 if(response.status == 200 && response.data.status == 'OK'){
                     self.isLoggedIn = true;
                     self.user = response.data.user;

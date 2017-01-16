@@ -22,6 +22,8 @@
   "dependencies": {
     "axios": "^0.15.3",
     "bulma": "^0.3.0",
+    "highcharts": "^5.0.6",
+    "vue-highcharts": "0.0.9",
     "vue2-autocomplete-js": "0.0.4"
   }
 }
