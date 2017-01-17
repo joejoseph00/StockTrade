@@ -76,7 +76,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <template v-if="!stocks.length">
+                                <template v-if="stocks.length==0">
                                     <tr>
                                         <td colspan="9" class="has-text-centered">No Purchased Stocks yet </td>
                                     </tr>
@@ -162,6 +162,34 @@
                     </div>
                 </div>
             </div>
+            <div class="container">
+                <div class="columns">
+                    <div class="column">
+                        <div class="card">
+                            <header class="card-header">
+                                <p class="card-header-title">
+                                    Top Performing Stocks
+                                </p>
+                            </header>
+                            <div class="card-content">
+                                <stock-leaderboard></stock-leaderboard>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column is-4">
+                        <div class="card">
+                            <header class="card-header">
+                                <p class="card-header-title">
+                                    Latest Stock Recommendation
+                                </p>
+                            </header>
+                            <div class="card-content">
+                                    <stock-recommendation></stock-recommendation>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </template>
@@ -171,6 +199,8 @@ import Axios from 'axios';
 import Modal from './utils/Modal.vue';
 import StockBuy from './StockBuy.vue';
 import StockSell from './StockSell.vue';
+import StockLeaderboard from './StockLeaderboard.vue';
+import StockRecommendation from './StockRecommendation.vue';
 import Events from './Events.js';
 
 export default {
@@ -196,6 +226,8 @@ export default {
         'modal' : Modal,
         'stock-buy' : StockBuy,
         'stock-sell' : StockSell,
+        'stock-leaderboard' : StockLeaderboard,
+        'stock-recommendation' : StockRecommendation,
     },
     methods: {
         getPorfolioStats(){

@@ -31,6 +31,10 @@ Route::group(['prefix' => 'api/v1'], function () {
     Route::get('/stock/search', 'StockController@search');
     Route::post('/stock/buy', 'TransactionController@store');
     Route::post('/stock/sell', 'TransactionController@sell');
+
+    Route::get('/stocks/top', 'StockController@top');
+    Route::get('/stocks/recommendation', 'StockController@recommendation');
+
     Route::get('/stock/data/{symbol}/{options?}', 'StockController@show');
     Route::get('/stock/history/{symbol}/{options?}', 'StockController@getHistory');
 

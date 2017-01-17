@@ -158,6 +158,12 @@
     }
 }
 
+.container{
+    & + .container{
+        padding-top: 1.5rem;
+    }
+}
+
 .table{
     tr{
         &.is-narrow{
@@ -166,4 +172,8 @@
             }
         }
     }
+}
+
+.is-minheight-300{
+    min-height: 300px!important;
 }

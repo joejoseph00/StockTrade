@@ -6549,8 +6549,16 @@ label.panel-block:hover {
   margin-top: 1.5rem;
 }
 
+.container + .container {
+  padding-top: 1.5rem;
+}
+
 .table tr.is-narrow td {
   padding: 0.25em 0.5em;
+}
+
+.is-minheight-300 {
+  min-height: 300px !important;
 }
 
 /*# sourceMappingURL=stocktrade-main.css.map */
