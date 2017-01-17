@@ -6,7 +6,6 @@
             <a v-if="isLoadingFailed" class="button is-link" @click.prevent="onRetryFetch">Try Again</a>
         </div>
         <div v-else>
-            {{ symbol }}
             <highstock :options="chartOptions"></highstock>
             <p>
                 Last Updated : {{ lastUpdated }}

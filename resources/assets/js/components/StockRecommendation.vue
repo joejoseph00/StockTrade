@@ -16,8 +16,9 @@
             <table class="table">
                 <thead>
                     <tr>
+                        <th></th>
                         <th>Stock</th>
-                        <th>Exchange</th>
+                        <th>Exc</th>
                         <th>Type</th>
                         <th>Best</th>
                     </tr>
@@ -25,6 +26,11 @@
                 <tbody>
                     <template v-for="e in entry">
                         <tr>
+                            <td>
+                                <modal btnText='<span class="icon is-small" title="View Historical Data"><i class="fa fa-line-chart"></i></span>' btnClass="card-header-icon" :minimal="true" :minheight="false">
+                                    <stock-history-chart :symbol="e.symbol"></stock-history-chart>
+                                </modal>
+                            </td>
                             <td>{{ e.symbol }}</td>
                             <td>{{ e.issuer }}</td>
                             <td>{{ e.type }}</td>
@@ -63,6 +69,7 @@
 import Axios from 'axios';
 import StockBuy from './StockBuy.vue';
 import StockSell from './StockSell.vue';
+import StockHistoricalChart from './StockHistoricalChart.vue';
 import Modal from './utils/Modal.vue';
 
 export default {
@@ -85,6 +92,7 @@ export default {
         'modal' : Modal,
         'stock-buy' : StockBuy,
         'stock-sell' : StockSell,
+        'stock-history-chart' : StockHistoricalChart,
     },
     methods: {
         onFilterChanged(event){

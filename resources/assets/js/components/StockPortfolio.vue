@@ -67,6 +67,7 @@
                                     <th></th>
                                     <th></th>
                                     <th></th>
+                                    <th></th>
                                     <th>Stock</th>
                                     <th>Current Value</th>
                                     <th>Shares Owned</th>
@@ -110,6 +111,11 @@
                                                 ></stock-sell>
                                             </modal>
                                         </td>
+                                        <td>
+                                            <modal btnText='<span class="icon is-small" title="View Historical Data"><i class="fa fa-line-chart"></i></span>' btnClass="card-header-icon" :minimal="true" :minheight="false">
+                                                <stock-history-chart :symbol="stock.symbol"></stock-history-chart>
+                                            </modal>
+                                        </td>
                                         <td>{{ stock.symbol }}</td>
                                         <td>${{ stock.currentPrice }}</td>
                                         <td>{{ stock.qty }}</td>
@@ -120,6 +126,7 @@
 
                                     <template v-if="active==stock.symbol">
                                         <tr class="is-narrow">
+                                            <td></td>
                                             <td></td>
                                             <td></td>
                                             <td></td>
@@ -134,6 +141,7 @@
                                             <tr class="is-narrow">
                                                 <td></td>
                                                 <td></td>
+                                                <td></td>
                                                 <td> {{ log.type }} </td>
                                                 <td> <abbr :title="log.updated_at">{{ log.purchasedTimeAgo }}</abbr> </td>
                                                 <td> {{ log.priceFormatted }} </td>
@@ -144,6 +152,7 @@
                                             </tr>
                                         </template>
                                         <tr>
+                                            <td></td>
                                             <td></td>
                                             <td></td>
                                             <td></td>
@@ -184,7 +193,7 @@
                                 </p>
                             </header>
                             <div class="card-content">
-                                    <stock-recommendation></stock-recommendation>
+                                <stock-recommendation></stock-recommendation>
                             </div>
                         </div>
                     </div>
@@ -199,6 +208,7 @@ import Axios from 'axios';
 import Modal from './utils/Modal.vue';
 import StockBuy from './StockBuy.vue';
 import StockSell from './StockSell.vue';
+import StockHistoricalChart from './StockHistoricalChart.vue';
 import StockLeaderboard from './StockLeaderboard.vue';
 import StockRecommendation from './StockRecommendation.vue';
 import Events from './Events.js';
@@ -228,6 +238,7 @@ export default {
         'stock-sell' : StockSell,
         'stock-leaderboard' : StockLeaderboard,
         'stock-recommendation' : StockRecommendation,
+        'stock-history-chart' : StockHistoricalChart,
     },
     methods: {
         getPorfolioStats(){
