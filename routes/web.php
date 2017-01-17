@@ -30,6 +30,7 @@ Route::group(['prefix' => 'api/v1'], function () {
 
     Route::get('/stock/search', 'StockController@search');
     Route::post('/stock/buy', 'TransactionController@store');
+    Route::post('/stock/sell', 'TransactionController@sell');
     Route::get('/stock/data/{symbol}/{options?}', 'StockController@show');
     Route::get('/stock/history/{symbol}/{options?}', 'StockController@getHistory');
 
@@ -42,4 +43,6 @@ Route::group(['prefix' => 'api/v1'], function () {
     Route::post('/user/logout', 'UserController@logout');
     Route::get('/user/watchlist', 'UserController@getWatchlist');
     Route::get('/user/transactions', 'UserController@getTransactions');
+
+    Route::get('/user/portfolio', 'UserController@portfolio');
 });

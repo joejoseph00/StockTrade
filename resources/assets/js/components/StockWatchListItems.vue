@@ -31,16 +31,24 @@
             <footer class="card-footer">
                 <div class="card-footer-item">
                     <modal btnText="Buy" btnClass="is-block" :minimal="true" :minheight="false">
-                        <template slot="header">Buy {{ details.sumbol }} at {{ details.statistics.financialData.currentPrice.fmt }}</template>
+                        <template slot="header">Buy {{ details.symbol }} at {{ details.statistics.financialData.currentPrice.fmt }}</template>
                         <stock-buy
                         :symbol="details.symbol"
                         :name="details.name"
                         :price="details.statistics.financialData.currentPrice.fmt"
-
                         ></stock-buy>
                     </modal>
                 </div>
-                <a class="card-footer-item">Sell</a>
+                <div class="card-footer-item">
+                    <modal btnText="Sell" btnClass="is-block" :minimal="true" :minheight="false">
+                        <template slot="header">Sell {{ details.symbol }} at {{ details.statistics.financialData.currentPrice.fmt }}</template>
+                        <stock-sell
+                        :symbol="details.symbol"
+                        :name="details.name"
+                        :price="details.statistics.financialData.currentPrice.fmt"
+                        ></stock-sell>
+                    </modal>
+                </div>
                 <modal btnText="More Info" btnClass="card-footer-item">
                     <template slot="header">{{ details.symbol }} : {{ details.name }}</template>
                     <div class="content">
@@ -136,6 +144,7 @@ import Modal from './utils/Modal.vue';
 import StockHistoricalChart from './StockHistoricalChart.vue';
 import Axios from 'axios';
 import StockBuy from './StockBuy.vue';
+import StockSell from './StockSell.vue';
 import Tabs from './utils/Tabs.vue';
 import Tab from './utils/Tab.vue';
 
@@ -161,6 +170,7 @@ export default {
         'stock-history-chart' : StockHistoricalChart,
         'modal' : Modal,
         'stock-buy' : StockBuy,
+        'stock-sell' : StockSell,
         'tabs' : Tabs,
         'tab' : Tab,
     },

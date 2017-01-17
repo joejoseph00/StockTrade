@@ -16,11 +16,11 @@ class CreateHistoryTable extends Migration
         Schema::create('history', function (Blueprint $table) {
             $table->increments('id');
             $table->string('symbol');
-            $table->decimal('high','12','12');
-            $table->decimal('open','12','12');
-            $table->decimal('close','12','12');
-            $table->decimal('low','12','12');
-            $table->decimal('volume','12','12');
+            $table->decimal('high','64','12');
+            $table->decimal('open','64','12');
+            $table->decimal('close','64','12');
+            $table->decimal('low','64','12');
+            $table->decimal('volume','64','12');
             $table->timestamp('timestamp');
         });
     }

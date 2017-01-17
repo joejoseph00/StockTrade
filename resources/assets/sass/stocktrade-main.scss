@@ -117,7 +117,7 @@
         color: #fff;
     }
     .tabs-bulma > .tabs > ul > li{
-            margin-top: 0.25em;
+        margin-top: 0.25em;
     }
     .tabs-bulma.is-primary > .tabs a {
         color: #fff;
@@ -150,4 +150,20 @@
     display: block;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+.card{
+    & + .card{
+        margin-top: 1.5rem;
+    }
+}
+
+.table{
+    tr{
+        &.is-narrow{
+            td{
+                padding: 0.25em 0.5em;
+            }
+        }
+    }
 }

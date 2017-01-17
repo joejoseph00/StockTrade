@@ -314,6 +314,12 @@ class StockController extends Controller
                             'type' => $details['instrumentType'],
                             'statistics' => json_encode($detailedStats),
                             'profile' => json_encode($profile),
+                            'high' => $detailedStats['financialData']->targetHighPrice->raw,
+                            'low' => $detailedStats['financialData']->targetLowPrice->raw,
+                            'price' => $detailedStats['financialData']->currentPrice->raw,
+                            'revenue' => $detailedStats['financialData']->totalRevenue->raw,
+                            'value' => $detailedStats['defaultKeyStatistics']->enterpriseValue->raw,
+                            'recommendation' => $detailedStats['financialData']->recommendationKey,
                         ]);
                     }else{
                         Stock::create([
@@ -323,8 +329,18 @@ class StockController extends Controller
                             'type' => $details['instrumentType'],
                             'statistics' => json_encode($detailedStats),
                             'profile' => json_encode($profile),
+                            'high' => $detailedStats['financialData']->targetHighPrice->raw,
+                            'low' => $detailedStats['financialData']->targetLowPrice->raw,
+                            'price' => $detailedStats['financialData']->currentPrice->raw,
+                            'revenue' => $detailedStats['financialData']->totalRevenue->raw,
+                            'value' => $detailedStats['defaultKeyStatistics']->enterpriseValue->raw,
+                            'recommendation' => $detailedStats['financialData']->recommendationKey,
                         ]);
                     }
+
+
+
+
 
                     return response()->json([
                         'profile' => $profile,

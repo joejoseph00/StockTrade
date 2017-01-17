@@ -7,10 +7,10 @@ use Illuminate\Database\Migrations\Migration;
 class CreateStocksTable extends Migration
 {
     /**
-     * Run the migrations.
-     *
-     * @return void
-     */
+    * Run the migrations.
+    *
+    * @return void
+    */
     public function up()
     {
         Schema::create('stocks', function (Blueprint $table) {
@@ -22,16 +22,24 @@ class CreateStocksTable extends Migration
             $table->text('recordts')->nullable();
             $table->text('statistics')->nullable();
             $table->text('profile')->nullable();
+
+            $table->decimal('low','64','12')->nullable();
+            $table->decimal('high','64','12')->nullable();
+            $table->decimal('price','64','12')->nullable();
+            $table->decimal('revenue','64','12')->nullable();
+            $table->decimal('value','64','12')->nullable();
+
+            $table->string('recommendation');
             $table->timestamps();
             $table->unique('symbol');
         });
     }
 
     /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
+    * Reverse the migrations.
+    *
+    * @return void
+    */
     public function down()
     {
         Schema::dropIfExists('stocks');

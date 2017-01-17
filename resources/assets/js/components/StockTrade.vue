@@ -1,6 +1,5 @@
 <template lang="html">
     <div id="StockTradeWrapper">
-
         <section class="hero is-primary">
             <div class="hero-head">
                 <div class="nav-right nav-menu">
@@ -25,20 +24,16 @@
             </div>
         </section>
         <tabs tabclass="is-centered is-boxed" :invertColor="true" >
-            <tab name="Dashboard">
-                <h1>Here is the content for Dashboard</h1>
+            <tab name="My Portfolio" :selected="true">
+                <stocktrade-portfolio></stocktrade-portfolio>
             </tab>
-            <tab name="Watchlist" :selected="true">
+            <tab name="Watchlist">
                 <stocktrade-watchlist></stocktrade-watchlist>
-            </tab>
-            <tab name="My Portfolio">
-                <h1>Here is the content for My Portfolio</h1>
             </tab>
             <tab name="Transaction History">
                 <stocktrade-transactions></stocktrade-transactions>
             </tab>
         </tabs>
-
     </div>
 </template>
 
@@ -46,6 +41,7 @@
 import Events from './Events.js';
 import StockTradeWatchList from './StockTradeWatchList.vue';
 import StockTransactions from './StockTransactions.vue';
+import StockPortfolio from './StockPortfolio.vue';
 import Tabs from './utils/Tabs.vue';
 import Tab from './utils/Tab.vue';
 
@@ -54,6 +50,7 @@ export default {
     components: {
         'stocktrade-watchlist' : StockTradeWatchList,
         'stocktrade-transactions' : StockTransactions,
+        'stocktrade-portfolio' : StockPortfolio,
         'tabs' : Tabs,
         'tab' : Tab,
     },

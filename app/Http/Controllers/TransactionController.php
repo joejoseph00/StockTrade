@@ -16,7 +16,7 @@ class TransactionController extends Controller
     */
     public function index()
     {
-        
+
     }
 
     /**
@@ -54,6 +54,43 @@ class TransactionController extends Controller
         $transaction_id = Transaction::create([
             'user_id' => Auth::id(),
             'type' => 'buy',
+            'symbol' => $request->get('symbol'),
+            'qty' => $request->get('qty'),
+            'price' =>  $request->get('price'),
+        ]);
+
+        return response()->json([
+            'data' => [
+                'id' => $transaction_id
+            ],
+            'status' => 'OK'
+        ]);
+    }
+    /**
+    * Store a newly created resource in storage.
+    *
+    * @param  \Illuminate\Http\Request  $request
+    * @return \Illuminate\Http\Response
+    */
+    public function sell(Request $request)
+    {
+
+        $validator = Validator::make($request->all(), [
+            'symbol' => 'required|string',
+            'qty' => 'required|numeric|min:1',
+            'price' => 'required|numeric|min:1',
+        ]);
+
+        if($validator->fails()){
+            return response()->json([
+                'error' => $validator->errors()->all(),
+                'status' => 'FAILED'
+            ],422);
+        }
+
+        $transaction_id = Transaction::create([
+            'user_id' => Auth::id(),
+            'type' => 'sell',
             'symbol' => $request->get('symbol'),
             'qty' => $request->get('qty'),
             'price' =>  $request->get('price'),

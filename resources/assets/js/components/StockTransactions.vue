@@ -8,7 +8,7 @@
                             Latest Transactions
                         </p>
                         <a class="card-header-icon">
-                            <span class="icon" @click="fetchTransactionPage">
+                            <span class="icon is-small" @click="fetchTransactionPage">
                                 <i class="fa fa-refresh"></i>
                             </span>
                         </a>
@@ -126,6 +126,9 @@
             this.fetchTransactionPage();
 
             Events.$on('buyingSuccess',function(symbol){
+                self.fetchTransactionPage();
+            });
+            Events.$on('sellingSuccess',function(symbol){
                 self.fetchTransactionPage();
             });
         }

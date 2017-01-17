@@ -6545,4 +6545,12 @@ label.panel-block:hover {
   text-overflow: ellipsis;
 }
 
+.card + .card {
+  margin-top: 1.5rem;
+}
+
+.table tr.is-narrow td {
+  padding: 0.25em 0.5em;
+}
+
 /*# sourceMappingURL=stocktrade-main.css.map */
