@@ -20,10 +20,6 @@ class ChangeDecimalPrecisionToHistoryTable extends Migration
             $table->decimal('close','64','12')->change();
             $table->decimal('low','64','12')->change();
             $table->decimal('volume','64','12')->change();
-            $table->decimal('unadjhigh','64','12')->change();
-            $table->decimal('unadjlow','64','12')->change();
-            $table->decimal('unadjopen','64','12')->change();
-            $table->decimal('unadjclose','64','12')->change();
         });
     }
 

@@ -74,6 +74,7 @@
 
     <script>
     import Axios from 'axios';
+    import Events from './Events.js';
     export default {
         data: function(){
             return {
@@ -121,7 +122,12 @@
             }
         },
         created: function(){
+            var self = this;
             this.fetchTransactionPage();
+
+            Events.$on('buyingSuccess',function(symbol){
+                self.fetchTransactionPage();
+            });
         }
     }
     </script>

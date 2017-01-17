@@ -44,6 +44,7 @@
 </template>
 <script>
 import Axios from 'axios';
+import Events from './Events.js';
 export default {
     data : function(){
         return {
@@ -83,14 +84,15 @@ export default {
                 qty : this.qty
             }).then(function(response){
                 self.isBuying = false;
+                console.log(response);
                 if(response.status == 200 && response.data.status == 'OK'){
+                    Events.$emit('buyingSuccess',self.symbol);
                     self.isBuyingSuccess = true;
                 }
             }).catch(function(error){
                 self.isBuying = false;
                 self.isBuyingSuccess = false;
                 self.buyingErrors = error.response.data.error;
-                console.log(error.response);
             });
         }
     }

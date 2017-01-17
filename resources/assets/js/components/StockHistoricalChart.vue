@@ -8,6 +8,9 @@
         <div v-else>
             {{ symbol }}
             <highstock :options="chartOptions"></highstock>
+            <p>
+                Last Updated : {{ lastUpdated }}
+            </p>
         </div>
     </div>
 </template>
@@ -27,6 +30,7 @@ export default {
             isLoading : true,
             isLoadingFailed : false,
             progressInterval : null,
+            lastUpdated : null,
             loadingPercent : 0,
             messages : {
                 loading : 'Fetching Stock Historical Data ...',
@@ -54,6 +58,7 @@ export default {
             },50);
             Axios.get(self.api.getStockHistory + self.symbol).then(function(response){
                 if(response.data.history) self.prepareChart(response.data.history);
+                self.lastUpdated = response.data.lastUpdated;
                 self.isLoading = false;
             }).catch(function (error) {
                 console.log(error);

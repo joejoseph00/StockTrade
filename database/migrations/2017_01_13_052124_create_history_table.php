@@ -21,10 +21,6 @@ class CreateHistoryTable extends Migration
             $table->decimal('close','12','12');
             $table->decimal('low','12','12');
             $table->decimal('volume','12','12');
-            $table->decimal('unadjhigh','12','12');
-            $table->decimal('unadjlow','12','12');
-            $table->decimal('unadjopen','12','12');
-            $table->decimal('unadjclose','12','12');
             $table->timestamp('timestamp');
         });
     }

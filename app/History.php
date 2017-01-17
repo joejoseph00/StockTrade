@@ -19,10 +19,6 @@ class History extends Model
         'close',
         'low',
         'volume',
-        'unadjhigh',
-        'unadjlow',
-        'unadjopen',
-        'unadjclose',
         'timestamp',
     ];
 

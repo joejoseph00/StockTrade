@@ -76,6 +76,12 @@ class StockController extends Controller
 
     public function getHistory($symbol,$options = []){
 
+        $stock = Stock::select([
+            'name',
+            'type',
+            'updated_at'
+            ])->where(['symbol' => $symbol])->firstOrFail();
+
         $history = History::select([
             'timestamp','open','high','low','close'
             ])->where('symbol',$symbol)->orderBy('timestamp')->get()->toArray();
@@ -108,6 +114,8 @@ class StockController extends Controller
                 ];
             },$history);
             return response()->json([
+                'stock' => $stock,
+                'lastUpdated' => $stock->updated_at->diffForHumans(),
                 'history' => [
                     'open' => $historyopen,
                     'high' => $historyhigh,
@@ -212,10 +220,6 @@ class StockController extends Controller
                                     'close' => $result->indicators->quote[0]->close[$key],
                                     'low' => $result->indicators->quote[0]->low[$key],
                                     'volume' => $result->indicators->quote[0]->volume[$key],
-                                    'unadjhigh' => $result->indicators->unadjquote[0]->unadjhigh[$key],
-                                    'unadjlow' => $result->indicators->unadjquote[0]->unadjlow[$key],
-                                    'unadjopen' => $result->indicators->unadjquote[0]->unadjopen[$key],
-                                    'unadjclose' => $result->indicators->unadjquote[0]->unadjclose[$key]
                                 ]
                             );
                         }
