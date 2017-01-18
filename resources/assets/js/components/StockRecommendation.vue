@@ -24,6 +24,13 @@
                     </tr>
                 </thead>
                 <tbody>
+                    <template v-if="Object.keys(entry).length==0">
+                        <tr>
+                            <td colspan="5" class="has-text-centered">
+                                No Recommendations to show.
+                            </td>
+                        </tr>
+                    </template>
                     <template v-for="e in entry">
                         <tr>
                             <td>
@@ -71,6 +78,7 @@ import StockBuy from './StockBuy.vue';
 import StockSell from './StockSell.vue';
 import StockHistoricalChart from './StockHistoricalChart.vue';
 import Modal from './utils/Modal.vue';
+import Events from './Events.js';
 
 export default {
     data: function(){
@@ -84,7 +92,7 @@ export default {
             },
             entry : {},
             messages : {
-                loading : 'Getting portfolio details...'
+                loading : 'Getting Recommendations'
             },
         }
     },
@@ -115,6 +123,7 @@ export default {
                 self.entry = response.data.entry;
                 self.isLoading = false;
                 self.loadingPercent = 0;
+                Events.$emit('updateFrameheight');
             }).catch(function (error) {
                 self.messages.loading = 'Error: Failed getting watchlist';
                 self.isLoadingFailed = true;

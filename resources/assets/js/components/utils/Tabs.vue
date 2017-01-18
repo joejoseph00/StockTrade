@@ -1,6 +1,6 @@
 <template lang="html">
     <div class="tabs-bulma" :class="{ 'is-primary' : invertColor }">
-        <div class="tabs is-centered" :class="tabclass">
+        <div class="tabs" :class="tabclass">
             <ul>
                 <li v-for="tab in tabs" :class="{ 'is-active' : tab.isActive }">
                     <a href="#" @click.prevent="setIsActive(tab)">
@@ -17,6 +17,9 @@
 </template>
 
 <script>
+
+import Events from '../Events.js';
+
 export default {
     name: 'Tabs',
     data: function(){
@@ -29,7 +32,8 @@ export default {
             default : false
         },
         tabclass : {
-            default : ''
+            type: String,
+            default : 'is-centered'
         },
         icon : {
             default : false
@@ -41,6 +45,7 @@ export default {
     methods: {
 
         setIsActive(clickedTab){
+            Events.$emit('tabClicked',clickedTab);
             this.tabs.forEach(tab => {
                 tab.isActive = tab.name==clickedTab.name;
             })

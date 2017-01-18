@@ -145,7 +145,7 @@
                                                 <td> {{ log.type }} </td>
                                                 <td> <abbr :title="log.updated_at">{{ log.purchasedTimeAgo }}</abbr> </td>
                                                 <td> {{ log.priceFormatted }} </td>
-                                                <td> {{ log.qty }} </td>
+                                                <td> {{ log.qtyFormatted }} </td>
                                                 <td> {{ log.totalFormatted }} </td>
                                                 <td></td>
                                                 <td></td>

@@ -209,19 +209,39 @@ class StockController extends Controller
                             $history = [];
 
                             foreach ((array)$result->timestamp as $key => $unix) {
-                                History::updateOrCreate(
-                                    [
+
+                                $exist = History::where([
+                                    'symbol' => $symbol,
+                                    'timestamp' => Carbon::createFromTimestamp($unix)->toDateTimeString()
+                                ])->first();
+
+                                if($exist){
+                                    History::where([
                                         'symbol' => $symbol,
                                         'timestamp' => Carbon::createFromTimestamp($unix)->toDateTimeString()
-                                    ],
-                                    [
-                                        'high' => $result->indicators->quote[0]->high[$key],
-                                        'open' => $result->indicators->quote[0]->open[$key],
-                                        'close' => $result->indicators->quote[0]->close[$key],
-                                        'low' => $result->indicators->quote[0]->low[$key],
-                                        'volume' => $result->indicators->quote[0]->volume[$key],
-                                    ]
-                                );
+                                    ])->update(
+                                        [
+                                            'high' => $result->indicators->quote[0]->high[$key],
+                                            'open' => $result->indicators->quote[0]->open[$key],
+                                            'close' => $result->indicators->quote[0]->close[$key],
+                                            'low' => $result->indicators->quote[0]->low[$key],
+                                            'volume' => $result->indicators->quote[0]->volume[$key],
+                                        ]
+                                    );
+                                }else{
+                                    History::create(
+                                        [
+                                            'symbol' => $symbol,
+                                            'timestamp' => Carbon::createFromTimestamp($unix)->toDateTimeString(),
+                                            'high' => $result->indicators->quote[0]->high[$key],
+                                            'open' => $result->indicators->quote[0]->open[$key],
+                                            'close' => $result->indicators->quote[0]->close[$key],
+                                            'low' => $result->indicators->quote[0]->low[$key],
+                                            'volume' => $result->indicators->quote[0]->volume[$key],
+                                        ]
+                                    );
+                                }
+
                             }
 
                         }
@@ -416,7 +436,12 @@ class StockController extends Controller
                 public function search(Request $request)
                 {
                     $term = $request->input('q');
-                    if(empty($term)) return response()->json([]);
+                    if(empty($term)) return response()->json([
+                        'status' => 'FAILED',
+                        'error' => [
+                            'No term specified. Use parameter `q`.'
+                        ]
+                    ]);
 
                     $response = Curl::to('http://d.yimg.com/autoc.finance.yahoo.com/autoc?region=us&lang=en&query='.$term)
                     ->asJson()
@@ -453,7 +478,7 @@ class StockController extends Controller
                     });
 
                     return response()->json([
-                        'status' => 'FAILED',
+                        'status' => 'OK',
                         'entry' => $entry
                     ]);
                 }
@@ -493,7 +518,7 @@ class StockController extends Controller
                     });
 
                     return response()->json([
-                        'status' => 'FAILED',
+                        'status' => 'OK',
                         'entry' => $entry
                     ]);
                 }

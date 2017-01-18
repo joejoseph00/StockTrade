@@ -38,6 +38,7 @@
 </template>
 
 <script>
+import Axios from 'axios';
 import Events from './Events.js';
 import StockTradeWatchList from './StockTradeWatchList.vue';
 import StockTransactions from './StockTransactions.vue';
@@ -47,6 +48,16 @@ import Tab from './utils/Tab.vue';
 
 
 export default {
+    data: function(){
+        return {
+            api : {
+                logoutAccount : {
+                    url : hostname + "/api/v1/user/logout",
+                    response : null
+                }
+            }
+        }
+    },
     components: {
         'stocktrade-watchlist' : StockTradeWatchList,
         'stocktrade-transactions' : StockTransactions,

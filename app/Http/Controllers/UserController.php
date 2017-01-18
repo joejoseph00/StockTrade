@@ -295,8 +295,9 @@ class UserController extends Controller
 
             $item->total = $item->price * $item->qty;
             $item->totalFormatted = '$' . number_format($item->total,2);
-
+            $item->qtyFormatted = number_format($item->qty,0);
             if($item->type=='SELL') $item->totalFormatted = '(' . $item->totalFormatted . ')';
+            if($item->type=='SELL') $item->qtyFormatted = '(' . $item->qtyFormatted . ')';
 
             $item->idFormatted = str_pad($item->id, 6, "0", STR_PAD_LEFT);
             $item->purchasedTimeAgo = $item->updated_at->diffForHumans();
@@ -323,17 +324,28 @@ class UserController extends Controller
             if($entry->type==='BUY'){
                 $stocks[$entry->symbol]['qty'] += $entry->qty;
                 $totalShares += $entry->qty;
-                $stocks[$entry->symbol]['purchasedPriceTotal'] += ($entry->price * $entry->qty);
 
-                $stocks[$entry->symbol]['gain'] += (($stocks[$entry->symbol]['statistics']->financialData->currentPrice->raw * $entry->qty)  - ($entry->price * $entry->qty) );
-                $totalGains += $stocks[$entry->symbol]['gain'];
+                $currentPriceTotalhere = ($stocks[$entry->symbol]['statistics']->financialData->currentPrice->raw * $entry->qty);
+                $purchasedPriceTotalhere = ($entry->price * $entry->qty);
+
+                $stocks[$entry->symbol]['purchasedPriceTotal'] += $purchasedPriceTotalhere;
+
+                $gainTotalHere = ($currentPriceTotalhere  - $purchasedPriceTotalhere);
+
+                $stocks[$entry->symbol]['gain'] += $gainTotalHere;
+                $totalGains += $gainTotalHere;
             }
             else{
-                // $stocks[$entry->symbol]['qty'] -= $entry->qty;
-                // $totalShares -= $entry->qty;
+                $stocks[$entry->symbol]['qty'] -= $entry->qty;
+                $totalShares -= $entry->qty;
 
                 // $stocks[$entry->symbol]['gain'] += ($entry->price * $entry->qty);
-                // $totalGains += $stocks[$entry->symbol]['gain'];
+
+                $currentPriceTotalhere = ($stocks[$entry->symbol]['statistics']->financialData->currentPrice->raw * $entry->qty);
+                $purchasedPriceTotalhere = ($entry->price * $entry->qty);
+                $gainTotalHere = ($currentPriceTotalhere  - $purchasedPriceTotalhere);
+
+                $totalGains += $gainTotalHere;
             }
 
 
@@ -345,15 +357,10 @@ class UserController extends Controller
 
             $stock['name'] = $stockData->name;
             $stock['currentPrice'] = number_format($stock['statistics']->financialData->currentPrice->raw,2);
+            $stock['gainPercent'] = $stock['gain']!=0 ? number_format(($stock['gain'] / $stock['purchasedPriceTotal']) * 100,2) : '0.00';
             $stock['purchasedPriceTotal'] = number_format($stock['purchasedPriceTotal'],2);
             $stock['currentPriceTotal'] = number_format($stock['qty'] * $stock['statistics']->financialData->currentPrice->raw,2);
-
-            // Total Gain/Loss
-            // $stock['gain'] = $stock['currentPriceTotal'] - $stock['purchasedPriceTotal'];
-            // $totalGains += $stock['gain'];
             $stock['gain'] = number_format($stock['gain'],2);
-
-            $stock['gainPercent'] = $stock['gain']!=0 ? number_format(($stock['gain'] / $stock['purchasedPriceTotal']) * 100,2) : '0.00';
             $stock['history'] = array_reverse($stock['history']);
 
             $stocks[$key] = $stock;
@@ -367,12 +374,14 @@ class UserController extends Controller
                 'totalCompanies' => count($stocks),
                 'startingMoney' => $startingMoney,
                 'totalGains' => $totalGains,
-                'totalGainsFmt' => '$' . number_format($totalGains,2),
-                'totalGainsPercent' => ($totalGains!=0 ? number_format(($totalGains / $startingMoney) * 100,2) : '0.00'),
-                'accountValue' => $startingMoney - $totalGains,
-                'accountValueFmt' => '$' . number_format($startingMoney - $totalGains,2),
+                'totalGainsFmt' => $totalGains >= 0 ? '$' . number_format(abs($totalGains),2) : '(-$'.number_format(abs($totalGains),2).')',
+                'totalGainsPercent' => $totalGains < 0 ? '(' . (number_format(($totalGains / $startingMoney) * 100,2) . '%') . ')' : (number_format(($totalGains / $startingMoney) * 100,2) . '%'),
+                'accountValue' => $startingMoney + $totalGains,
+                'accountValueFmt' => (($startingMoney + $totalGains) >= 0 ? '$' . number_format(abs($startingMoney + $totalGains),2) : '(-$'.number_format(abs($startingMoney + $totalGains),2).')'),
             ]
         ]);
+
+
     }
 
 }

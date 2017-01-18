@@ -23,7 +23,9 @@ Route::get('/embed/watchlist', function () {
 });
 
 // API
-
+Route::get('/docs/api', function () {
+    return view('api');
+});
 
 
 Route::group(['prefix' => 'api/v1'], function () {

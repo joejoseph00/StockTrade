@@ -6549,6 +6549,10 @@ label.panel-block:hover {
   margin-top: 1.5rem;
 }
 
+aside.menu + aside.menu {
+  margin-top: 1.5rem;
+}
+
 .container + .container {
   padding-top: 1.5rem;
 }
@@ -6559,6 +6563,14 @@ label.panel-block:hover {
 
 .is-minheight-300 {
   min-height: 300px !important;
+}
+
+.list-inline {
+  list-style: none;
+}
+
+.list-inline > li {
+  display: inline;
 }
 
 /*# sourceMappingURL=stocktrade-main.css.map */

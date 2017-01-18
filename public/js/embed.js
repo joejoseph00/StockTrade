@@ -3,12 +3,12 @@ var thisScript = document.getElementById('dm-stock-trade-js');
 var parent = thisScript.parentElement;
 var z = document.createElement('iframe');
 z.setAttribute('id','dm-stock-trade');
-z.setAttribute('src','http://stocktrade.demo/embed/watchlist');
+z.setAttribute('src','http://127.0.0.1:1234/embed/watchlist');
 z.setAttribute('width','100%');
 z.setAttribute('height','400px');
 z.setAttribute('frameborder','0');
 z.setAttribute('allowtransparency','true');
-z.setAttribute('scrolling','no');
+z.setAttribute('scrolling','yes');
 parent.appendChild(z);
 var dmStockTradeID = document.getElementById('dm-stock-trade');
 dmStockTradeID.addEventListener("load",function(){

@@ -8,7 +8,7 @@
                 <div class="col-xs-12">
                     <div class="row">
                         <div class="col-sm-12">
-                            <script id="dm-stock-trade-js" src="http://stocktrade.demo:8000/js/embed.js"></script>
+                            <script id="dm-stock-trade-js" src="{{ url('/js/embed.js') }}"></script>
                         </div>
                     </div>
                 </div>

@@ -13,6 +13,7 @@ const stocktrade = new Vue({
     <div v-if="userStatusChecked">
     <stocktrade v-if="isLoggedIn"></stocktrade>
     <stocktrade-login v-else></stocktrade-login>
+
     </div>
     <div v-else>
     <section class="hero is-primary is-large header-image">
@@ -32,6 +33,17 @@ const stocktrade = new Vue({
     </div>
     </section>
     </div>
+    <footer class="footer">
+    <div class="container">
+    <div class="content has-text-centered">
+    <ul class="list-inline">
+    <li><a href="/embed/watchlist">Home</a></li>
+    <li>|</li>
+    <li><a href="/api">API</a></li>
+    </ul>
+    </div>
+    </div>
+    </footer>
     </div>
     `,
     data: {
@@ -81,6 +93,14 @@ const stocktrade = new Vue({
         Events.$on('userLoggedOut',function(){
             self.isLoggedIn = false;
             self.user = null;
+        });
+
+        Events.$on('updateFrameheight',function(){
+            sendHeight();
+        });
+
+        Events.$on('tabClicked',function(){
+            sendHeight();
         });
 
         this.checkUserStatus()
