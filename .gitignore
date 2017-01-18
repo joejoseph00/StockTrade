@@ -9,3 +9,5 @@ Homestead.yaml
 public/api/v1/js/stocktrade.js
 public/css
 public/js/app.js
+
+dump.sql

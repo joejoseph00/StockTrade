@@ -286,6 +286,7 @@ class UserController extends Controller
     public function portfolio(){
 
         $startingMoney = 100000;
+        $cashValue = $startingMoney;
         $totalShares = 0;
         $totalGains = 0;
 
@@ -334,6 +335,8 @@ class UserController extends Controller
 
                 $stocks[$entry->symbol]['gain'] += $gainTotalHere;
                 $totalGains += $gainTotalHere;
+
+                $cashValue -= $purchasedPriceTotalhere;
             }
             else{
                 $stocks[$entry->symbol]['qty'] -= $entry->qty;
@@ -346,8 +349,8 @@ class UserController extends Controller
                 $gainTotalHere = ($currentPriceTotalhere  - $purchasedPriceTotalhere);
 
                 $totalGains += $gainTotalHere;
+                $cashValue += $currentPriceTotalhere;
             }
-
 
             $stocks[$entry->symbol]['history'][] = $entry;
 
@@ -377,6 +380,8 @@ class UserController extends Controller
                 'totalGainsFmt' => $totalGains >= 0 ? '$' . number_format(abs($totalGains),2) : '(-$'.number_format(abs($totalGains),2).')',
                 'totalGainsPercent' => $totalGains < 0 ? '(' . (number_format(($totalGains / $startingMoney) * 100,2) . '%') . ')' : (number_format(($totalGains / $startingMoney) * 100,2) . '%'),
                 'accountValue' => $startingMoney + $totalGains,
+                'cashValue' => $cashValue,
+                'cashValueFmt' => $cashValue >= 0 ? '$' . number_format(abs($cashValue),2) : '(-$'.number_format(abs($cashValue),2).')',
                 'accountValueFmt' => (($startingMoney + $totalGains) >= 0 ? '$' . number_format(abs($startingMoney + $totalGains),2) : '(-$'.number_format(abs($startingMoney + $totalGains),2).')'),
             ]
         ]);

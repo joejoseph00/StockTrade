@@ -28,6 +28,12 @@
                                 </div>
                                 <div class="level-item has-text-centered">
                                     <div>
+                                        <p class="heading">Cash Value</p>
+                                        <p class="title">{{ portfolio.cashValueFmt }}</p>
+                                    </div>
+                                </div>
+                                <div class="level-item has-text-centered">
+                                    <div>
                                         <p class="heading">Total Shares</p>
                                         <p class="title">{{ portfolio.totalShares }}</p>
                                     </div>
@@ -42,12 +48,6 @@
                                     <div>
                                         <p class="heading">Total Gain %</p>
                                         <p class="title">{{ portfolio.totalGainsPercent }}</p>
-                                    </div>
-                                </div>
-                                <div class="level-item has-text-centered">
-                                    <div>
-                                        <p class="heading">Companies Owned</p>
-                                        <p class="title">{{ portfolio.totalCompanies }}</p>
                                     </div>
                                 </div>
                             </nav>
@@ -79,7 +79,7 @@
                             <tbody>
                                 <template v-if="stocks.length==0">
                                     <tr>
-                                        <td colspan="9" class="has-text-centered">No Purchased Stocks yet </td>
+                                        <td colspan="10" class="has-text-centered">No Purchased Stocks yet </td>
                                     </tr>
                                 </template>
                                 <template v-for="stock in stocks">
