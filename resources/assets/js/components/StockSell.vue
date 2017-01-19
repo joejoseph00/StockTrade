@@ -102,11 +102,17 @@ export default {
                 }
             }).then(function(response){
                 if(response.status == 200 && response.data.status == 'OK'){
+                    
                     self.maxSell = response.data.result.maxSell;
                     self.canSell = true;
+
                     if(self.maxSell<1){
                          self.canSell = false;
                          self.qty = 0;
+                    }
+
+                    if(self.qty>self.maxSell){
+                        self.qty = self.maxSell;
                     }
                 }
             }).catch(function(error){

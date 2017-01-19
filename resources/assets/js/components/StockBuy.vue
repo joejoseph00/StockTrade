@@ -110,6 +110,10 @@ export default {
                          self.canBuy = false;
                          self.qty = 0;
                     }
+
+                    if(self.qty>self.maxBuy){
+                         self.qty = self.maxBuy;
+                    }
                 }
             }).catch(function(error){
                 self.canBuy = false;
