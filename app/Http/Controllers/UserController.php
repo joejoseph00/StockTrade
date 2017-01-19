@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\User;
 use App\Stock;
 use App\Watchlist;
+use App\UserInfo;
 use App\Transaction;
 use Auth;
 
@@ -370,21 +371,31 @@ class UserController extends Controller
             $stocks[$key] = $stock;
 
         }
+        $portfolioData = [
+            'totalShares' => $totalShares,
+            'totalCompanies' => count($stocks),
+            'startingMoney' => $startingMoney,
+            'totalGains' => $totalGains,
+            'totalGainsFmt' => $totalGains >= 0 ? '$' . number_format(abs($totalGains),2) : '(-$'.number_format(abs($totalGains),2).')',
+            'totalGainsPercent' => $totalGains < 0 ? '(' . (number_format(($totalGains / $startingMoney) * 100,2) . '%') . ')' : (number_format(($totalGains / $startingMoney) * 100,2) . '%'),
+            'accountValue' => $startingMoney + $totalGains,
+            'cashValue' => $cashValue,
+            'cashValueFmt' => $cashValue >= 0 ? '$' . number_format(abs($cashValue),2) : '(-$'.number_format(abs($cashValue),2).')',
+            'accountValueFmt' => (($startingMoney + $totalGains) >= 0 ? '$' . number_format(abs($startingMoney + $totalGains),2) : '(-$'.number_format(abs($startingMoney + $totalGains),2).')'),
+        ];
+
+        foreach ($portfolioData as $key => $value) {
+            UserInfo::updateOrCreate([
+                'user_id' => Auth::id(),
+                'key' => $key,
+            ],[
+                'value' => $value
+            ]);
+        }
 
         return response()->json([
             'stocks' => $stocks,
-            'portfolio' => [
-                'totalShares' => $totalShares,
-                'totalCompanies' => count($stocks),
-                'startingMoney' => $startingMoney,
-                'totalGains' => $totalGains,
-                'totalGainsFmt' => $totalGains >= 0 ? '$' . number_format(abs($totalGains),2) : '(-$'.number_format(abs($totalGains),2).')',
-                'totalGainsPercent' => $totalGains < 0 ? '(' . (number_format(($totalGains / $startingMoney) * 100,2) . '%') . ')' : (number_format(($totalGains / $startingMoney) * 100,2) . '%'),
-                'accountValue' => $startingMoney + $totalGains,
-                'cashValue' => $cashValue,
-                'cashValueFmt' => $cashValue >= 0 ? '$' . number_format(abs($cashValue),2) : '(-$'.number_format(abs($cashValue),2).')',
-                'accountValueFmt' => (($startingMoney + $totalGains) >= 0 ? '$' . number_format(abs($startingMoney + $totalGains),2) : '(-$'.number_format(abs($startingMoney + $totalGains),2).')'),
-            ]
+            'portfolio' => $portfolioData
         ]);
 
 

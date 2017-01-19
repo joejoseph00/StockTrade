@@ -36,6 +36,11 @@
                     <input class="input has-text-right" type="number" v-model="totalAmount" readonly>
                 </p>
             </div>
+            <div v-if=" maxBuy < 1 " class="column is-full">
+                <blockquote>
+                    You have no enough cash balance to buy stocks from {{ symbol }}
+                </blockquote>
+            </div>
             <div v-if=" isBuyingSuccess!=null " class="column is-full">
                 <blockquote v-if=" isBuyingSuccess ">
                     Congratulations! Transaction complete.
@@ -99,7 +104,12 @@ export default {
                 if(response.status == 200 && response.data.status == 'OK'){
                     self.maxBuy = response.data.result.maxBuy;
                     self.canBuy = true;
-                    if(self.canBuy<1) self.canBuy = false;
+                    if(self.maxBuy<1) self.canBuy = false;
+
+                    if(self.maxBuy<1){
+                         self.canBuy = false;
+                         self.qty = 0;
+                    }
                 }
             }).catch(function(error){
                 self.canBuy = false;

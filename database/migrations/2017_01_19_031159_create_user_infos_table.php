@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddUniqueCompToHistoryTable extends Migration
+class CreateUserInfosTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,12 @@ class AddUniqueCompToHistoryTable extends Migration
      */
     public function up()
     {
-        Schema::table('history', function (Blueprint $table) {
-            //unique(['first', 'last'])
-            // $table->unique(['symbol', 'timestamp']);
+        Schema::create('user_infos', function (Blueprint $table) {
+            $table->increments('id');
+            $table->integer('user_id');
+            $table->string('key');
+            $table->text('value');
+            $table->timestamps();
         });
     }
 
@@ -26,8 +29,6 @@ class AddUniqueCompToHistoryTable extends Migration
      */
     public function down()
     {
-        Schema::table('history', function (Blueprint $table) {
-            //
-        });
+        Schema::dropIfExists('user_infos');
     }
 }
