@@ -126,7 +126,6 @@ export default {
                 if(self.loadingPercent>100) self.loadingPercent = 0;
             },50);
             Axios.get(self.api.getWatchlist.url).then(function(response){
-                console.log(response);
                 self.stocks = response.data.watchlist;
                 self.isLoading = false;
             }).catch(function (error) {

@@ -17,7 +17,7 @@
             <table class="table">
                 <thead>
                     <tr>
-                        <th></th> 
+                        <th></th>
                         <th>Symbol</th>
                         <th>Name</th>
                         <th>Exchange</th>
@@ -99,7 +99,6 @@ export default {
     },
     methods: {
         onFilterChanged(event){
-            console.log(event);
             this.leaderboardFilter = event.target.value;
             this.getLeaderboard();
         },

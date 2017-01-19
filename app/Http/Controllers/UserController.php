@@ -389,4 +389,30 @@ class UserController extends Controller
 
     }
 
+    function getMaxBuy(Request $request){
+
+        if($request->has('symbol')){
+            $stock = Stock::select('price')->where('symbol',$request->symbol)->firstOrFail();
+            $price = $stock->price ;
+
+            $cashvalue = $this->portfolio()->getData()->portfolio->cashValue;
+
+            return response()->json([
+                'error' => '',
+                'status' => 'OK',
+                'result' => [
+                    'symbol' => $request->symbol,
+                    'maxBuy' => floor($cashvalue / $price),
+                    'maxBuyPrice' => floor($cashvalue / $price) * $price,
+                    'maxBuyPriceFmt' => '$' . number_format(floor($cashvalue / $price) * $price,2),
+                ]
+            ]);
+        }
+
+        return response()->json([
+            'error' => 'No symbol specified. Use `symbol` parameter',
+            'status' => 'FAILED'
+        ]);
+    }
+
 }

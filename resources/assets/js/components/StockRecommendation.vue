@@ -104,7 +104,6 @@ export default {
     },
     methods: {
         onFilterChanged(event){
-            console.log(event);
             this.leaderboardFilter = event.target.value;
             this.getLeaderboard();
         },

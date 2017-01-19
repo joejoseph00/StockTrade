@@ -21,6 +21,9 @@ Route::get('/dashboard', function () {
 Route::get('/embed/watchlist', function () {
     return view('embed/watchlist');
 });
+Route::get('/widget/demotrader', function () {
+    return view('embed/watchlist');
+});
 
 // API
 Route::get('/docs/api', function () {
@@ -51,4 +54,5 @@ Route::group(['prefix' => 'api/v1'], function () {
     Route::get('/user/transactions', 'UserController@getTransactions');
 
     Route::get('/user/portfolio', 'UserController@portfolio');
+    Route::get('/user/getMaxBuy', 'UserController@getMaxBuy');
 });

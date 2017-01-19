@@ -60,7 +60,6 @@ export default {
                 self.lastUpdated = response.data.lastUpdated;
                 self.isLoading = false;
             }).catch(function (error) {
-                console.log(error);
                 self.messages.loading = 'Error: Failed getting watchlist';
             });
         },
