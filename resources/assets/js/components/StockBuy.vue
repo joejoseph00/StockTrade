@@ -99,6 +99,7 @@ export default {
                 if(response.status == 200 && response.data.status == 'OK'){
                     self.maxBuy = response.data.result.maxBuy;
                     self.canBuy = true;
+                    if(self.canBuy<1) self.canBuy = false;
                 }
             }).catch(function(error){
                 self.canBuy = false;

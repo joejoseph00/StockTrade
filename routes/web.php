@@ -55,4 +55,5 @@ Route::group(['prefix' => 'api/v1'], function () {
 
     Route::get('/user/portfolio', 'UserController@portfolio');
     Route::get('/user/getMaxBuy', 'UserController@getMaxBuy');
+    Route::get('/user/getMaxSell', 'UserController@getMaxSell');
 });

@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\User;
 use App\Stock;
 use App\Watchlist;
+use App\Transaction;
 use Auth;
 
 class UserController extends Controller
@@ -405,6 +406,37 @@ class UserController extends Controller
                     'maxBuy' => floor($cashvalue / $price),
                     'maxBuyPrice' => floor($cashvalue / $price) * $price,
                     'maxBuyPriceFmt' => '$' . number_format(floor($cashvalue / $price) * $price,2),
+                ]
+            ]);
+        }
+
+        return response()->json([
+            'error' => 'No symbol specified. Use `symbol` parameter',
+            'status' => 'FAILED'
+        ]);
+    }
+
+
+    function getMaxSell(Request $request){
+
+        if($request->has('symbol')){
+            $logs = Transaction::select('qty','type')->where('symbol',$request->symbol)->get();
+            $qty = 0;
+            foreach ($logs as $key => $log) {
+                if($log->type === 'buy'){
+                     $qty += $log->qty;
+                }
+                else{
+                     $qty -= $log->qty;
+                }
+            }
+
+            return response()->json([
+                'error' => '',
+                'status' => 'OK',
+                'result' => [
+                    'symbol' => $request->symbol,
+                    'maxSell' => $qty,
                 ]
             ]);
         }

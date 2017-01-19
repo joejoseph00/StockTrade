@@ -14,13 +14,20 @@
             <div class="column is-half">
                 <label class="label">Quantity</label>
                 <p class="control">
-                    <input class="input has-text-right" type="number" v-model="qty" min="1">
+                    <input class="input has-text-right" type="number" v-model="qty" min="1" :max="maxSell" @change="checkmaxSell">
+                    <span class="help is-success">
+                        <a href="#" @click.prevent="qty = ((qty+10) > maxSell ? maxSell : qty + 10)">+10</a> |
+                        <a href="#" @click.prevent="qty = ((qty+100) > maxSell ? maxSell : qty + 100)">+100</a> |
+                        <a href="#" @click.prevent="qty = ((qty+500) > maxSell ? maxSell : qty + 500)">+500</a> |
+                        <a href="#" @click.prevent="qty = ((qty+1000) > maxSell ? maxSell : qty + 1000)">+1000</a> |
+                        <a href="#" @click.prevent="qty=maxSell">MAX</a>
+                    </span>
                 </p>
             </div>
             <div class="column is-half">
                 <label class="label">&nbsp;</label>
                 <p>
-                    <button class="button is-primary is-fullwidth" :class="{ 'is-loading' : isSelling }" @click="onSellStock" >Sell Now</button>
+                    <button class="button is-primary is-fullwidth" :class="{ 'is-loading' : isSelling , 'is-disabled' : !canSell }" @click="onSellStock" >Sell Now</button>
                 </p>
             </div>
             <div class="column is-half">
@@ -28,6 +35,11 @@
                 <p class="control">
                     <input class="input has-text-right" type="number" v-model="totalAmount" readonly>
                 </p>
+            </div>
+            <div v-if=" maxSell < 1 " class="column is-full">
+                <blockquote>
+                    You have no outstanding stocks for {{ symbol }}
+                </blockquote>
             </div>
             <div v-if=" isSellingSuccess!=null " class="column is-full">
                 <blockquote v-if=" isSellingSuccess ">
@@ -48,12 +60,15 @@ import Events from './Events.js';
 export default {
     data : function(){
         return {
+            maxSell: 1,
+            canSell: false,
             isSelling : false,
             isSellingSuccess : null,
             sellingErrors : [],
             qty : 100,
             api : {
                 sellStocks : hostname + "/api/v1/stock/sell",
+                checkMaxSell : hostname + "/api/v1/user/getMaxSell"
             }
         }
     },
@@ -74,6 +89,30 @@ export default {
         }
     },
     methods: {
+        checkmaxSell: function(){
+            if(this.qty > this.maxSell) this.qty = this.maxSell;
+        },
+        checkMaxQuantity: function(){
+            var self = this;
+            self.canSell = false;
+
+            Axios.get(self.api.checkMaxSell,{
+                params : {
+                    symbol : this.symbol,
+                }
+            }).then(function(response){
+                if(response.status == 200 && response.data.status == 'OK'){
+                    self.maxSell = response.data.result.maxSell;
+                    self.canSell = true;
+                    if(self.maxSell<1){
+                         self.canSell = false;
+                         self.qty = 0;
+                    }
+                }
+            }).catch(function(error){
+                self.canSell = false;
+            });
+        },
         onSellStock: function(){
             var self = this;
             self.isSelling = true;
@@ -94,6 +133,10 @@ export default {
                 self.sellingErrors = error.response.data.error;
             });
         }
+    },
+    created: function(){
+        var self = this;
+        self.checkMaxQuantity();
     }
 }
 </script>
