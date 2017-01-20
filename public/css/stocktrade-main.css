@@ -6573,4 +6573,8 @@ aside.menu + aside.menu {
   display: inline;
 }
 
+.is-overflow {
+  overflow: auto;
+}
+
 /*# sourceMappingURL=stocktrade-main.css.map */

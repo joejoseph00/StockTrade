@@ -173,26 +173,26 @@
             </div>
             <div class="container">
                 <div class="columns">
-                    <div class="column">
+                    <div class="column is-full-mobile is-full-tablet is-two-thirds-desktop">
                         <div class="card">
                             <header class="card-header">
                                 <p class="card-header-title">
                                     Top Performing Stocks
                                 </p>
                             </header>
-                            <div class="card-content">
+                            <div class="card-content is-overflow">
                                 <stock-leaderboard></stock-leaderboard>
                             </div>
                         </div>
                     </div>
-                    <div class="column is-4">
+                    <div class="column is-full-mobile is-full-tablet is-one-third-desktop">
                         <div class="card">
                             <header class="card-header">
                                 <p class="card-header-title">
                                     Latest Stock Recommendation
                                 </p>
                             </header>
-                            <div class="card-content">
+                            <div class="card-content is-overflow">
                                 <stock-recommendation></stock-recommendation>
                             </div>
                         </div>
