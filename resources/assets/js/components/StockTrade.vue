@@ -24,7 +24,7 @@
             </div>
         </section>
         <tabs tabclass="is-centered is-boxed" :invertColor="true" >
-            <tab name="My Portfolio" :selected="true">
+            <tab name="My Portfolio">
                 <stocktrade-portfolio></stocktrade-portfolio>
             </tab>
             <tab name="Watchlist">
@@ -32,6 +32,9 @@
             </tab>
             <tab name="Transaction History">
                 <stocktrade-transactions></stocktrade-transactions>
+            </tab>
+            <tab name="Preferences" :selected="true">
+                <stocktrade-preferences></stocktrade-preferences>
             </tab>
         </tabs>
     </div>
@@ -41,6 +44,7 @@
 import Axios from 'axios';
 import Events from './Events.js';
 import StockTradeWatchList from './StockTradeWatchList.vue';
+import StockTradePreferences from './StockTradePreferences.vue';
 import StockTransactions from './StockTransactions.vue';
 import StockPortfolio from './StockPortfolio.vue';
 import Tabs from './utils/Tabs.vue';
@@ -62,6 +66,7 @@ export default {
         'stocktrade-watchlist' : StockTradeWatchList,
         'stocktrade-transactions' : StockTransactions,
         'stocktrade-portfolio' : StockPortfolio,
+        'stocktrade-preferences' : StockTradePreferences,
         'tabs' : Tabs,
         'tab' : Tab,
     },

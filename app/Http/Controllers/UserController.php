@@ -458,4 +458,19 @@ class UserController extends Controller
         ]);
     }
 
+    function profile(){
+
+        $info = UserInfo::where('user_id',Auth::id())->get();
+        return response()->json([
+            'error' => '',
+            'status' => 'OK',
+            'info' => $info,
+            'profile' => [
+                'fullname' => Auth::user()->fullname,
+                'email' => '',
+                'username' => Auth::user()->username,
+            ]
+        ]);
+    }
+
 }

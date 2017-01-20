@@ -78,6 +78,12 @@ const stocktrade = new Vue({
                 }
                 clearInterval(self.progressInterval);
                 self.userStatusChecked = true;
+            }).catch(function(error){
+                if(error.response.data.error == 'Unauthenticated.'){
+                    self.isLoggedIn = false;
+                    clearInterval(self.progressInterval);
+                    self.userStatusChecked = true;
+                }
             });
         }
     },

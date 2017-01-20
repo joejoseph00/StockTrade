@@ -210,37 +210,18 @@ class StockController extends Controller
 
                             foreach ((array)$result->timestamp as $key => $unix) {
 
-                                $exist = History::where([
+                                if($result->indicators->quote[0]->open[$key] == 0) continue;
+
+                                History::updateOrCreate([
                                     'symbol' => $symbol,
                                     'timestamp' => Carbon::createFromTimestamp($unix)->toDateTimeString()
-                                ])->first();
-
-                                if($exist){
-                                    History::where([
-                                        'symbol' => $symbol,
-                                        'timestamp' => Carbon::createFromTimestamp($unix)->toDateTimeString()
-                                    ])->update(
-                                        [
-                                            'high' => $result->indicators->quote[0]->high[$key],
-                                            'open' => $result->indicators->quote[0]->open[$key],
-                                            'close' => $result->indicators->quote[0]->close[$key],
-                                            'low' => $result->indicators->quote[0]->low[$key],
-                                            'volume' => $result->indicators->quote[0]->volume[$key],
-                                        ]
-                                    );
-                                }else{
-                                    History::create(
-                                        [
-                                            'symbol' => $symbol,
-                                            'timestamp' => Carbon::createFromTimestamp($unix)->toDateTimeString(),
-                                            'high' => $result->indicators->quote[0]->high[$key],
-                                            'open' => $result->indicators->quote[0]->open[$key],
-                                            'close' => $result->indicators->quote[0]->close[$key],
-                                            'low' => $result->indicators->quote[0]->low[$key],
-                                            'volume' => $result->indicators->quote[0]->volume[$key],
-                                        ]
-                                    );
-                                }
+                                ],[
+                                    'high' => $result->indicators->quote[0]->high[$key],
+                                    'open' => $result->indicators->quote[0]->open[$key],
+                                    'close' => $result->indicators->quote[0]->close[$key],
+                                    'low' => $result->indicators->quote[0]->low[$key],
+                                    'volume' => $result->indicators->quote[0]->volume[$key],
+                                ]);
 
                             }
 
