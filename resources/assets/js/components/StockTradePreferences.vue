@@ -23,28 +23,33 @@
                                 </figure>
                             </div>
                             <div class="media-content">
-                                <form class="control">
+                                <form class="control" @submit.prevent="updateProfile">
                                     <div class="columns">
                                         <div class="column is-6">
                                             <label class="label">Fullname</label>
                                             <p class="control">
-                                                <input class="input" type="text" placeholder="Your Fullname" v-model="profile.fullname" required>
+                                                <input class="input" type="text" name="fullname" placeholder="Your Fullname" v-model="profile.fullname" required>
                                             </p>
                                             <label class="label">Username</label>
                                             <p class="control">
-                                                <input class="input" type="text" placeholder="Your Username" v-model="profile.username" required>
+                                                <input class="input" type="text" name="username" placeholder="Your Username" v-model="profile.username" required>
                                             </p>
                                             <label class="label">Email Address</label>
                                             <p class="control">
-                                                <input class="input" type="email" placeholder="Your Email Address" v-model="profile.email" required>
+                                                <input class="input" type="email" name="email" placeholder="Your Email Address" v-model="profile.email">
                                             </p>
                                             <label class="label">Password</label>
                                             <p class="control">
-                                                <input class="input" type="password" placeholder="*********" value="">
+                                                <input class="input" name="password" v-model="profile.password" type="password" placeholder="*********" value="">
                                             </p>
                                             <label class="label">Confirm Password</label>
                                             <p class="control">
-                                                <input class="input" type="password" placeholder="*********" value="">
+                                                <input class="input" name="password_confirmation" v-model="profile.password_confirmation" type="password" placeholder="*********" value="">
+                                            </p>
+                                            <p>
+                                                <div class="block">
+                                                    <button type="submit" class="button is-primary" :class="{ 'is-loading' : profileSaving }">Update Profile</button>
+                                                </div>
                                             </p>
                                         </div>
                                         <div class="column is-4">
@@ -79,15 +84,33 @@ export default {
             isLoadingFailed : false,
             loadingPercent : 0,
             progressInterval : null,
+            profileSaving : false,
             messages : {
                 loading : "Getting Profile Information..."
             },
             api : {
-                getUserProfile : hostname + "/api/v1/user/profile"
+                getUserProfile : hostname + "/api/v1/user/profile",
+                updateUserProfile : hostname + "/api/v1/user/profile/update",
             },
+            error : { },
+            success : { }
         }
     },
     methods : {
+        updateProfile(){
+            var self = this;
+            self.profileSaving = true;
+
+            Axios.post(self.api.updateUserProfile,{ profile : self.profile }).then(function(response){
+                if(response.status == 200 && response.data.status == 'OK'){
+                    console.log(reponse.data);
+                }
+                self.profileSaving = false;
+            }).catch(function(error){
+                self.profileSaving = false;
+            });
+
+        },
         fetchProfileData(){
             var self = this;
             self.isLoadingFailed = false;

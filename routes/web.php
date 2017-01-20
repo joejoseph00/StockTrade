@@ -46,10 +46,11 @@ Route::group(['prefix' => 'api/v1' , 'middleware' => 'auth'], function () {
     Route::get('/user/transactions', 'UserController@getTransactions');
 
     Route::get('/user/profile', 'UserController@profile');
+    Route::post('/user/profile/update', 'UserController@update');
     Route::get('/user/portfolio', 'UserController@portfolio');
     Route::get('/user/getMaxBuy', 'UserController@getMaxBuy');
     Route::get('/user/getMaxSell', 'UserController@getMaxSell');
-    
+
 });
 
 Route::group(['prefix' => 'api/v1'], function () {

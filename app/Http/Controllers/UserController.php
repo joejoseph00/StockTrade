@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Validator;
 use Illuminate\Http\Request;
+use Illuminate\Validation\Rule;
 use App\User;
 use App\Stock;
 use App\Watchlist;
@@ -102,9 +103,58 @@ class UserController extends Controller
     * @param  int  $id
     * @return \Illuminate\Http\Response
     */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        //
+
+        $validator = Validator::make($request->get('profile'), [
+            'username' => [
+                'alpha_dash',
+                'required',
+                'min:6',
+                Rule::unique('users')->ignore(Auth::id()),
+            ],
+            'email' => 'email',
+            'fullname' => 'required',
+            'password' => 'required_with:password_confirmation|confirmed',
+        ]);
+
+        if($validator->fails()){
+            return response()->json([
+                'error' => $validator->errors()->all(),
+                'status' => 'FAILED'
+            ]);
+        }
+
+        $toUpdate = [
+            'username' => $request->profile['username'],
+            'fullname' => $request->profile['fullname'],
+        ];
+
+        if(!empty($request->password)){
+            $toUpdate['password'] = bcrypt($request->password);
+        }
+
+        User::find(Auth::id())->update($toUpdate);
+
+        $userInfo = [
+            'email' => $request->profile['email']
+        ];
+
+        foreach ($userInfo as $key => $value) {
+            UserInfo::updateOrCreate([
+                'user_id' => Auth::id(),
+                'key' => $key,
+            ],[
+                'value' => $value
+            ]);
+        }
+
+
+        return response()->json([
+            'error' => [],
+            'status' => 'OK',
+            'data' => $request->all()
+        ]);
     }
 
     /**
@@ -468,16 +518,24 @@ class UserController extends Controller
 
     function profile(){
 
-        $info = UserInfo::where('user_id',Auth::id())->get();
+        $info = UserInfo::select('key','value')->where('user_id',Auth::id())->get();
+
+
+
+        $profile = [
+            'fullname' => Auth::user()->fullname,
+            'email' => '',
+            'username' => Auth::user()->username,
+        ];
+
+        $info = array_combine(array_pluck($info,'key'),array_pluck($info,'value'));
+
+        $profile = array_merge($profile,$info);
+
         return response()->json([
             'error' => '',
             'status' => 'OK',
-            'info' => $info,
-            'profile' => [
-                'fullname' => Auth::user()->fullname,
-                'email' => '',
-                'username' => Auth::user()->username,
-            ]
+            'profile' => $profile
         ]);
     }
 

@@ -3,9 +3,6 @@ import StockTradeLogin from './components/StockTradeLogin.vue';
 import Events from './components/Events.js';
 import Axios from 'axios';
 
-require('amstock3');
-require('amcharts3');
-
 const stocktrade = new Vue({
     el: '#stocktrade',
     template : `

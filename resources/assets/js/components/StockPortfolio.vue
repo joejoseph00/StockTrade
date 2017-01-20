@@ -151,7 +151,7 @@
                                                 <td></td>
                                             </tr>
                                         </template>
-                                        <tr>
+                                        <tr class="is-narrow">
                                             <td></td>
                                             <td></td>
                                             <td></td>
