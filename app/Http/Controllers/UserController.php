@@ -371,6 +371,14 @@ class UserController extends Controller
             $stocks[$key] = $stock;
 
         }
+
+        uasort($stocks, function($a,$b){
+            if ($a['qty'] == $b['qty']) {
+                return 0;
+            }
+            return ($a['qty'] > $b['qty']) ? -1 : 1;
+        });
+
         $portfolioData = [
             'totalShares' => $totalShares,
             'totalCompanies' => count($stocks),
@@ -435,10 +443,10 @@ class UserController extends Controller
             $qty = 0;
             foreach ($logs as $key => $log) {
                 if($log->type === 'buy'){
-                     $qty += $log->qty;
+                    $qty += $log->qty;
                 }
                 else{
-                     $qty -= $log->qty;
+                    $qty -= $log->qty;
                 }
             }
 
