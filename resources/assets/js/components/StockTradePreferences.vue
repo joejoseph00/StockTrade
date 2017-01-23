@@ -56,10 +56,11 @@
                                             <label class="label">Country</label>
                                             <p class="control">
                                                 <span class="select">
-                                                    <select>
-                                                        <option>Select Country</option>
+                                                    <select v-model="profile.country">
+                                                        <option v-for="country in countries">{{ country }}</option>
                                                     </select>
                                                 </span>
+
                                             </p>
                                         </div>
                                     </div>
@@ -85,12 +86,14 @@ export default {
             loadingPercent : 0,
             progressInterval : null,
             profileSaving : false,
+            countries : {},
             messages : {
                 loading : "Getting Profile Information..."
             },
             api : {
                 getUserProfile : hostname + "/api/v1/user/profile",
                 updateUserProfile : hostname + "/api/v1/user/profile/update",
+                getCountryList : hostname + "/js/countries.json",
             },
             error : { },
             success : { }
@@ -134,11 +137,21 @@ export default {
             }).catch(function(error){
                 self.isLoadingFailed = true;
             });
+        },
+        fetchCountries(){
+            var self = this;
+            Axios.get(self.api.getCountryList).then(function(response){
+                if(response.status == 200 && response.data){
+                    response.data = Object.keys(response.data).map(function(k) { return response.data[k] });
+                    self.countries = response.data.sort();
+                }
+            });
         }
     },
     created: function(){
         var self = this;
         this.fetchProfileData();
+        this.fetchCountries();
     }
 }
 </script>

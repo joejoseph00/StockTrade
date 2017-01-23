@@ -137,7 +137,8 @@ class UserController extends Controller
         User::find(Auth::id())->update($toUpdate);
 
         $userInfo = [
-            'email' => $request->profile['email']
+            'email' => $request->profile['email'],
+            'country' => $request->profile['country'],
         ];
 
         foreach ($userInfo as $key => $value) {
