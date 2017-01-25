@@ -2,6 +2,9 @@ import StockTrade from './components/StockTrade.vue';
 import StockTradeLogin from './components/StockTradeLogin.vue';
 import Events from './components/Events.js';
 import Axios from 'axios';
+import VueLocalStorage from 'vue-localstorage'
+
+Vue.use(VueLocalStorage);
 
 const stocktrade = new Vue({
     el: '#stocktrade',
@@ -32,6 +35,12 @@ const stocktrade = new Vue({
     </div>
     </div>
     `,
+    localStorage: {
+        activeTabStocktrade: {
+            type: String,
+            default: 'My Portfolio'
+        },
+    },
     data: {
         isLoggedIn: false,
         userStatusChecked : false,

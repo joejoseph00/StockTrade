@@ -33,7 +33,7 @@
             <tab name="Transaction History">
                 <stocktrade-transactions></stocktrade-transactions>
             </tab>
-            <tab name="Preferences" :selected="true">
+            <tab name="Preferences">
                 <stocktrade-preferences></stocktrade-preferences>
             </tab>
         </tabs>
@@ -54,6 +54,7 @@ import Tab from './utils/Tab.vue';
 export default {
     data: function(){
         return {
+            active : 'portfolio',
             api : {
                 logoutAccount : {
                     url : hostname + "/api/v1/user/logout",

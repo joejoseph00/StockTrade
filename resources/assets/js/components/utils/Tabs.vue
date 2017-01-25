@@ -49,6 +49,9 @@ export default {
             this.tabs.forEach(tab => {
                 tab.isActive = tab.name==clickedTab.name;
             })
+
+            this.$localStorage.set('activeTabStocktrade',clickedTab.name);
+
         }
     }
 }

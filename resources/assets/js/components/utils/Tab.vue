@@ -23,6 +23,14 @@ export default {
     },
     created: function(){
         this.isActive = this.selected;
+
+        if (typeof(Storage) !== "undefined") {
+
+            var activeTabStocktrade = this.$localStorage.get('activeTabStocktrade')
+            if(activeTabStocktrade){
+                this.isActive = activeTabStocktrade == this.name;
+            }
+        }
     }
 }
 </script>
