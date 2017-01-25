@@ -208,20 +208,24 @@ class StockController extends Controller
                             // Save Historical Data
                             $history = [];
 
-                            foreach ((array)$result->timestamp as $key => $unix) {
+                            if(isset($result->timestamp)){
+                                
+                                foreach ((array)$result->timestamp as $key => $unix) {
 
-                                if($result->indicators->quote[0]->open[$key] == 0) continue;
+                                    if($result->indicators->quote[0]->open[$key] == 0) continue;
 
-                                History::updateOrCreate([
-                                    'symbol' => $symbol,
-                                    'timestamp' => Carbon::createFromTimestamp($unix)->toDateTimeString()
-                                ],[
-                                    'high' => $result->indicators->quote[0]->high[$key],
-                                    'open' => $result->indicators->quote[0]->open[$key],
-                                    'close' => $result->indicators->quote[0]->close[$key],
-                                    'low' => $result->indicators->quote[0]->low[$key],
-                                    'volume' => $result->indicators->quote[0]->volume[$key],
-                                ]);
+                                    History::updateOrCreate([
+                                        'symbol' => $symbol,
+                                        'timestamp' => Carbon::createFromTimestamp($unix)->toDateTimeString()
+                                    ],[
+                                        'high' => $result->indicators->quote[0]->high[$key],
+                                        'open' => $result->indicators->quote[0]->open[$key],
+                                        'close' => $result->indicators->quote[0]->close[$key],
+                                        'low' => $result->indicators->quote[0]->low[$key],
+                                        'volume' => $result->indicators->quote[0]->volume[$key],
+                                    ]);
+
+                                }
 
                             }
 
@@ -315,11 +319,11 @@ class StockController extends Controller
                                 'type' => $details['instrumentType'],
                                 'statistics' => json_encode($detailedStats),
                                 'profile' => json_encode($profile),
-                                'high' => $detailedStats['financialData']->targetHighPrice->raw,
-                                'low' => $detailedStats['financialData']->targetLowPrice->raw,
-                                'price' => $detailedStats['financialData']->currentPrice->raw,
-                                'revenue' => $detailedStats['financialData']->totalRevenue->raw,
-                                'value' => $detailedStats['defaultKeyStatistics']->enterpriseValue->raw,
+                                'high' => (isset($detailedStats['financialData']->targetHighPrice->raw) ? $detailedStats['financialData']->targetHighPrice->raw : 0),
+                                'low' => (isset($detailedStats['financialData']->targetLowPrice->raw) ? $detailedStats['financialData']->targetLowPrice->raw : 0),
+                                'price' => (isset($detailedStats['financialData']->currentPrice->raw) ? $detailedStats['financialData']->currentPrice->raw : 0),
+                                'revenue' => (isset($detailedStats['financialData']->totalRevenue->raw) ? $detailedStats['financialData']->totalRevenue->raw : 0),
+                                'value' => (isset($detailedStats['defaultKeyStatistics']->enterpriseValue->raw) ? $detailedStats['defaultKeyStatistics']->enterpriseValue->raw : 0),
                                 'recommendation' => $detailedStats['financialData']->recommendationKey,
                             ]);
                         }else{
@@ -330,11 +334,11 @@ class StockController extends Controller
                                 'type' => $details['instrumentType'],
                                 'statistics' => json_encode($detailedStats),
                                 'profile' => json_encode($profile),
-                                'high' => $detailedStats['financialData']->targetHighPrice->raw,
-                                'low' => $detailedStats['financialData']->targetLowPrice->raw,
-                                'price' => $detailedStats['financialData']->currentPrice->raw,
-                                'revenue' => $detailedStats['financialData']->totalRevenue->raw,
-                                'value' => $detailedStats['defaultKeyStatistics']->enterpriseValue->raw,
+                                'high' => (isset($detailedStats['financialData']->targetHighPrice->raw) ? $detailedStats['financialData']->targetHighPrice->raw : 0),
+                                'low' => (isset($detailedStats['financialData']->targetLowPrice->raw) ? $detailedStats['financialData']->targetLowPrice->raw : 0),
+                                'price' => (isset($detailedStats['financialData']->currentPrice->raw) ? $detailedStats['financialData']->currentPrice->raw : 0),
+                                'revenue' => (isset($detailedStats['financialData']->totalRevenue->raw) ? $detailedStats['financialData']->totalRevenue->raw : 0),
+                                'value' => (isset($detailedStats['defaultKeyStatistics']->enterpriseValue->raw) ? $detailedStats['defaultKeyStatistics']->enterpriseValue->raw : 0),
                                 'recommendation' => $detailedStats['financialData']->recommendationKey,
                             ]);
                         }

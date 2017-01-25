@@ -11,6 +11,7 @@ use App\Watchlist;
 use App\UserInfo;
 use App\Transaction;
 use Auth;
+use Image;
 
 class UserController extends Controller
 {
@@ -537,6 +538,31 @@ class UserController extends Controller
             'error' => '',
             'status' => 'OK',
             'profile' => $profile
+        ]);
+    }
+
+    public function uploadProfile(Request $request){
+        $filename = 'avatar-'.Auth::id() . '-' . date('YmdHis') .'.jpg';
+        $path = 'avatar/';
+        $img = Image::make($request->file('photo'))
+        ->resize(null, 128, function ($constraint) {
+            $constraint->aspectRatio();
+            $constraint->upsize();
+        })
+        ->crop(128, 128);
+        $img->save($path . $filename);
+
+        UserInfo::updateOrCreate([
+            'user_id' => Auth::id(),
+            'key' => 'avatar',
+        ],[
+            'value' => asset($path . $filename)
+        ]);
+
+        return response()->json([
+            'error' => '',
+            'status' => 'OK',
+            'profile' => asset($path . $filename)
         ]);
     }
 

@@ -42,7 +42,7 @@
                             <td>{{ e.issuer }}</td>
                             <td>{{ e.type }}</td>
                             <td>
-                                <template v-if="e.recommendation === 'BUY' ">
+                                <template v-if="e.recommendation === 'BUY' || e.recommendation === 'STRONG_BUY' ">
                                     <modal btnText="BUY" btnClass="is-link" :minimal="true" :minheight="false">
                                         <template slot="header">Buy {{ e.symbol }} at {{ e.currentPrice }}</template>
                                         <stock-buy

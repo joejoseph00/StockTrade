@@ -13,6 +13,8 @@
     "laravel-elixir": "^6.0.0-14",
     "laravel-elixir-vue-2": "^0.2.0",
     "laravel-elixir-webpack-official": "^1.0.2",
+    "less": "^2.7.2",
+    "less-loader": "^2.2.3",
     "lodash": "^4.16.2",
     "vue": "^2.0.1",
     "vue-loader": "^10.0.2",

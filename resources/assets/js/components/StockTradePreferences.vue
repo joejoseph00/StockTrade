@@ -18,8 +18,10 @@
                         </div>
                         <div v-else class="media">
                             <div class="media-left">
-                                <figure class="image" style="height: 128px; width: 128px;">
-                                    <img src="http://bulma.io/images/placeholders/128x128.png" alt="Image">
+                                <figure class="image is-square" style="height: 128px; width: 128px;">
+                                    <photo-uploader
+                                    imgDefault="http://bulma.io/images/placeholders/128x128.png" :imgPath='profile.avatar' imgW="128px" imgH="128px" btnClass="button is-small is-fullwidth" postMethod = "/api/v1/user/profile/avatarUpdate"
+                                    ></photo-uploader>
                                 </figure>
                             </div>
                             <div class="media-content">
@@ -60,7 +62,6 @@
                                                         <option v-for="country in countries">{{ country }}</option>
                                                     </select>
                                                 </span>
-
                                             </p>
                                         </div>
                                     </div>
@@ -77,6 +78,7 @@
 <script>
 
 import Axios from 'axios';
+import PhotoUploader from './utils/PhotoUploader.vue';
 
 export default {
     data: function(){
@@ -94,10 +96,14 @@ export default {
                 getUserProfile : hostname + "/api/v1/user/profile",
                 updateUserProfile : hostname + "/api/v1/user/profile/update",
                 getCountryList : hostname + "/js/countries.json",
+                saveProfilePicture : hostname + "/api/v1/user/profile/photo/update",
             },
             error : { },
             success : { }
         }
+    },
+    components: {
+        'photo-uploader' : PhotoUploader,
     },
     methods : {
         updateProfile(){

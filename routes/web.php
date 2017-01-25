@@ -51,10 +51,13 @@ Route::group(['prefix' => 'api/v1' , 'middleware' => 'auth'], function () {
     Route::get('/user/getMaxBuy', 'UserController@getMaxBuy');
     Route::get('/user/getMaxSell', 'UserController@getMaxSell');
 
+    Route::post('/user/profile/avatarUpdate', 'UserController@uploadProfile');
+
+
+
 });
 
 Route::group(['prefix' => 'api/v1'], function () {
-
 
     Route::get('/stock/data/{symbol}/{options?}', 'StockController@show');
     Route::get('/stock/history/{symbol}/{options?}', 'StockController@getHistory');
