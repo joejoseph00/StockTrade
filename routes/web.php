@@ -57,7 +57,7 @@ Route::group(['prefix' => 'api/v1' , 'middleware' => 'auth'], function () {
 
 });
 
-Route::group(['prefix' => 'api/v1'], function () {
+Route::group(['prefix' => 'api/v1', 'middleware' => 'cors'], function () {
 
     Route::get('/stock/data/{symbol}/{options?}', 'StockController@show');
     Route::get('/stock/history/{symbol}/{options?}', 'StockController@getHistory');
