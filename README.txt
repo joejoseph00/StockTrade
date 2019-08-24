@@ -1,4 +1,5 @@
 Prerequisites:
+
 sudo apt install php7.2-mbstring php5.6-mbstring php7.0-mbstring php7.1-mbstring php7.3-mbstring
 sudo apt install php7.2-dom php5.6-dom php7.0-dom php7.1-dom php7.3-dom
 sudo apt install php7.2-bcmath php5.6-bcmath php7.0-bcmath php7.1-bcmath php7.3-bcmath
